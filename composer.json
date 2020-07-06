@@ -1,0 +1,45 @@
+{
+    "name": "dpsoft/mehr4-theme-dpeac",
+    "description": "A minimal theme for mehr4",
+    "keywords": [
+        "dpsoft",
+        "mehr4-theme-dpeac"
+    ],
+    "homepage": "https://github.com/dpsoft/mehr4-theme-dpeac",
+    "license": "Apache-2.0",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Z-yavari",
+            "email": "info@dpe.ac",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^5.8 || ^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dpsoft\\Mehr4ThemeDpeac\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dpsoft\\Mehr4ThemeDpeac\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dpsoft\\Mehr4ThemeDpeac\\Mehr4ThemeDpeacServiceProvider"
+            ],
+            "aliases": {
+                "Mehr4ThemeAzarbs": "Dpsoft\\Mehr4ThemeDpeac\\Mehr4ThemeDpeacFacade"
+            }
+        }
+    }
+}
