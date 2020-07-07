@@ -98,51 +98,51 @@
 {{--        </div>--}}
 {{--    </div>--}}
 {{--</div>--}}
-<!-- */Header -->
-<header class="header">
-    <div class="">
-        <div class="grid-x grid-padding-x">
-            <div class="medium-2 small-12 cell mobile-support-none">
-                <img src="{{setting('site.logo')}}" alt="{{setting('site.name')}}">
-                          </div>
-            <div class="small-6 none-desk">
-                <div class="menu-responsive-mob" data-responsive-toggle="home-animated-menu" data-hide-for="medium">
-                    <button class="menu-icon" type="button" data-toggle></button>
-                    <div class="title-bar-title">فهرست</div>
-                </div>
-                <a href="#" class=" reg-log-btn-mob">
-                    <i class="fa fa-sign-in" aria-hidden="true"></i>
-                </a>
-            </div>
+{{--<!-- */Header -->--}}
+{{--<header class="header">--}}
+{{--    <div class="">--}}
+{{--        <div class="grid-x grid-padding-x">--}}
+{{--            <div class="medium-2 small-12 cell mobile-support-none">--}}
+{{--                <img src="{{setting('site.logo')}}" alt="{{setting('site.name')}}">--}}
+{{--                          </div>--}}
+{{--            <div class="small-6 none-desk">--}}
+{{--                <div class="menu-responsive-mob" data-responsive-toggle="home-animated-menu" data-hide-for="medium">--}}
+{{--                    <button class="menu-icon" type="button" data-toggle></button>--}}
+{{--                    <div class="title-bar-title">فهرست</div>--}}
+{{--                </div>--}}
+{{--                <a href="#" class=" reg-log-btn-mob">--}}
+{{--                    <i class="fa fa-sign-in" aria-hidden="true"></i>--}}
+{{--                </a>--}}
+{{--            </div>--}}
 
-            <div class="menu-responsive-mob-left small-6">
-                <img class="moblie-logo" src="{{setting('site.logo')}}" alt="{{setting('site.name')}}">
-            </div>
-            <div class="medium-8 small-12 cell">
-                <nav class="menu-header" id="home-animated-menu" data-animate="hinge-in-from-top hinge-out-from-top">
-                    <ul class="dropdown menu" data-dropdown-menu>
+{{--            <div class="menu-responsive-mob-left small-6">--}}
+{{--                <img class="moblie-logo" src="{{setting('site.logo')}}" alt="{{setting('site.name')}}">--}}
+{{--            </div>--}}
+{{--            <div class="medium-8 small-12 cell">--}}
+{{--                <nav class="menu-header" id="home-animated-menu" data-animate="hinge-in-from-top hinge-out-from-top">--}}
+{{--                    <ul class="dropdown menu" data-dropdown-menu>--}}
 
-                        <li @if(Route::currentRouteName()=='home') class="navbar-active" @endif>
-                                                        <a class="home" href="/"><span>خانه</span></a>
-                                                    </li>
+{{--                        <li @if(Route::currentRouteName()=='home') class="navbar-active" @endif>--}}
+{{--                                                        <a class="home" href="/"><span>خانه</span></a>--}}
+{{--                                                    </li>--}}
 
-                        <li @if(Route::currentRouteName()=='course') class="navbar-active" @endif>
-                                                        <a class="home" href="/"><span>دپارتمان ها</span></a>
-                                                    </li>
+{{--                        <li @if(Route::currentRouteName()=='course') class="navbar-active" @endif>--}}
+{{--                                                        <a class="home" href="/"><span>دپارتمان ها</span></a>--}}
+{{--                                                    </li>--}}
 
-                      <li @if(Route::currentRouteName()=='blog') class="navbar-active" @endif>
-                                                        <a class="home" href="/"><span>اخبار</span></a>
-                                                    </li>
-
-
-  <li @if(Route::currentRouteName()=='contact') class="navbar-active" @endif>
-                                                        <a class="home" href="/"><span>تماس با ما</span></a>
-                                                    </li>
+{{--                      <li @if(Route::currentRouteName()=='blog') class="navbar-active" @endif>--}}
+{{--                                                        <a class="home" href="/"><span>اخبار</span></a>--}}
+{{--                                                    </li>--}}
 
 
-                    </ul>
-                </nav>
-            </div>
+{{--  <li @if(Route::currentRouteName()=='contact') class="navbar-active" @endif>--}}
+{{--                                                        <a class="home" href="/"><span>تماس با ما</span></a>--}}
+{{--                                                    </li>--}}
+
+
+{{--                    </ul>--}}
+{{--                </nav>--}}
+{{--            </div>--}}
 {{--            <div class="medium-2 small-12 cell mobile-support-none ">--}}
 {{--                {% if session.name %}--}}
 {{--                <a id="btn-logout-user" class="button hollow button alert reg-log-btn">--}}
@@ -231,81 +231,117 @@
 {{--                    </button>--}}
 {{--                </div>--}}
 {{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</header>--}}
+{{--<style>--}}
+
+{{--</style>--}}
+<header class="header">
+    <div class="">
+        <div class="grid-x grid-padding-x">
+            <div class="medium-2 small-12 cell mobile-support-none">
+                <img src="http://dpe.ac/api/file/download/5e4cc37103672/%D8%AF%D8%A7%D9%86%D8%B4-%D9%BE%DA%98%D9%88%D9%87%D8%A7%D9%863-%D9%86%D9%88%DB%8C%D9%86.png" alt="نوین دانش پژوهان">
+            </div>
+            <div class="small-6 none-desk">
+                <div class="menu-responsive-mob" data-responsive-toggle="home-animated-menu" data-hide-for="medium" data-e="b8c3kf-e" style="display: none;">
+                    <button class="menu-icon" type="button" data-toggle=""></button>
+                    <div class="title-bar-title">فهرست</div>
+                </div>
+                <a href="#" class=" reg-log-btn-mob">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <div class="menu-responsive-mob-left small-6">
+                <img class="moblie-logo" src="http://dpe.ac/api/file/download/5e4cc37103672/%D8%AF%D8%A7%D9%86%D8%B4-%D9%BE%DA%98%D9%88%D9%87%D8%A7%D9%863-%D9%86%D9%88%DB%8C%D9%86.png" alt="نوین دانش پژوهان">
+            </div>
+            <div class="medium-8 small-12 cell">
+                <nav class="menu-header" id="home-animated-menu" data-animate="hinge-in-from-top hinge-out-from-top">
+                    <ul class="dropdown menu" data-dropdown-menu="" role="menubar" data-e="i3yzzf-e">
+                        <li class="navbar-active" role="menuitem">
+                            <a href="/">صفحه اصلی</a>
+                        </li>
+                        <li @if(Route::currentRouteName()=='course-list') role="menuitem" class="current-menu-item" @endif>
+                       <a href="{{route('course-list')}}"><span>دپارتمان ها</span></a>
+                        </li>
+
+                        <li @if(Route::currentRouteName()=='blog') role="menuitem" class="current-menu-item" @endif>
+                            <a href="{{route('blog')}}"><span>اخبار</span></a>
+                        </li>
+
+                        <li class="" role="menuitem">
+                            <a href="http://dpe.ac/page/%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85-%D8%AF%D8%B1-%D9%87%D8%B1%D8%AC%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86/12">استخدام</a>
+                        </li>
+                        <li class="is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true" aria-label="امور کاربران">
+                            <a href="#">امور کاربران</a>
+                            <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" role="menu">
+                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/lms/index.php">پروفایل کاربران</a></li>
+                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://app.dpe.ac">دریافت برنامه&zwnj;ی اندروید</a></li>
+                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C-%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D9%87-%D8%A7%D8%B2-%D9%BE%D8%B1%D9%88%D9%81%D8%A7%DB%8C%D9%84-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%DB%8C/22">راهنمای استفاده از پروفایل کاربری</a></li>
+                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D8%AF%D8%B1%D8%AE%D9%88%D8%A7%D8%B3%D8%AA-%D9%85%D8%B9%D8%B1%D9%81%DB%8C-%D8%A8%D9%87-%DA%A9%D8%A7%D8%B1/23">درخواست معرفی به کار</a></li>
+                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D8%AF%D8%B1%D8%AE%D9%88%D8%A7%D8%B3%D8%AA-%D8%B4%D8%B1%DA%A9%D8%AA-%D8%AF%D8%B1-%DA%A9%D8%A7%D8%B1%DA%AF%D8%A7%D9%87-%D9%87%D8%A7%DB%8C-%D8%A2%D9%86%D9%84%D8%A7%DB%8C%D9%86/24">درخواست شرکت در کارگاه های آنلاین</a></li>
+                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D8%B3%D9%88%D8%A7%D9%84%D8%A7%D8%AA-%D9%85%D8%AA%D8%AF%D8%A7%D9%88%D9%84/26">سوالات متداول</a></li>
+                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1%D9%87%D8%A7%DB%8C-%D9%85%D8%B1%D8%AA%D8%A8%D8%B7/56">دانلود نرم افزارهای مرتبط</a></li>
+                            </ul>
+                        </li>
+                        <li class="is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true" aria-label="راهنمای ثبت نام">
+                            <a href="#">راهنمای ثبت نام</a>
+                            <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" role="menu">
+                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D8%B1%D9%88%D9%86%D8%AF-%D8%A8%D8%B1%DA%AF%D8%B2%D8%A7%D8%B1%DB%8C-%D8%AF%D9%88%D8%B1%D9%87-%D9%87%D8%A7/28">روند برگزاری دوره ها</a></li>
+                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C-%D8%AA%D8%B5%D9%88%DB%8C%D8%B1%DB%8C-%D8%AB%D8%A8%D8%AA-%D9%86%D8%A7%D9%85/29">راهنمای تصویری ثبت نام</a></li>
+                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D9%82%D9%88%D8%A7%D9%86%DB%8C%D9%86-%D9%88-%D9%85%D9%82%D8%B1%D8%B1%D8%A7%D8%AA/30">قوانین و مقررات</a></li>
+                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D8%AB%D8%A8%D8%AA-%D8%B4%DA%A9%D8%A7%DB%8C%D8%A7%D8%AA/31">ثبت شکایات</a></li>
+                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D8%AF%D8%B1%D8%AE%D9%88%D8%A7%D8%B3%D8%AA-%D9%85%D8%B4%D8%A7%D9%88%D8%B1%D9%87-%D8%B1%D8%A7%DB%8C%DA%AF%D8%A7%D9%86/32">درخواست مشاوره رایگان</a></li>
+                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D9%85%D8%AD%D8%AA%D9%88%DB%8C%D8%A7%D8%AA-%D9%BE%DA%A9%DB%8C%D8%AC-%D9%87%D8%A7%DB%8C-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C/33">محتویات پکیج های آموزشی</a></li>
+                            </ul>
+                        </li>
+
+                        <li role="menuitem"><a href="http://dpe.ac/page/%DA%AF%D9%88%D8%A7%D9%87%DB%8C%D9%86%D8%A7%D9%85%D9%87-%D8%AA%D8%A7%DB%8C%DB%8C%D8%AF%DB%8C%D9%87-%D8%AD%D8%B1%D9%81%D9%87-%D8%A7%DB%8C-%D8%A2%D9%85%D9%88%D8%B2%D8%B4/36">تاییدیه ها</a>
+                        </li>
+
+
+                        <li class="is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true" aria-label="درباره ما">
+                            <a href="http://dpe.ac/page/%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%DB%8C-%D9%85%D8%A7/10">درباره ما</a>
+                            <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" role="menu">
+                                <li @if(Route::currentRouteName()=='about') role="menuitem" class="is-submenu-item is-dropdown-submenu-item current-menu-item" @endif>
+                                    <a href="{{route('about')}}"><span>داستان ما</span></a>
+                                </li>
+                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D9%85%D8%AC%D9%88%D8%B2%D8%A7%D8%AA-%D9%88-%D8%A7%D9%81%D8%AA%D8%AE%D8%A7%D8%B1%D8%A7%D8%AA/14">مجوزات و افتخارات</a></li>
+                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D9%87%D9%85%DA%A9%D8%A7%D8%B1%D8%A7%D9%86/15">همکاران </a></li>
+                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D8%B3%D9%85%DB%8C%D9%86%D8%A7%D8%B1%D9%87%D8%A7/16">سمینار ها</a></li>
+                                <li role="menuitem" class="is-dropdown-submenu-parent is-submenu-item is-dropdown-submenu-item opens-left" aria-haspopup="true" aria-label="محصولات ما"><a href="http://dpe.ac/page/%D8%B3%D9%85%DB%8C%D9%86%D8%A7%D8%B1%D9%87%D8%A7/16">محصولات ما</a>
+                                    <ul class="submenu is-dropdown-submenu vertical" data-submenu="" role="menu">
+                                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D8%B3%D8%A7%D9%85%D8%A7%D9%86%D9%87+%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA+%D9%85%D8%AD%D8%AA%D9%88%D8%A7+%D9%86%D9%88%DB%8C%D8%B3%D9%87/55">مدیریت محتوای نویسه</a></li>
+                                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D8%B3%D8%A7%D9%85%D8%A7%D9%86%D9%87+%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA+%D9%85%D8%AC%D8%A7%D8%B2%DB%8C+%D9%85%D9%87%D8%B1/54"> سامانه آموزش مجازی مهر</a></li>
+                                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D8%B3%D8%A7%D9%85%D8%A7%D9%86%D9%87+%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1%DB%8C%D8%A7%D8%A8%DB%8C+%D9%88+%D9%81%D8%B1%D9%88%D8%B4+%D8%AA%D9%84%D9%81%D9%86%DB%8C+%D8%A2%D9%88%D8%A7/53">سامانه بازاریابی و فروش تلفنی آوا</a></li>
+                                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D8%AF%D8%B1%D8%AE%D9%88%D8%A7%D8%B3%D8%AA-%D9%85%D8%B9%D8%B1%D9%81%DB%8C-%D8%A8%D9%87-%DA%A9%D8%A7%D8%B1/23">دارکوب جاب</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </li>
+
+                        <li class="is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true" aria-label="ارتباط باما">
+                            <a href="http://dpe.ac/page/%D8%A7%D8%B1%D8%AA%D8%A8%D8%A7%D8%B7-%D8%A8%D8%A7-%D9%85%D8%A7/49">ارتباط باما</a>
+                            <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" role="menu">
+                                <li @if(Route::currentRouteName()=='contact') role="menuitem" class="is-submenu-item is-dropdown-submenu-item current-menu-item" @endif>
+                                    <a href="{{route('contact')}}"><span>تماس با ما</span></a>
+                                </li>
+
+                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D8%AF%D8%B1%D8%AE%D9%88%D8%A7%D8%B3%D8%AA-%D9%87%D9%85%DA%A9%D8%A7%D8%B1%DB%8C-%D8%A8%D8%A7-%D8%AF%D8%A7%D9%86%D8%B4-%D9%BE%DA%98%D9%88%D9%87%D8%A7%D9%86/19"> درخواست همکاری با دانش پژوهان</a></li>
+                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/page/%D8%AF%D8%A7%D9%86%D8%B4-%D9%BE%DA%98%D9%88%D9%87%D8%A7%D9%86-%D8%AF%D8%B1-%D8%B1%D8%B3%D8%A7%D9%86%D9%87-%D9%87%D8%A7%DB%8C-%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%DB%8C/20"> دانش پژوهان در رسانه های اجتماعی</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="medium-2 small-12 cell mobile-support-none ">
+                <a href="http://dpe.ac/panel/login" class="button hollow button reg-log-btn">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i> ورود / ثبت نام
+                </a>
+
+            </div>
         </div>
     </div>
 </header>
-<style>
-    header.header nav.menu-header ul>li ul li ul {
-        margin:0 !important;
-    }
-    header.header nav.menu-header ul>li ul li {
-        display: block;
-        border-bottom: 1px solid #ddd;
-        line-height: 35px;
-        width: 100%;
-    }
-    .dropdown.menu>li.is-dropdown-submenu-parent>a:after {
-        display: inline-block !important;
-        width: 0;
-        height: 0;
-        border: 0;
-        content: "\f105";
-        border-bottom-width: 0;
-        border-top-style: solid;
-        border-color: #ffae00 transparent transparent !important;
-        left: 10px !important;
-        font: normal normal normal 14px/1 FontAwesome;
-        right: auto;
-        margin-top: 2px !important;
-        color: #ffae00;
-        transform: rotate(90deg);
-    }
-    .is-dropdown-submenu .is-dropdown-submenu-parent.opens-left>a:after{
-        display: inline-block !important;
-        width: 0;
-        height: 0;
-        border: 0;
-        content: "\f105";
-        border-bottom-width: 0;
-        border-top-style: solid;
-        border-color: #ffae00 transparent transparent !important;
-        left: 10px !important ;
-        font: normal normal normal 14px/1 FontAwesome;
-        right: auto;
-        margin-top: 5px !important;
-        color: #ffae00;
-        transform: rotate(180deg);
-    }
-    .good-teachers .header-tabs .tabs .tabs-title.is-active img {
-        border: 6px solid #00a6bc;
-        border-radius: 100%;
-    }
-    .navbar-active {
-        border-radius: 2px;
-        border-bottom: 3px solid #ffb900;
-        transition: all ease-in-out .3s;
-    }
-    header.header nav.menu-header ul>li:hover {
-        border: none;
-        border-radius: 2px;
-        border-bottom: 3px solid #ffb900;
-        transition: all ease-in-out .3s;
-    }
-    .dropdown.menu a {
-        padding: 5px 10px !important;
-
-    }
-
-    .dropdown.menu li {
-        margin-top: 10px;
-
-    }
-    header.header nav.menu-header ul>li ul {
-        background: #fff;
-        box-shadow: 0px 0px 6px -2px #000;
-        z-index: 999999;
-        margin-top: 3px;
-        border-radius: 3px;
-        border: none;
-    }
-</style>

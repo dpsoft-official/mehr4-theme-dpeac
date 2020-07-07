@@ -32,8 +32,9 @@
 {{--    <link rel="manifest" href="{{theme_directory}}/assets/img/manifest.json">--}}
 
     <!-- BASE CSS -->
-{{--    <link rel="stylesheet" href="{{asset('/vendor/mehr4-theme-dpeac/css/assets/css/app.css')}}">--}}
     <link href="{{mix('app.css','vendor/mehr4-theme-dpeac')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('/vendor/mehr4-theme-dpeac/fonts/font.css')}}">
+
     @yield('head')
 </head>
 <body >
@@ -78,7 +79,7 @@
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.navigation.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.video.min.js')}}"></script>
-<script>
+{{--<script>--}}
 {{--    //for all pages--}}
 {{--    $('.video-embed-teacher-free').click(function() {--}}
 {{--        var video_id = $(this).data('video');--}}
@@ -552,6 +553,16 @@
 
 {{--    });--}}
 {{--</script>--}}
+<script>
+$(document).ready(function () {
+    $("div.tabs-title.is-active").click(function (e) {
+        var a = $('div.tabs-title.is-active').find('img.body');
+        var b = $('div.tabs-title.is-active').find('a.body');
+        $('div.tabs-title.is-loop').appendTo('.is-active').show('fast');
+    });
+
+});
+</script>
 @yield('footer')
 @include('sweet::alert')
 </body>
