@@ -63,6 +63,14 @@ class InstallThemeCommand extends Command
         \Mehr::updateOrNewSetting('teacher8.name','پرویز درگی','نام استاد هشتم');
         \Mehr::updateOrNewSetting('teacher9.name','اوژن استوار','نام استاد نهم');
         \Mehr::updateOrNewSetting('contact.payamak','3000601880','شماره پیامک');
+        \Mehr::updateOrNewSetting('title1','دانش پذیران','عنوان اول قسمت دانش پژوهانی شوید');
+        \Mehr::updateOrNewSetting('title2','ساعت تولید محتوا','عنوان دوم قسمت دانش پژوهانی شوید');
+        \Mehr::updateOrNewSetting('title3','استادان','عنوان سوم قسمت دانش پژوهانی شوید');
+        \Mehr::updateOrNewSetting('title4','دوره ها','عنوان چهارم قسمت دانش پژوهانی شوید');
+        \Mehr::updateOrNewSetting('num1','400000',' تعداد عنوان اول قسمت دانش پژوهانی شوید ');
+        \Mehr::updateOrNewSetting('num2','525',' تعداد عنوان دوم قسمت دانش پژوهانی شوید ');
+        \Mehr::updateOrNewSetting('num3','70',' تعداد عنوان سوم قسمت دانش پژوهانی شوید ');
+        \Mehr::updateOrNewSetting('num4','120',' تعداد عنوان چهارم قسمت دانش پژوهانی شوید ');
 
 
     }

@@ -43,7 +43,18 @@
             </div>
             <!-- END REVOLUTION SLIDER -->
         </article>
-
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+                <div class="row medium-8 small-12">
+                    <div class="search-head">
+                        <form action="" name="course-search">
+                            <input id="search_course" type="text" name="course_name" value="" id="search-input-field" class="search__input" placeholder=" جستجو کنید...">
+                            <button type="send" class="search-btn">جستجو کن</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
                 <!-- #Packege 0-100 -->
         <section class="packege">
@@ -453,30 +464,30 @@
                     <div class="grid-x grid-padding-x">
                         <div class="medium-3  small-6">
                             <div class="graph-des">
-                                <h1 class="timer count-title before-numb count-number" data-to="400000"
-                                    data-speed="5500"></h1>
-                                <b>دانش پذیران</b>
+                                <h1 class="timer count-title before-numb count-number" data-to="{{setting('num1')}}"
+                                    data-speed="1500"></h1>
+                                <b>{{setting('title1')}}</b>
                             </div>
                         </div>
                         <div class="medium-3 small-6">
                             <div class="graph-des">
-                                <h1 class="timer count-title before-numb count-number" data-to="525"
+                                <h1 class="timer count-title before-numb count-number" data-to="{{setting('num2')}}"
                                     data-speed="1500"></h1>
-                                <b>ساعت تولید محتوا</b>
+                                <b>{{setting('title2')}}</b>
                             </div>
                         </div>
                         <div class="medium-3 small-6">
                             <div class="graph-des">
-                                <h1 class="timer count-title before-numb count-number" data-to="70"
+                                <h1 class="timer count-title before-numb count-number" data-to="{{setting('num3')}}"
                                     data-speed="1500"></h1>
-                                <b>استادان</b>
+                                <b>{{setting('title3')}}</b>
                             </div>
                         </div>
                         <div class="medium-3 small-6">
                             <div class="graph-des">
-                                <h1 class="timer count-title before-numb count-number" data-to="120"
+                                <h1 class="timer count-title before-numb count-number" data-to="{{setting('num4')}}"
                                     data-speed="1500"></h1>
-                                <b>دوره ها</b>
+                                <b>{{setting('title4')}}</b>
                             </div>
                         </div>
                     </div>
@@ -489,7 +500,7 @@
 {{--                            <video width="100%" height="auto" id="video" preload="none" controls poster="{{Storage::url('')}}">--}}
 {{--                                --}}{{--                                <source src="{{home_video.url}}">--}}
 {{--                            </video>--}}
-                            <video width="100%" height="auto" id="video" preload="none" controls="" poster="">
+                            <video width="100%" height="auto" id="video" preload="none" controls="" poster="{{Storage::url('theme/video-poster.jpg')}}">
                                 <source src="">
                             </video>
 
@@ -500,30 +511,7 @@
             </div>
         </section>
 
-        <!-- Honors -->
-        <!--
-        <div class="honors">
-            <div class="info-teacher">
-                <div class="grid-container">
-                    <div class="grid-x grid-padding-x">
-                        <div class="medium-6 ">
-                        </div>
-                        <div class="medium-6  small-12">
-                            <h2> مجوزات و افتخارات</h2>
-                            <span>کارشناسی مهندس صنایع</span>
-                            <span>کارشناسی ارشد را در دو رشته مدیریت استراتژیک و مدیریت بازاریابی در دانشگاه METU آنکارا</span>
-                            <span>دکترای مدیریت اجرایی کسب و کار (DBA) از دانشگاه University of Southern California در دور مشترک در
-                                کمپس American University of Dubai امارات تمرکز اصلی وی در آغاز فعالیت هایش بر حوزه لجستیک و مدیریت
-                                یکپارچه زنجیره تامین بوده و همچنان نیز به فعالیت های اجرایی، پژوهشی و آموزشی حرفه ای در این زمینه
-                                می پردازد. </span>
-                            <span>برای مشاهده ی رزومه ی کامل، دوره ه وویدئوها وارد پروفایل استاد شوید</span>
-                            <a href="#" class="profile-teacher-btn">مشاهده </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
+
 
         <!-- #Blog -->
         <section class="newsbar" style="margin-top:303px !important;">
