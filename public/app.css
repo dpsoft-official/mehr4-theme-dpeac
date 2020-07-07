@@ -17908,6 +17908,21 @@ header.header nav.menu-header ul>li ul {
     border-radius: 3px;
     border: none;
 }
+.tparrows.tp-leftarrow:before{
+    display:none;
+}
+.tp-leftarrow tparrows gyges{
+    display: none;
+}
+.tparrows.tp-rightarrow:before{
+    display: none;
+}
+.tp-rightarrow.tparrows.gyges {
+    display: none;
+}
+.tp-leftarrow.tparrows.gyges{
+    display:none;
+}
 /* 
  * @author    ThemePunch <info@themepunch.com>
  * @link      http://www.themepunch.com/
