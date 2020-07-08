@@ -137,48 +137,52 @@
                 </div>
             </div>
 {{--            اساتید--}}
-{{--            <div class="header-tabs">--}}
-{{--                <!-- Gride Start -->--}}
-{{--                <div class="grid-container">--}}
-{{--                    <div class="grid-x grid-padding-x">--}}
-{{--                        <div class="head-packege-light">--}}
-{{--                            <h3> اساتید این دوره</h3>--}}
-{{--                            <hr>--}}
-{{--                        </div>--}}
-{{--                        <ul class="tabs" data-tabs="" id="course-tabs" role="tablist" data-e="9v8y1y-e">--}}
-{{--                            <li class="tabs-title is-active" role="presentation">--}}
-{{--                                <img src="http://dpe.ac/api/file/download/5a79974a2ce26_Untitled-1.jpg/Untitled-1.jpg" class="teacher-avatar" width="100px" alt="حسابداری برای همه(کاربردی)">--}}
-{{--                                <a data-tabs-target="teacher-18710" href="#teacher-18710" role="tab" aria-controls="teacher-18710" aria-selected="true" id="teacher-18710-label" tabindex="0">شیرین رزاز زاده</a>--}}
-{{--                            </li>--}}
-{{--                        </ul>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
+            <div class="header-tabs">
+                <!-- Gride Start -->
+                <div class="grid-container">
+                    <div class="grid-x grid-padding-x">
+                        <div class="head-packege-light">
+                            <h3> اساتید این دوره</h3>
+                            <hr>
+                        </div>
+                        <ul class="tabs" data-tabs="" id="course-tabs" role="tablist" data-e="9v8y1y-e">
+                            <li class="tabs-title is-active" role="presentation">
+                                <img src="" class="teacher-avatar" width="100px" alt="">
+                                <a data-tabs-target="teacher-18710" href="#teacher-18710" role="tab" aria-controls="teacher-18710" aria-selected="true" id="teacher-18710-label" tabindex="0">
+{{--                                    {{$course->teachers}}--}}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <!-- End Gride -->
 
 
-{{--            <div class="tabs-content float-center" data-tabs-content="course-tabs">--}}
-{{--                <div class="tabs-panel is-active" id="teacher-18710" role="tabpanel" aria-labelledby="teacher-18710-label">--}}
-{{--                    <div class="good-teacher-tab-box">--}}
-{{--                        <div class="grid-container">--}}
-{{--                            <div class="info-teacher">--}}
-{{--                                <img width="100%" style="height:454px!important;position: relative;background: #fff;" src="http://dpe.ac/api/file/download/5b7c0170dcd53/shrin-razaazzadeh.png" alt="حسابداری برای همه(کاربردی)">--}}
-{{--                                <div class="grid-x grid-padding-x top">--}}
-{{--                                    <div class="medium-6  ">--}}
-{{--                                    </div>--}}
-{{--                                    <div class="medium-6  small-12 ">--}}
-{{--                                        <h3>شیرین رزاز زاده</h3>--}}
-{{--                                        <a href="/%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF/18710/شیرین رزاز زاده" class="profile-teacher-btn">پروفایل استاد</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="clear"></div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
+            <div class="tabs-content float-center" data-tabs-content="course-tabs">
+                <div class="tabs-panel is-active" id="teacher-18710" role="tabpanel" aria-labelledby="teacher-18710-label">
+                    <div class="good-teacher-tab-box">
+                        <div class="grid-container">
+                            <div class="info-teacher">
+                                <img width="100%" style="height:454px!important;position: relative;background: #fff;" src="" alt="">
+                                <div class="grid-x grid-padding-x top">
+                                    <div class="medium-6  ">
+                                    </div>
+                                    <div class="medium-6  small-12 ">
+                                        <h3>
+{{--                                    {{$course->teachers}}--}}
+                                        </h3>
+                                        <a href="" class="profile-teacher-btn">پروفایل استاد</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
 
-{{--            <div class="clear"></div>         </section>--}}
+            <div class="clear"></div>         </section>
 
 
 {{--            متغیر کاربران وارد شود--}}
