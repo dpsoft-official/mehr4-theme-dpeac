@@ -47,8 +47,8 @@
             <div class="grid-x grid-padding-x">
                 <div class="row medium-8 small-12">
                     <div class="search-head">
-                        <form action="" name="course-search">
-                            <input id="search_course" type="text" name="course_name" value="" id="search-input-field" class="search__input" placeholder=" جستجو کنید...">
+                       <form action="{{route('course-list')}}">
+                           <input id="search_course" type="search" name="q" value="" id="search-input-field" class="search__input" placeholder="جستجوی دوره">
                             <button type="send" class="search-btn">جستجو کن</button>
                         </form>
                     </div>
@@ -172,9 +172,12 @@
                                     </div>
                                     <div class="medium-6  small-12 ">
                                         <h3>{{setting('teacher1.name')}}</h3>
-
-                                        <span>توضیحات</span>
-
+                                        <span>{{setting('exp1.teacher1.name')}}</span>
+                                        <span>{{setting('exp2.teacher1.name')}}</span>
+                                        <span>{{setting('exp3.teacher1.name')}}</span>
+                                        <span>{{setting('exp4.teacher1.name')}}</span>
+                                        <span>{{setting('exp5.teacher1.name')}}</span>
+                                        <span>{{setting('exp6.teacher1.name')}}</span>
                                         <a href="" class="profile-teacher-btn">پروفایل استاد</a>
                                     </div>
                                 </div>
@@ -198,8 +201,12 @@
                                     <div class="medium-6  small-12 ">
                                         <h3>{{setting('teacher2.name')}}</h3>
 
-                                        <span>توضیحات</span>
-
+                                        <span>{{setting('exp1.teacher2.name')}}</span>
+                                        <span>{{setting('exp2.teacher2.name')}}</span>
+                                        <span>{{setting('exp3.teacher2.name')}}</span>
+                                        <span>{{setting('exp4.teacher2.name')}}</span>
+                                        <span>{{setting('exp5.teacher2.name')}}</span>
+                                        <span>{{setting('exp6.teacher2.name')}}</span>
                                         <a href="" class="profile-teacher-btn">پروفایل استاد</a>
                                     </div>
                                 </div>
@@ -223,8 +230,12 @@
                                     <div class="medium-6  small-12 ">
                                         <h3>{{setting('teacher3.name')}}</h3>
 
-                                        <span>توضیحات</span>
-
+                                        <span>{{setting('exp1.teacher3.name')}}</span>
+                                        <span>{{setting('exp2.teacher3.name')}}</span>
+                                        <span>{{setting('exp3.teacher3.name')}}</span>
+                                        <span>{{setting('exp4.teacher3.name')}}</span>
+                                        <span>{{setting('exp5.teacher3.name')}}</span>
+                                        <span>{{setting('exp6.teacher3.name')}}</span>
                                         <a href="" class="profile-teacher-btn">پروفایل استاد</a>
                                     </div>
                                 </div>
@@ -248,8 +259,12 @@
                                     <div class="medium-6  small-12 ">
                                         <h3>{{setting('teacher4.name')}}</h3>
 
-                                        <span>توضیحات</span>
-
+                                        <span>{{setting('exp1.teacher4.name')}}</span>
+                                        <span>{{setting('exp2.teacher4.name')}}</span>
+                                        <span>{{setting('exp3.teacher4.name')}}</span>
+                                        <span>{{setting('exp4.teacher4.name')}}</span>
+                                        <span>{{setting('exp5.teacher4.name')}}</span>
+                                        <span>{{setting('exp6.teacher4.name')}}</span>
                                         <a href="" class="profile-teacher-btn">پروفایل استاد</a>
                                     </div>
                                 </div>
@@ -273,8 +288,12 @@
                                     <div class="medium-6  small-12 ">
                                         <h3>{{setting('teacher5.name')}}</h3>
 
-                                        <span>توضیحات</span>
-
+                                        <span>{{setting('exp1.teacher5.name')}}</span>
+                                        <span>{{setting('exp2.teacher5.name')}}</span>
+                                        <span>{{setting('exp3.teacher5.name')}}</span>
+                                        <span>{{setting('exp4.teacher5.name')}}</span>
+                                        <span>{{setting('exp5.teacher5.name')}}</span>
+                                        <span>{{setting('exp6.teacher5.name')}}</span>
                                         <a href="" class="profile-teacher-btn">پروفایل استاد</a>
                                     </div>
                                 </div>
@@ -298,8 +317,12 @@
                                     <div class="medium-6  small-12 ">
                                         <h3>{{setting('teacher6.name')}}</h3>
 
-                                        <span>توضیحات</span>
-
+                                        <span>{{setting('exp1.teacher6.name')}}</span>
+                                        <span>{{setting('exp2.teacher6.name')}}</span>
+                                        <span>{{setting('exp3.teacher6.name')}}</span>
+                                        <span>{{setting('exp4.teacher6.name')}}</span>
+                                        <span>{{setting('exp5.teacher6.name')}}</span>
+                                        <span>{{setting('exp6.teacher6.name')}}</span>
                                         <a href="" class="profile-teacher-btn">پروفایل استاد</a>
                                     </div>
                                 </div>
@@ -323,8 +346,12 @@
                                     <div class="medium-6  small-12 ">
                                         <h3>{{setting('teacher7.name')}}</h3>
 
-                                        <span>توضیحات</span>
-
+                                        <span>{{setting('exp1.teacher7.name')}}</span>
+                                        <span>{{setting('exp2.teacher7.name')}}</span>
+                                        <span>{{setting('exp3.teacher7.name')}}</span>
+                                        <span>{{setting('exp4.teacher7.name')}}</span>
+                                        <span>{{setting('exp5.teacher7.name')}}</span>
+                                        <span>{{setting('exp6.teacher7.name')}}</span>
                                         <a href="" class="profile-teacher-btn">پروفایل استاد</a>
                                     </div>
                                 </div>
@@ -347,8 +374,12 @@
                                     </div>
                                     <div class="medium-6  small-12 ">
                                         {{setting('teacher8.name')}}
-                                        <span>توضیحات</span>
-
+                                        <span>{{setting('exp1.teacher8.name')}}</span>
+                                        <span>{{setting('exp2.teacher8.name')}}</span>
+                                        <span>{{setting('exp3.teacher8.name')}}</span>
+                                        <span>{{setting('exp4.teacher8.name')}}</span>
+                                        <span>{{setting('exp5.teacher8.name')}}</span>
+                                        <span>{{setting('exp6.teacher8.name')}}</span>
                                         <a href="" class="profile-teacher-btn">پروفایل استاد</a>
                                     </div>
                                 </div>
@@ -371,8 +402,12 @@
                                     <div class="medium-6  small-12 ">
                                         <h3>{{setting('teacher9.name')}}</h3>
 
-                                        <span>توضیحات</span>
-
+                                        <span>{{setting('exp1.teacher9.name')}}</span>
+                                        <span>{{setting('exp2.teacher9.name')}}</span>
+                                        <span>{{setting('exp3.teacher9.name')}}</span>
+                                        <span>{{setting('exp4.teacher9.name')}}</span>
+                                        <span>{{setting('exp5.teacher9.name')}}</span>
+                                        <span>{{setting('exp6.teacher9.name')}}</span>
                                         <a href="" class="profile-teacher-btn">پروفایل استاد</a>
                                     </div>
                                 </div>
@@ -426,17 +461,17 @@
 {{--                @endif--}}
 {{--            </div>--}}
             <div class="grid-container">
-                @if($categories!=null)
                 @foreach($categories as $category)
                 <div class="grid-x grid-padding-x dep-section">
                     <div class="department-crt ">
                         <img src="" width="176" alt="">
-                        <H5>اسم دسته بندی</H5>
+{{--                        <H5>{!! \Illuminate\Support\Str::limit(strip_tags($category->title),20,'...') !!}</H5>--}}
                         <p>مشخصات</p>
                         <a href=""
                            class="dep-crt-btn">مشاهده کل دوره ها</a>
                     </div>
 {{--                        @if($category->courses!=null)--}}
+{{--                    @foreach($category->courses as $course)--}}
                     <div class="post4" >
                         <a href="888 ">
                             <img src="" alt="">
@@ -445,12 +480,12 @@
                             <ins> تومان</ins>
                         </a>
                                           </div>
+{{--                    @endforeach--}}
 {{--@endif--}}
 
                 </div>
                    @endforeach
-                    @endif
-            </div>
+                                </div>
         </section>
 
         <!-- #DaneshPajohaniShavid -->

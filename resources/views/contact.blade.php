@@ -25,7 +25,10 @@
                                 <br>
                                 <br>
                                 شماره تماس پشتیبانی آموزشی :
-                               {{setting('contact.phone')}}
+                               {{setting('phone.buy1')}}-
+                               {{setting('phone.buy2')}}-
+                               {{setting('phone.buy3')}}-
+                               {{setting('phone.buy4')}}
                                 <br>
                                 <br>
                                 ایمیل  روابط عمومی :

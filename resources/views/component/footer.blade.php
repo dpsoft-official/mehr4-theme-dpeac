@@ -180,12 +180,20 @@
                 <div class="news-latter">
                     <p>برای دریافت مشاوره رایگان شماره تماس خود را وارد کنید</p>
                     <img src="{{Storage::url('theme/footer-mosh.png')}}" alt="فوتر">
-                    <form name="free-contact">
-                        <input type="hidden" name="csrf_name" value="csrf5f0425a5d1143">
-                        <input type="hidden" name="csrf_value" value="14a709a058800c0448793981c6c5ea6e">            <input type="hidden" name="courseId" value="47">
-                        <input type="hidden" name="sourceId" value="13">
-                        <input type="text" name="mobile" placeholder="091212345678" pattern="09\d{9}" required="">
-                        <button type="submit" class="latter-btn">با من تماس بگیرید!</button>
+                    <form
+                        role="form"
+                        name="ava-crm-form"
+                        class="wpcf7-form"
+                        data-token="{{setting('ava3.token')}}"
+                        novalidate="novalidate">
+                        <input type="hidden" name="product_id" value="{{setting('product_id')}}">
+                        <input type="hidden" name="source_id" value="{{setting('resource_id')}}">
+                        <input type="tel"  name="mob" id="inputMobile"  required="required" pattern="[\u06F0-\u06F90-9\u0660-\u0669]{11}"
+                               value=""   size="40"    placeholder="091212345678">
+                        <input type="submit"   value="با من تماس بگیرید"   style="background: #2ac489;
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: white!important;">
                     </form>
                 </div>
                 <div class="row medium-8 small-12">
@@ -199,9 +207,9 @@
                         <ul class="socoial">
 
 
-                            @if(setting('social.twiter')!=null)
+                            @if(setting('social.twitter')!=null)
                             <li>
-                                <a href="{{setting('social.twiter')}}">
+                                <a href="{{setting('social.twitter')}}">
                                     <i class="icon-uniF104"></i>
                                 </a>
                             </li>
@@ -221,9 +229,9 @@
                                 </a>
                             </li>
                                 @endif
-                                @if(setting('social.yotube')!=null)
+                                @if(setting('social.youtube')!=null)
                             <li>
-                                <a href="{{setting('social.yotube')}}">
+                                <a href="{{setting('social.youtube')}}">
                                     <i class="icon-uniF102"></i>
                                 </a>
                             </li>
@@ -246,11 +254,11 @@
                         <br>
                         <i class="icon-uniF100"></i>
                         <p>
-                            تلفن ثبت نام:                    {{setting('contact.phone')}}
+                            تلفن ثبت نام:   {{setting('contact.phone')}}
                         </p>
                         <i class="icon-uniF101"></i>
                         <p>
-                                            {{setting('contact.phone2')}}
+                                            {{setting('contact.payamak')}}
                         </p>
                         <div style="margin-top: 10px">
                             <a href="https://cafebazaar.ir/app/ir.dpsoft.lms" target="_blank">
