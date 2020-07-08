@@ -125,8 +125,8 @@ class InstallThemeCommand extends Command
         \Mehr::updateOrNewSetting('num2','525',' تعداد عنوان دوم قسمت دانش پژوهانی شوید ');
         \Mehr::updateOrNewSetting('num3','70',' تعداد عنوان سوم قسمت دانش پژوهانی شوید ');
         \Mehr::updateOrNewSetting('num4','120',' تعداد عنوان چهارم قسمت دانش پژوهانی شوید ');
-        \Mehr::updateOrNewSetting('samandehi','<img width="110" id="jxlzfukzesgtoeuknbqe" style="cursor:pointer" onclick="window.open(&quot;https://logo.samandehi.ir/Verify.aspx?id=16082&amp;p=rfthgvkaobpdmcsiuiwk&quot;, &quot;Popup&quot;,&quot;toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30&quot;)" alt="logo-samandehi" src="https://logo.samandehi.ir/logo.aspx?id=16082&amp;p=nbpdwlbqlymaaqgwodrf">','کد ای نماد ');
-        \Mehr::updateOrNewSetting('enemad','120','کد سامان دهی ');
+        \Mehr::updateOrNewSetting('samandehi','','کد ای نماد ');
+        \Mehr::updateOrNewSetting('enemad','','کد سامان دهی ');
         \Mehr::updateOrNewSetting('phone.buy1','03136688575 ','شماره تلفن پشتیبانی 1 ');
         \Mehr::updateOrNewSetting('phone.buy2','03136001070 ','شماره تلفن پشتیبانی 2 ');
         \Mehr::updateOrNewSetting('phone.buy3','03136001080 ','شماره تلفن پشتیبانی 3 ');

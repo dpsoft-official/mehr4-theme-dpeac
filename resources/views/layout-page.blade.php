@@ -21,6 +21,10 @@
                     </div>
                 </div>
             </div>
+            <hr>
+<br>
+<br>
+
         </div>
     </section>
 @endsection

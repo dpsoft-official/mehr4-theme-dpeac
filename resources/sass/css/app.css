@@ -10945,12 +10945,14 @@ div#comment-send i {
 }
 
 .register-course {
-    background: url(../assets/image/course_12.png) center center no-repeat;
-    display: inline-block;
-    object-fit: cover;
-    background-size: 100%;
-    width: 100%;
-    text-align: center
+    /*background: url(../assets/image/course_12.png) center center no-repeat;*/
+    display: inline-block!important;
+    object-fit: cover!important;
+    background-size: 100% !important;
+    width: 100%!important;
+    text-align: center!important;
+    background-repeat: no-repeat!important;
+    background-position: center center!important;
 }
 
 .register-course h5 {
@@ -11410,7 +11412,7 @@ div#comment-send i {
 
 .post-content {
     position: relative;
-    margin-bottom: 300px;
+    margin-bottom: 240px;
     padding-bottom: 100px
 }
 

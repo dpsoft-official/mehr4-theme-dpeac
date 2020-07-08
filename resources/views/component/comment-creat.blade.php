@@ -1,32 +1,30 @@
-<form method="post" action="{{route('comment.create')}}" autocomplete="off">
-    {{ csrf_field() }}
-
-    @guest
-        <div class="column one-second" style="margin-bottom: unset;">
-            <input type="text" name='name' value="" id="subject" placeholder="نام" style="width: 100%">
-        </div>
-        <div class="column one-second" style="margin-bottom: unset;">
-            <input type="email" name="email" value="" placeholder="ایمیل" style="width: 100%">
-        </div>
-        <input type="hidden" name="{{$parent}}" value="{{$parent_id}}">
-
-        <textarea class="column one" name="body" id="comments2" rows="6" placeholder="نظر شما ..."
-                  style="margin-bottom: 12px;"></textarea>
-
-        <button type="submit" id="buy-course" class="btn_1 rounded full-width add_top_60"> ارسال نظر</button>
-
-    @else
-
-        <input type="hidden" name="{{$parent}}" value="{{$parent_id}}">
-
-        <textarea class="column one" name="body" id="comments2" rows="6" placeholder="نظر شما ..."
-                  style="border-width: 3px 0 3px 0 !important;margin: 0;margin-bottom: 12px;"></textarea>
-
-        <button type="submit" id="buy-course" class="btn_1 rounded full-width add_top_60"> ارسال نظر</button>
-    @endguest
-</form>
-
-
-
-
-
+                <form method="post"  class="comments-course-form-validate formcomment"
+                      action="{{route('comment.create')}}" autocomplete="off">
+                    {{ csrf_field() }}
+                    @guest
+                    <label for="">
+                        <input type="text" name='name' value="" id="subject" placeholder="نام" style="width: 100%">
+                    </label>
+                    <label for="">
+                        <input type="email" name="email" placeholder="ایمیل شما: " required="">
+                    </label>
+                        <input type="hidden" name="{{$parent}}" value="{{$parent_id}}">
+                        <label for="">
+                        <textarea name="body" id="" rows="3" placeholder="نظر شما: " required=""></textarea>
+                         </label>
+                        <button type="submit" id="btn-course-comment-submit" class="comments-course-form-validate-btn">
+                            ارسال
+                        </button>                    @else
+                        <input type="hidden" name="{{$parent}}" value="{{$parent_id}}">
+                        <textarea class="column one" name="body" id="" rows="6" placeholder="نظر شما ...">
+                                  </textarea>
+{{--                        <button type="submit" id="btn-course-comment-submit" class="comments-course-form-validate-btn">--}}
+                            ارسال
+{{--                        </button>--}}
+                        <button type="submit" id="btn-course-comment-submit" class="comments-course-form-validate-btn">
+                            ارسال
+                        </button>
+{{--                        <button type="submit" id="buy-course" class="btn_1 rounded full-width add_top_60"> ارسال نظر</button>--}}
+                    @endguest
+                </form>
+<br>

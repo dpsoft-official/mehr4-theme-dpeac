@@ -1,15 +1,14 @@
 @extends("mehr4-theme-dpeac::layout")
 
 @section('main')
-    <main class="main">
         <!-- #Slider -->
         <section class="slider-course">
             <div class="back-header">
-                <img src="{{Storage::url('$course->image')}}" alt="">
+                <img src="{{$course->image? Storage::url('$course->image'):Storage::url('theme/head.jpg')}}">
             </div>
                  <div class="title-course">
                 <h2 id="course-title" style="color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 4px 3px;">{{$course->title}}</h2>
-                <p id="course-description" style="color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 2px 3px;">{{$course->description}}</p>
+                <p id="course-description" style="color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 2px 3px;">{{$course->expert}}</p>
                  </div>
         </section>
 
@@ -34,7 +33,7 @@
                     <div class="medium-6 small-12">
                         <div class="info-video">
                             <a class="video-embed-course" data-open="video-head-course" data-video="video-22049107" aria-controls="video-head-course" aria-haspopup="true" tabindex="0">
-                                <img src="" alt="{{$course->name}}">
+                                <img src="{{Storage::url('theme/video-poster.jpg')}}" alt="{{$course->name}}">
                             </a>
                         </div>
                     </div>
@@ -57,7 +56,7 @@
                     <div class="medium-3 small-12 sticky-container" data-sticky-container="" style="height: 481px;">
                         <div id="example2"></div>
                         <div class="des-side sticky is-anchored is-at-top" data-sticky="" data-top-anchor="example2:top" data-btm-anchor="foo:bottom" data-resize="tlab0p-sticky" data-mutate="tlab0p-sticky" data-e="rj6ejr-e" data-events="resize" style="max-width: 300px; margin-top: 0px; bottom: auto; top: 0px;">
-                            <img src="http://dpe.ac/api/file/download/5b8fbda90734a/hesabdari-baraye-hame-box-dore_pre.jpg" alt="حسابداری برای همه(کاربردی)">
+                            <img src="{{Storage::url('course->image')}}" alt="حسابداری برای همه(کاربردی)">
                             <div class="des-side-info">
                                 <b>{{$course->name}}</b>
                                 <p>
@@ -74,9 +73,9 @@
                                 </p>
                                 <p>
                                     <i class="fa fa-money" aria-hidden="true"></i> قیمت:
-                                    <span>{{$course->price}}</span>
+                                    <span>{{number_format($course->price )}} ریال </span>
                                 </p>
-                                <a href="/lms/index.php/buy/course?plan_id=728" class="des-side-info-btn">ثبت نام آنلاین </a>
+                                <a href="{{\Mehr4Payment::courseBuyUrl($course)}}" class="des-side-info-btn">ثبت نام آنلاین </a>
                             </div>
                         </div>
                     </div>
@@ -184,46 +183,50 @@
 
 {{--            متغیر کاربران وارد شود--}}
         <!-- #Comments -->
-{{--        <section class="comments-course">--}}
-{{--            <h3>نظرات</h3>--}}
-{{--            <!-- Gride Start -->--}}
-{{--            <div class="grid-container">--}}
-{{--                <div class="grid-x grid-padding-x">--}}
-{{--                    <div class="medium-4 small-12">--}}
-{{--                        <div class="comments-course-form">--}}
-{{--                            <h2>ارسال دیدگاه</h2>--}}
 
-{{--                            <form name="course-comment" class="comments-course-form-validate formcomment">--}}
-{{--                                <label for="">--}}
-{{--                                    <input type="text" name="name" placeholder="نام و نام خانوادگی: " required="">--}}
-{{--                                </label>--}}
-{{--                                <label for="">--}}
-{{--                                    <input type="email" name="email" placeholder="ایمیل شما: " required="">--}}
-{{--                                </label>--}}
-{{--                                <label for="">--}}
-{{--                                    <textarea name="body" id="" rows="3" placeholder="نظر شما: " required=""></textarea>--}}
-{{--                                </label>--}}
-{{--                                <input type="hidden" name="csrf_name" value="csrf5f054e9accff8">--}}
-{{--                                <input type="hidden" name="csrf_value" value="5128e6f0b00cf102a40935428486e5fe">                    <button type="submit" id="btn-course-comment-submit" class="comments-course-form-validate-btn">--}}
-{{--                                    ارسال--}}
-{{--                                </button>--}}
-{{--                            </form>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="medium-8 small-12">--}}
-{{--                    </div>--}}
-{{--                    <div class="medium-4 small-12">--}}
+            @if($course->commentable==true)
+            <section class="comments-course">
+            <h3>نظرات</h3>
+            <!-- Gride Start -->
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div class="medium-4 small-12">
+                        <div class="comments-course-form">
+                            <h2>ارسال دیدگاه</h2>
+                            @include('mehr4-theme-dpeac::component.comment-creat',['parent'=>'course' ,'parent_id'=>$course->id])
+                        </div>
+                    </div>
+                    @if($course->comments->count()>0)
+                    <div class="medium-8 small-12" itemscope="itemscope" itemprop="http://schema.org/Comment">
+                            @foreach($course->comments as $comment)
+                            <div class="comments-course-box">
+                                <article style="overflow: hidden; max-height: none;">
+                                    <b itemprop="author"><a>{{$comment->creator ? $comment->creator->name:"نظر دهنده"}}"</a></b>
+                                    <p itemprop="description">
+                                        {{$comment->body}}
+                                       </p>
+                                </article>
+                            </div>
+                        @endforeach
+                    </div>
+                        @endif
+
+{{--                        <div class="medium-4 small-12">--}}
 {{--                        <div class="comment">--}}
 {{--                            <h5>اولین فرد مشارکت کننده باشید...</h5>--}}
 {{--                        </div>--}}
 {{--                    </div>--}}
 
+                </div>
+            </div>
+            </section>
+             @endif
+        </section>
 
-{{--                </div>--}}
-{{--                <div id="end-menu-stiky"></div>         </div></section>--}}
-
+        <br>
         <!-- #Register Course -->
-        <section class="register-course">
+
+        <section class="register-course" style="background:url('{{Storage::url('theme/course-bg.png')}}');">
             <h5>برای ثبت نام این دوره کلیک کنید</h5>
             <a href="{{\Mehr4Payment::courseBuyUrl($course)}}" class="register-course-btn">ثبت نام آنلاین
             </a>
@@ -233,50 +236,53 @@
             </div>         </section>
 
 
+
 {{--            دوره ها مشابه--}}
         <!-- #Department -->
-{{--        <section class="course-card">--}}
-{{--            <div class="head-packege">--}}
-{{--                <h3>سایر دوره های مشابه</h3>--}}
-{{--            </div>--}}
-{{--            <div class="grid-container">--}}
-{{--                <div class="grid-x grid-padding-x dep-section">--}}
-{{--                    <div class="post4">--}}
-{{--                        <a href="http://dpe.ac/%D8%AF%D9%88%D8%B1%D9%87%E2%80%8C%DB%8C+%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C/80/%D8%AD%D8%B3%D8%A7%D8%A8%D8%AF%D8%A7%D8%B1%DB%8C-%D9%85%D8%A7%D9%84%DB%8C%D8%A7%D8%AA%DB%8C">--}}
-{{--                            <img src="http://dpe.ac/api/file/download/5b8fbda952216/hesabdari-maliati-ghavanin-jadid-maliati-box-dore_pre.jpg" alt="حسابداری مالیاتی">--}}
-{{--                            <h3>حسابداری مالیاتی</h3>--}}
-{{--                            <span></span>--}}
-{{--                            <ins>369,000 تومان</ins>--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                    <div class="post4">--}}
-{{--                        <a href="http://dpe.ac/%D8%AF%D9%88%D8%B1%D9%87%E2%80%8C%DB%8C+%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C/81/%D8%AD%D8%B3%D8%A7%D8%A8%D8%AF%D8%A7%D8%B1%DB%8C-%D8%AF%D8%B1-%D8%A7%DA%A9%D8%B3%D9%84">--}}
-{{--                            <img src="http://dpe.ac/api/file/download/5b2a452dadcf8/karbord-excel-dar-hesbdari-box-dore.jpg" alt="حسابداری در اکسل">--}}
-{{--                            <h3>حسابداری در اکسل</h3>--}}
-{{--                            <span></span>--}}
-{{--                            <ins>229,000 تومان</ins>--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                    <div class="post4">--}}
-{{--                        <a href="http://dpe.ac/%D8%AF%D9%88%D8%B1%D9%87%E2%80%8C%DB%8C+%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C/390/%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA-%D8%B3%D8%B1%D9%85%D8%A7%DB%8C%D9%87-%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C">--}}
-{{--                            <img src="http://dpe.ac/api/file/download/5b3b567ea08d8/moarefi-dore-modiriat-sarmayeh-gozary-box-dore-daneshpazhouhan-institute.jpg" alt="مدیریت سرمایه گذاری">--}}
-{{--                            <h3>مدیریت سرمایه گذاری</h3>--}}
-{{--                            <span></span>--}}
-{{--                            <ins>819,000 تومان</ins>--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                    <div class="post4">--}}
-{{--                        <a href="http://dpe.ac/%D8%AF%D9%88%D8%B1%D9%87%E2%80%8C%DB%8C+%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C/426/%D8%AD%D8%B3%D8%A7%D8%A8%D8%AF%D8%A7%D8%B1%DB%8C-%D9%88%D8%AC%D9%88%D9%87-%D9%86%D9%82%D8%AF">--}}
-{{--                            <img src="http://dpe.ac/api/file/download/5b8fbda986db8/hesabdary-voj_oh-naghd-box-dore-daneshpazhouhan-pre.jpg" alt="حسابداری وجوه نقد">--}}
-{{--                            <h3>حسابداری وجوه نقد</h3>--}}
-{{--                            <span></span>--}}
-{{--                            <ins>339,000 تومان</ins>--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>         </section>--}}
 
-    </main>
+        <section class="course-card">
+            <div class="head-packege">
+                <h3>سایر دوره های مشابه</h3>
+            </div>
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x dep-section">
+                    <div class="post4">
+                        <a href="http://dpe.ac/%D8%AF%D9%88%D8%B1%D9%87%E2%80%8C%DB%8C+%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C/80/%D8%AD%D8%B3%D8%A7%D8%A8%D8%AF%D8%A7%D8%B1%DB%8C-%D9%85%D8%A7%D9%84%DB%8C%D8%A7%D8%AA%DB%8C">
+                            <img src="http://dpe.ac/api/file/download/5b8fbda952216/hesabdari-maliati-ghavanin-jadid-maliati-box-dore_pre.jpg" alt="حسابداری مالیاتی">
+                            <h3>حسابداری مالیاتی</h3>
+                            <span></span>
+                            <ins>369,000 تومان</ins>
+                        </a>
+                    </div>
+                    <div class="post4">
+                        <a href="http://dpe.ac/%D8%AF%D9%88%D8%B1%D9%87%E2%80%8C%DB%8C+%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C/81/%D8%AD%D8%B3%D8%A7%D8%A8%D8%AF%D8%A7%D8%B1%DB%8C-%D8%AF%D8%B1-%D8%A7%DA%A9%D8%B3%D9%84">
+                            <img src="http://dpe.ac/api/file/download/5b2a452dadcf8/karbord-excel-dar-hesbdari-box-dore.jpg" alt="حسابداری در اکسل">
+                            <h3>حسابداری در اکسل</h3>
+                            <span></span>
+                            <ins>229,000 تومان</ins>
+                        </a>
+                    </div>
+                    <div class="post4">
+                        <a href="http://dpe.ac/%D8%AF%D9%88%D8%B1%D9%87%E2%80%8C%DB%8C+%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C/390/%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA-%D8%B3%D8%B1%D9%85%D8%A7%DB%8C%D9%87-%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C">
+                            <img src="http://dpe.ac/api/file/download/5b3b567ea08d8/moarefi-dore-modiriat-sarmayeh-gozary-box-dore-daneshpazhouhan-institute.jpg" alt="مدیریت سرمایه گذاری">
+                            <h3>مدیریت سرمایه گذاری</h3>
+                            <span></span>
+                            <ins>819,000 تومان</ins>
+                        </a>
+                    </div>
+                    <div class="post4">
+                        <a href="http://dpe.ac/%D8%AF%D9%88%D8%B1%D9%87%E2%80%8C%DB%8C+%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C/426/%D8%AD%D8%B3%D8%A7%D8%A8%D8%AF%D8%A7%D8%B1%DB%8C-%D9%88%D8%AC%D9%88%D9%87-%D9%86%D9%82%D8%AF">
+                            <img src="http://dpe.ac/api/file/download/5b8fbda986db8/hesabdary-voj_oh-naghd-box-dore-daneshpazhouhan-pre.jpg" alt="حسابداری وجوه نقد">
+                            <h3>حسابداری وجوه نقد</h3>
+                            <span></span>
+                            <ins>339,000 تومان</ins>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </section>
 @endsection
 
 
