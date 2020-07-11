@@ -17,7 +17,7 @@
                             <section class="slider-main">
                                 <div class="department-boxes" style="margin: 0;">
                                     @foreach($categories as $category)
-                                    <a class="departman-boxa" href="{{$category->course->url}}">
+                                    <a class="departman-boxa" href="{{$category->url}}">
                                             <span class="departman-box"> <img src="{{Storage::url($category->image)}}"
                                                                               alt="">
                                                 <small>{{$category->title}}</small> </span></a>
