@@ -6,36 +6,52 @@
         <article class="content">
 
 
-            <div id="rev_slider_13_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="beforeafterslider14" data-source="gallery"
+            <div id="rev_slider_13_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
+                 data-alias="beforeafterslider14" data-source="gallery"
                  style="margin:0px auto;background:#252525;padding:0px;margin-top:0px;margin-bottom:0px;">
                 <!-- START REVOLUTION SLIDER 5.4.6.3 auto mode -->
-                <div id="rev_slider_13_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.6.3">
+                <div id="rev_slider_13_1" class="rev_slider fullwidthabanner" style="display:none;"
+                     data-version="5.4.6.3">
                     <ul>
                         <!-- SLIDE  -->
-                        <li data-index="rs-36" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"
-                            data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="" data-rotate="0" data-saveperformance="off"
-                            data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7=""
-                            data-param8="" data-param9="" data-param10="" data-description="" data-beforeafter='{"moveto":"50%|50%|50%|50%","bgColor":"#3cd3fe","bgType":"solid","bgImage":"","bgFit":"cover","bgPos":"center center","bgRepeat":"no-repeat","direction":"horizontal","easing":"Power2.easeInOut","delay":"500","time":"750","out":"fade","carousel":false,"bounceArrows":"infinite","bounceType":"repel","bounceAmount":"5","bounceSpeed":"1500","bounceEasing":"ease-in-out","bounceDelay":"750","shiftOffset":"10","shiftTiming":"300","shiftEasing":"ease","shiftDelay":"250"}'>
+                        <li data-index="rs-36" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
+                            data-hideslideonmobile="off"
+                            data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb=""
+                            data-rotate="0" data-saveperformance="off"
+                            data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4=""
+                            data-param5="" data-param6="" data-param7=""
+                            data-param8="" data-param9="" data-param10="" data-description=""
+                            data-beforeafter='{"moveto":"50%|50%|50%|50%","bgColor":"#3cd3fe","bgType":"solid","bgImage":"","bgFit":"cover","bgPos":"center center","bgRepeat":"no-repeat","direction":"horizontal","easing":"Power2.easeInOut","delay":"500","time":"750","out":"fade","carousel":false,"bounceArrows":"infinite","bounceType":"repel","bounceAmount":"5","bounceSpeed":"1500","bounceEasing":"ease-in-out","bounceDelay":"750","shiftOffset":"10","shiftTiming":"300","shiftEasing":"ease","shiftDelay":"250"}'>
                             <!-- MAIN IMAGE -->
-                            <img src="{{Storage::url('theme/transparent.png')}}"  data-bgcolor='#ffb900' style='background:#ffb900'  data-bgposition="center center"
-                                 data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" alt="دانش پژوهان" data-no-retina>
+                            <img src="{{Storage::url('theme/transparent.png')}}" data-bgcolor='#ffb900'
+                                 style='background:#ffb900' data-bgposition="center center"
+                                 data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg"
+                                 alt="دانش پژوهان" data-no-retina>
                             <!-- LAYERS -->
 
                             <!-- LAYER NR. 1 -->
-                            <div class="tp-caption   tp-resizeme" id="slide-36-layer-63" data-x="" data-y="-115" data-width="['none','none','none','none']"
-                                 data-height="['none','none','none','none']" data-type="image" data-beforeafter="before" data-responsive_offset="on"
+                            <div class="tp-caption   tp-resizeme" id="slide-36-layer-63" data-x="" data-y="-115"
+                                 data-width="['none','none','none','none']"
+                                 data-height="['none','none','none','none']" data-type="image" data-beforeafter="before"
+                                 data-responsive_offset="on"
                                  data-frames='[{"delay":0,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                                 data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                 data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,0]"
                                  data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;">
-                                <img src="{{Storage::url('theme/ee920-SLIDER-site-FINAl1.png')}}"  data-ww="auto" alt="دانش پژوهان"  data-hh="auto" data-no-retina> </div>
+                                <img src="{{Storage::url('theme/ee920-SLIDER-site-FINAl1.png')}}" data-ww="auto"
+                                     alt="دانش پژوهان" data-hh="auto" data-no-retina></div>
 
                             <!-- LAYER NR. 2 -->
-                            <div class="tp-caption   tp-resizeme" id="slide-36-layer-64" data-x="1" data-y="-113" data-width="['none','none','none','none']"
-                                 data-height="['none','none','none','none']" data-type="image" data-beforeafter="after" data-responsive_offset="on"
+                            <div class="tp-caption   tp-resizeme" id="slide-36-layer-64" data-x="1" data-y="-113"
+                                 data-width="['none','none','none','none']"
+                                 data-height="['none','none','none','none']" data-type="image" data-beforeafter="after"
+                                 data-responsive_offset="on"
                                  data-frames='[{"delay":0,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                                 data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                 data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                                 data-paddingright="[0,0,0,0]"
                                  data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6;">
-                                <img src="{{Storage::url('theme/ee920-SLIDER-site-FINAL2.png')}}"  alt="دانش پژوهان"  data-ww="auto" data-hh="auto" data-no-retina> </div>
+                                <img src="{{Storage::url('theme/ee920-SLIDER-site-FINAL2.png')}}" alt="دانش پژوهان"
+                                     data-ww="auto" data-hh="auto" data-no-retina></div>
                         </li>
                     </ul>
                     <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
@@ -47,8 +63,9 @@
             <div class="grid-x grid-padding-x">
                 <div class="row medium-8 small-12">
                     <div class="search-head">
-                       <form action="{{route('course-list')}}">
-                           <input id="search_course" type="search" name="q" value="" id="search-input-field" class="search__input" placeholder="جستجوی دوره">
+                        <form action="{{route('course-list')}}">
+                            <input id="search_course" type="search" name="q" value="" id="search-input-field"
+                                   class="search__input" placeholder="جستجوی دوره">
                             <button type="send" class="search-btn">جستجو کن</button>
                         </form>
                     </div>
@@ -56,7 +73,7 @@
             </div>
         </div>
 
-                <!-- #Packege 0-100 -->
+        <!-- #Packege 0-100 -->
         <section class="packege">
             <div class="head-packege">
                 <h3>پکیج های صفر تا صد</h3>
@@ -64,14 +81,22 @@
             </div>
             <div class="grid-container">
                 <div class="grid-x grid-padding-x">
-                    @foreach($categories->take(12) as $categories)
-
-
+                    @foreach($categories->take(6) as $category)
                         <div class="medium-4">
-                            <a href="{{$categories->courses_url}}">
+                            <a href="{{$category->courses_url}}">
                 <span class="dpe-dep-box">
-                    <img src="" alt="{{setting('site.name')}}">
-                    <p>{{($categories->title)}}</p>
+                    <img src="{{Storage::url($category->image)}}" alt="{{$category->title}}">
+                    <p>{{($category->title)}}</p>
+                </span>
+                            </a>
+                        </div>
+                    @endforeach
+                    @foreach(\Dpsoft\Mehr\Models\Course::withAnyTags(['پکیج'])->get() as $course)
+                        <div class="medium-4">
+                            <a href="{{$course->courses_url}}">
+                <span class="dpe-dep-box">
+                    <img src="{{Storage::url($course->image)}}" alt="{{$course->title}}">
+                    <p>{{($course->title)}}</p>
                 </span>
                             </a>
                         </div>
@@ -166,7 +191,8 @@
                         <div class="grid-container">
                             <div class="info-teacher">
                                 <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                     data-src="{{Storage::url('theme/teacher1-bg.jpg')}}" alt="{{setting('teacher1.name')}}">
+                                     data-src="{{Storage::url('theme/teacher1-bg.jpg')}}"
+                                     alt="{{setting('teacher1.name')}}">
                                 <div class="grid-x grid-padding-x top">
                                     <div class="medium-6  ">
                                     </div>
@@ -194,7 +220,8 @@
                         <div class="grid-container">
                             <div class="info-teacher">
                                 <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                     data-src="{{Storage::url('theme/teacher2-bg.jpg')}}" alt="{{setting('teacher2.name')}}">
+                                     data-src="{{Storage::url('theme/teacher2-bg.jpg')}}"
+                                     alt="{{setting('teacher2.name')}}">
                                 <div class="grid-x grid-padding-x top">
                                     <div class="medium-6  ">
                                     </div>
@@ -223,7 +250,8 @@
                         <div class="grid-container">
                             <div class="info-teacher">
                                 <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                     data-src="{{Storage::url('theme/teacher3-bg.jpg')}}" alt="{{setting('teacher3.name')}}">
+                                     data-src="{{Storage::url('theme/teacher3-bg.jpg')}}"
+                                     alt="{{setting('teacher3.name')}}">
                                 <div class="grid-x grid-padding-x top">
                                     <div class="medium-6  ">
                                     </div>
@@ -252,7 +280,8 @@
                         <div class="grid-container">
                             <div class="info-teacher">
                                 <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                     data-src="{{Storage::url('theme/teacher4-bg.jpg')}}" alt="{{setting('teacher4.name')}}">
+                                     data-src="{{Storage::url('theme/teacher4-bg.jpg')}}"
+                                     alt="{{setting('teacher4.name')}}">
                                 <div class="grid-x grid-padding-x top">
                                     <div class="medium-6  ">
                                     </div>
@@ -281,7 +310,8 @@
                         <div class="grid-container">
                             <div class="info-teacher">
                                 <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                     data-src="{{Storage::url('theme/teacher5-bg.jpg')}}" alt="{{setting('teacher5.name')}}">
+                                     data-src="{{Storage::url('theme/teacher5-bg.jpg')}}"
+                                     alt="{{setting('teacher5.name')}}">
                                 <div class="grid-x grid-padding-x top">
                                     <div class="medium-6  ">
                                     </div>
@@ -310,7 +340,8 @@
                         <div class="grid-container">
                             <div class="info-teacher">
                                 <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                     data-src="{{Storage::url('theme/teacher6-bg.jpg')}}" alt="{{setting('teacher6.name')}}">
+                                     data-src="{{Storage::url('theme/teacher6-bg.jpg')}}"
+                                     alt="{{setting('teacher6.name')}}">
                                 <div class="grid-x grid-padding-x top">
                                     <div class="medium-6  ">
                                     </div>
@@ -339,7 +370,8 @@
                         <div class="grid-container">
                             <div class="info-teacher">
                                 <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                     data-src="{{Storage::url('theme/teacher7-bg.jpg')}}" alt="{{setting('teacher7.name')}}">
+                                     data-src="{{Storage::url('theme/teacher7-bg.jpg')}}"
+                                     alt="{{setting('teacher7.name')}}">
                                 <div class="grid-x grid-padding-x top">
                                     <div class="medium-6  ">
                                     </div>
@@ -368,7 +400,8 @@
                         <div class="grid-container">
                             <div class="info-teacher">
                                 <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                     data-src="{{Storage::url('theme/teacher8-bg.jpg')}}" alt="{{setting('teacher8.name')}}">
+                                     data-src="{{Storage::url('theme/teacher8-bg.jpg')}}"
+                                     alt="{{setting('teacher8.name')}}">
                                 <div class="grid-x grid-padding-x top">
                                     <div class="medium-6  ">
                                     </div>
@@ -395,7 +428,8 @@
                         <div class="grid-container">
                             <div class="info-teacher">
                                 <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                     data-src="{{Storage::url('theme/teacher9-bg.jpg')}}" alt="{{setting('teacher9.name')}}">
+                                     data-src="{{Storage::url('theme/teacher9-bg.jpg')}}"
+                                     alt="{{setting('teacher9.name')}}">
                                 <div class="grid-x grid-padding-x top">
                                     <div class="medium-6  ">
                                     </div>
@@ -421,72 +455,75 @@
         <!-- #Department -->
         <section class="department">
             <div class="head-packege">
-                <h3>دپارتمان ها</h3> <hr>
+                <h3>دپارتمان ها</h3>
+                <hr>
             </div>
             <!-- Gride Start -->
-{{--            <div class="grid-container">--}}
-{{--                <div class="grid-x grid-padding-x dep-section">--}}
-{{--                    @foreach($categories as $category)--}}
-{{--                    <div class="department-crt red">--}}
-{{--                        <img src="http://dpe.ac/api/file/download/5b8fbdaa2483e/icon-koochak-department-of-management-daneshpazhou_pre.png" width="176" alt="مدیریت ، فروش ، بازاریابی">--}}
-{{--                        <h5>مدیریت ، فروش ، بازاریابی</h5>--}}
-{{--                        <p>مدیریت را یاد بگیر تجربیاتتو ثبت کن</p>--}}
-{{--                        <a href="http://dpe.ac/%D8%AF%D9%BE%D8%A7%D8%B1%D8%AA%D9%85%D8%A7%D9%86/5/%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA-%D8%8C-%D9%81%D8%B1%D9%88%D8%B4-%D8%8C-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1%DB%8C%D8%A7%D8%A8%DB%8C/1" class="dep-crt-btn">مشاهده کل دوره ها</a>--}}
-{{--                    </div>--}}
+            {{--            <div class="grid-container">--}}
+            {{--                <div class="grid-x grid-padding-x dep-section">--}}
+            {{--                    @foreach($categories as $category)--}}
+            {{--                    <div class="department-crt red">--}}
+            {{--                        <img src="http://dpe.ac/api/file/download/5b8fbdaa2483e/icon-koochak-department-of-management-daneshpazhou_pre.png" width="176" alt="مدیریت ، فروش ، بازاریابی">--}}
+            {{--                        <h5>مدیریت ، فروش ، بازاریابی</h5>--}}
+            {{--                        <p>مدیریت را یاد بگیر تجربیاتتو ثبت کن</p>--}}
+            {{--                        <a href="http://dpe.ac/%D8%AF%D9%BE%D8%A7%D8%B1%D8%AA%D9%85%D8%A7%D9%86/5/%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA-%D8%8C-%D9%81%D8%B1%D9%88%D8%B4-%D8%8C-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1%DB%8C%D8%A7%D8%A8%DB%8C/1" class="dep-crt-btn">مشاهده کل دوره ها</a>--}}
+            {{--                    </div>--}}
 
-{{--                    <div class="post4">--}}
-{{--                        <a href="http://dpe.ac/%D8%AF%D9%88%D8%B1%D9%87%E2%80%8C%DB%8C+%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C/389/%D8%A7%D8%B1%D8%B2%D9%87%D8%A7%DB%8C-%D8%AF%DB%8C%D8%AC%DB%8C%D8%AA%D8%A7%D9%84-%D9%88-%D8%B3%D8%B1%D9%85%D8%A7%DB%8C%D9%87-%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C-%D8%AF%D8%B1-%DA%A9%D8%B3%D8%A8-%D9%88-%DA%A9%D8%A7%D8%B1%D9%87%D8%A7%DB%8C-%D8%AF%DB%8C%D8%AC%DB%8C%D8%AA%D8%A7%D9%84">--}}
-{{--                            <img src="http://dpe.ac/api/file/download/5b8fbdaa59282/moarefi-dore-arzhaye-digital-box-dore-daneshpazhou_pre.jpg" alt="ارزهای دیجیتال و سرمایه گذاری در کسب و کارهای دیجیتال">--}}
-{{--                            <h3>ارزهای دیجیتال و سرمایه گذاری در کسب و کارهای دیجیتال</h3>--}}
-{{--                            <span></span>--}}
-{{--                            <ins>959,000 تومان</ins>--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
+            {{--                    <div class="post4">--}}
+            {{--                        <a href="http://dpe.ac/%D8%AF%D9%88%D8%B1%D9%87%E2%80%8C%DB%8C+%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C/389/%D8%A7%D8%B1%D8%B2%D9%87%D8%A7%DB%8C-%D8%AF%DB%8C%D8%AC%DB%8C%D8%AA%D8%A7%D9%84-%D9%88-%D8%B3%D8%B1%D9%85%D8%A7%DB%8C%D9%87-%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C-%D8%AF%D8%B1-%DA%A9%D8%B3%D8%A8-%D9%88-%DA%A9%D8%A7%D8%B1%D9%87%D8%A7%DB%8C-%D8%AF%DB%8C%D8%AC%DB%8C%D8%AA%D8%A7%D9%84">--}}
+            {{--                            <img src="http://dpe.ac/api/file/download/5b8fbdaa59282/moarefi-dore-arzhaye-digital-box-dore-daneshpazhou_pre.jpg" alt="ارزهای دیجیتال و سرمایه گذاری در کسب و کارهای دیجیتال">--}}
+            {{--                            <h3>ارزهای دیجیتال و سرمایه گذاری در کسب و کارهای دیجیتال</h3>--}}
+            {{--                            <span></span>--}}
+            {{--                            <ins>959,000 تومان</ins>--}}
+            {{--                        </a>--}}
+            {{--                    </div>--}}
 
 
-{{--                </div>--}}
-{{--                @endforeach--}}
+            {{--                </div>--}}
+            {{--                @endforeach--}}
 
-{{--                @if($categories!=null)--}}
-{{--                <div class="grid-x grid-padding-x dep-section">--}}
-{{--                    @foreach($categories as $category)--}}
-{{--                    <div class="department-crt red">--}}
-{{--                            <img  src="" width="176" alt="">--}}
-{{--                            <p></p>--}}
-{{--                            <a href="" class="dep-crt-btn">مشاهده کل دوره ها</a>--}}
-{{--                        </div>--}}
+            {{--                @if($categories!=null)--}}
+            {{--                <div class="grid-x grid-padding-x dep-section">--}}
+            {{--                    @foreach($categories as $category)--}}
+            {{--                    <div class="department-crt red">--}}
+            {{--                            <img  src="" width="176" alt="">--}}
+            {{--                            <p></p>--}}
+            {{--                            <a href="" class="dep-crt-btn">مشاهده کل دوره ها</a>--}}
+            {{--                        </div>--}}
 
-{{--                </div>--}}
-{{--                @endforeach--}}
-{{--                @endif--}}
-{{--            </div>--}}
+            {{--                </div>--}}
+            {{--                @endforeach--}}
+            {{--                @endif--}}
+            {{--            </div>--}}
             <div class="grid-container">
                 @foreach($categories as $category)
-                <div class="grid-x grid-padding-x dep-section">
-                    <div class="department-crt ">
-                        <img src="" width="176" alt="">
+                    <div class="grid-x grid-padding-x dep-section">
+                        <div class="department-crt ">
+                            <img src="" width="176" alt="">
 
-{{--                        <H5>{!! \Illuminate\Support\Str::limit(strip_tags($category->title),20,'...') !!}</H5>--}}
-                        <p>مشخصات</p>
-                        <a href=""
-                           class="dep-crt-btn">مشاهده کل دوره ها</a>
-                    </div>
-{{--                        @if($category->courses!=null)--}}
-{{--                    @foreach($category->courses as $course)--}}
-                    <div class="post4" >
-                        <a href="888 ">
-                            <img src="" alt="">
-                            <h3 ></h3>
-                            <span></span>
-                            <ins> تومان</ins>
-                        </a>
-                                          </div>
-{{--                    @endforeach--}}
-{{--@endif--}}
-
-                </div>
-                   @endforeach
+                            <H5>{{$category->title}}</H5>
+                            <p>مشخصات</p>
+                            <a href=""
+                               class="dep-crt-btn">مشاهده کل دوره ها</a>
+                        </div>
+                        @if($category->courses() !=null)
+                            @foreach($category->courses as $i=>$course)
+                                @if($i<4)
+                                <div class="post4">
+                                    <a href="888 ">
+                                        <img src="" alt="">
+                                        <h3></h3>
+                                        <span></span>
+                                        <ins> تومان</ins>
+                                    </a>
                                 </div>
+                                @endif
+                            @endforeach
+                        @endif
+
+                    </div>
+                @endforeach
+            </div>
         </section>
 
         <!-- #DaneshPajohaniShavid -->
@@ -533,10 +570,11 @@
                 <div class="grid-container">
                     <div class="grid-x grid-padding-x">
                         <div class="row medium-12 cell">
-{{--                            <video width="100%" height="auto" id="video" preload="none" controls poster="{{Storage::url('')}}">--}}
-{{--                                --}}{{--                                <source src="{{home_video.url}}">--}}
-{{--                            </video>--}}
-                            <video width="100%" height="auto" id="video" preload="none" controls="" poster="{{Storage::url('theme/video-poster.jpg')}}">
+                            {{--                            <video width="100%" height="auto" id="video" preload="none" controls poster="{{Storage::url('')}}">--}}
+                            {{--                                --}}{{--                                <source src="{{home_video.url}}">--}}
+                            {{--                            </video>--}}
+                            <video width="100%" height="auto" id="video" preload="none" controls=""
+                                   poster="{{Storage::url('theme/video-poster.jpg')}}">
                                 <source src="">
                             </video>
 
@@ -546,7 +584,6 @@
                 </div>
             </div>
         </section>
-
 
 
         <!-- #Blog -->

@@ -262,7 +262,7 @@
                         </p>
                         <div style="margin-top: 10px">
                             <a href="https://cafebazaar.ir/app/ir.dpsoft.lms" target="_blank">
-                                <img class="bazaar" src="{{Storage::url('theme/bazaarImage.png')}}" alt="دانلود اپلیکیشن اندروید مهر از کافه بازار " title="دانلود اپلیکیشن اندروید مهر از کافه بازار" width="128">
+                                <img class="bazaar" src="{{Storage::url('theme/bazaarImage.png')}}" alt="دانلود برنامه&zwnj;ی اندروید مهر از کافه بازار" title="دانلود اپلیکیشن اندروید مهر از کافه بازار" width="128">
                             </a>
                             <a href="https://play.google.com/store/apps/details?id=ir.dpsoft.lms" target="_blank">
                                 <img class="googleplay" src="{{Storage::url('theme/googleplayImage.png')}}" alt="دانلود اپلیکیشن اندروید مهر از گوگل پلی" title="دانلود اپلیکیشن اندروید مهر از گوگل پلی" width="128">
