@@ -511,10 +511,10 @@
                                 @if($i<4)
                                 <div class="post4">
                                     <a href="888 ">
-                                        <img src="" alt="">
-                                        <h3></h3>
+                                        <img src="{{Storage::url('$course->image')}}" alt="{{$course->title}}">
+                                        <h3>{{$course->title}}</h3>
                                         <span></span>
-                                        <ins> تومان</ins>
+                                        <ins> </ins>
                                     </a>
                                 </div>
                                 @endif

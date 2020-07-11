@@ -16,11 +16,11 @@
                         <div class="grid-container" style="text-align: right;">
                             <section class="slider-main">
                                 <div class="department-boxes" style="margin: 0;">
-                                    @foreach($courses as $course)
-                                    <a class="departman-boxa" href="{{$course->url}}">
-                                            <span class="departman-box"> <img src="{{Storage::url($course->image)}}"
+                                    @foreach($categories as $category)
+                                    <a class="departman-boxa" href="{{$category->course->url}}">
+                                            <span class="departman-box"> <img src="{{Storage::url($category->image)}}"
                                                                               alt="">
-                                                <small>{{$course->title}}</small> </span></a>
+                                                <small>{{$category->title}}</small> </span></a>
                                     @endforeach
                                 </div>
                             </section>
