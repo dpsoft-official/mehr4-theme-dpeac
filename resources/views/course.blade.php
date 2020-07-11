@@ -11,7 +11,6 @@
                 <p id="course-description" style="color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 2px 3px;">{{$course->expert}}</p>
                  </div>
         </section>
-
         <!-- #Info Course  -->
         <section class="info-course">
             <!-- Gride Start -->
@@ -39,7 +38,6 @@
                     </div>
                 </div>
             </div>         </section>
-
         <!-- #Description Course -->
         <section class="description-course">
             <!-- Gride Start -->
@@ -101,7 +99,6 @@
                 </div>
             </div>
             <div id="start-menu-stiky"></div>         </section>
-
         <!-- #Teachers Course -->
         <section class="teacher-course">
             <!-- Gride Start -->
@@ -183,11 +180,8 @@
             </div>
 
             <div class="clear"></div>         </section>
-
-
 {{--            متغیر کاربران وارد شود--}}
         <!-- #Comments -->
-
             @if($course->commentable==true)
             <section class="comments-course">
             <h3>نظرات</h3>
@@ -203,14 +197,14 @@
                     @if($course->comments->count()>0)
                     <div class="medium-8 small-12" itemscope="itemscope" itemprop="http://schema.org/Comment">
                             @foreach($course->comments as $comment)
-                            <div class="comments-course-box">
+                            <section class="comments-course-box">
                                 <article style="overflow: hidden; max-height: none;">
                                     <b itemprop="author"><a>{{$comment->creator ? $comment->creator->name:"نظر دهنده"}}"</a></b>
                                     <p itemprop="description">
                                         {{$comment->body}}
                                        </p>
                                 </article>
-                            </div>
+                            </section>
                         @endforeach
                     </div>
                         @endif
@@ -225,11 +219,8 @@
             </div>
             </section>
              @endif
-        </section>
-
         <br>
         <!-- #Register Course -->
-
         <section class="register-course" style="background:url('{{Storage::url('theme/course-bg.png')}}');">
             <h5>برای ثبت نام این دوره کلیک کنید</h5>
             <a href="{{\Mehr4Payment::courseBuyUrl($course)}}" class="register-course-btn">ثبت نام آنلاین
@@ -238,12 +229,8 @@
                 <p>{{$course->title}}</p>
                 <a href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نام آنلاین</a>
             </div>         </section>
-
-
-
 {{--            دوره ها مشابه--}}
         <!-- #Department -->
-
         <section class="course-card">
             <div class="head-packege">
                 <h3>سایر دوره های مشابه</h3>
@@ -285,8 +272,15 @@
                 </div>
             </div>
         </section>
-
         </section>
+
+
+
+
+
+
+
+
 @endsection
 
 

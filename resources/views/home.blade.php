@@ -95,66 +95,66 @@
                         <ul class="tabs" data-tabs="" id="teacher-tabs" role="tablist" data-e="ds568c-e">
                             <li class="tabs-title" role="presentation">
                                 <img src="{{Storage::url('theme/teacher1.png')}}" class="teacher-avatar" width="100px"
-                                     alt="نیما کیمیایی">
+                                     alt="{{setting('teacher1.name')}}">
                                 <a data-tabs-target="teacher-1" href="#teacher-1" role="tab"
                                    aria-controls="teacher-22143" aria-selected="false" id="teacher-22143-label"
-                                   tabindex="-1">نیما کیمیایی</a>
+                                   tabindex="-1">{{setting('teacher1.name')}}</a>
                             </li>
                             <li class="tabs-title" role="presentation">
                                 <img src="{{Storage::url('theme/teacher2.png')}}" class="teacher-avatar" width="100px"
-                                     alt="احمد حلّت">
+                                     alt="{{setting('teacher2.name')}}">
                                 <a data-tabs-target="teacher-2" href="#teacher-2" role="tab"
                                    aria-controls="teacher-19776" aria-selected="false" id="teacher-19776-label"
-                                   tabindex="-1">احمد حلّت</a>
+                                   tabindex="-1">{{setting('teacher2.name')}}</a>
                             </li>
                             <li class="tabs-title" role="presentation">
                                 <img src="{{Storage::url('theme/teacher3.png')}}" class="teacher-avatar" width="100px"
-                                     alt="بابک بهبودی">
+                                     alt="{{setting('teacher3.name')}}">
                                 <a data-tabs-target="teacher-3" href="#teacher-3" role="tab"
                                    aria-controls="teacher-19253" aria-selected="false" id="teacher-19253-label"
-                                   tabindex="-1">بابک بهبودی</a>
+                                   tabindex="-1">{{setting('teacher3.name')}}</a>
                             </li>
                             <li class="tabs-title is-active" role="presentation">
                                 <img src="{{Storage::url('theme/teacher4.png')}}" class="teacher-avatar" width="100px"
-                                     alt="کامران صحت">
+                                     alt="{{setting('teacher4.name')}}">
                                 <a data-tabs-target="teacher-4" href="#teacher-4" role="tab"
                                    aria-controls="teacher-18742" aria-selected="true" id="teacher-18742-label"
-                                   tabindex="0">کامران صحت</a>
+                                   tabindex="0">{{setting('teacher4.name')}}</a>
                             </li>
                             <li class="tabs-title " role="presentation">
                                 <img src="{{Storage::url('theme/teacher5.png')}}" class="teacher-avatar" width="100px"
-                                     alt="پویا ودایع">
+                                     alt="{{setting('teacher5.name')}}">
                                 <a data-tabs-target="teacher-5" href="#teacher-5" role="tab"
                                    aria-controls="teacher-18684" aria-selected="false" id="teacher-18684-label"
-                                   tabindex="-1">پویا ودایع</a>
+                                   tabindex="-1">{{setting('teacher5.name')}}</a>
                             </li>
                             <li class="tabs-title " role="presentation">
                                 <img src="{{Storage::url('theme/teacher6.png')}}" class="teacher-avatar" width="100px"
-                                     alt="یحیی علوی">
+                                     alt="{{setting('teacher6.name')}}">
                                 <a data-tabs-target="teacher-6" href="#teacher-6" role="tab"
                                    aria-controls="teacher-18683" aria-selected="false" id="teacher-18683-label"
-                                   tabindex="-1">یحیی علوی</a>
+                                   tabindex="-1">{{setting('teacher6.name')}}</a>
                             </li>
                             <li class="tabs-title " role="presentation">
                                 <img src="{{Storage::url('theme/teacher7.png')}}" class="teacher-avatar" width="100px"
-                                     alt="فرخ دیبا">
+                                     alt="{{setting('teacher7.name')}}">
                                 <a data-tabs-target="teacher-7" href="#teacher-7" role="tab"
                                    aria-controls="teacher-18682" aria-selected="false" id="teacher-18682-label"
-                                   tabindex="-1">فرخ دیبا</a>
+                                   tabindex="-1">{{setting('teacher7.name')}}</a>
                             </li>
                             <li class="tabs-title " role="presentation">
                                 <img src="{{Storage::url('theme/teacher8.png')}}" class="teacher-avatar" width="100px"
-                                     alt="پرویز درگی">
+                                     alt="{{setting('teacher8.name')}}">
                                 <a data-tabs-target="teacher-8" href="#teacher-8" role="tab"
                                    aria-controls="teacher-18578" aria-selected="false" id="teacher-18578-label"
-                                   tabindex="-1">پرویز درگی</a>
+                                   tabindex="-1">{{setting('teacher8.name')}}</a>
                             </li>
                             <li class="tabs-title " role="presentation">
                                 <img src="{{Storage::url('theme/teacher9.png')}}" class="teacher-avatar" width="100px"
-                                     alt="اوژن استوار">
+                                     alt="{{setting('teacher9.name')}}">
                                 <a data-tabs-target="teacher-9" href="#teacher-9" role="tab"
                                    aria-controls="teacher-16093" aria-selected="false" id="teacher-16093-label"
-                                   tabindex="-1">اوژن استوار</a>
+                                   tabindex="-1">{{setting('teacher9.name')}}</a>
                             </li>
                         </ul>
                     </div>
@@ -166,7 +166,7 @@
                         <div class="grid-container">
                             <div class="info-teacher">
                                 <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                     data-src="{{Storage::url('theme/teacher1-bg.jpg')}}" alt="yuyuy">
+                                     data-src="{{Storage::url('theme/teacher1-bg.jpg')}}" alt="{{setting('teacher1.name')}}">
                                 <div class="grid-x grid-padding-x top">
                                     <div class="medium-6  ">
                                     </div>
@@ -194,7 +194,7 @@
                         <div class="grid-container">
                             <div class="info-teacher">
                                 <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                     data-src="{{Storage::url('theme/teacher2-bg.jpg')}}" alt="yuyuy">
+                                     data-src="{{Storage::url('theme/teacher2-bg.jpg')}}" alt="{{setting('teacher2.name')}}">
                                 <div class="grid-x grid-padding-x top">
                                     <div class="medium-6  ">
                                     </div>
@@ -223,7 +223,7 @@
                         <div class="grid-container">
                             <div class="info-teacher">
                                 <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                     data-src="{{Storage::url('theme/teacher3-bg.jpg')}}" alt="yuyuy">
+                                     data-src="{{Storage::url('theme/teacher3-bg.jpg')}}" alt="{{setting('teacher3.name')}}">
                                 <div class="grid-x grid-padding-x top">
                                     <div class="medium-6  ">
                                     </div>
@@ -252,7 +252,7 @@
                         <div class="grid-container">
                             <div class="info-teacher">
                                 <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                     data-src="{{Storage::url('theme/teacher4-bg.jpg')}}" alt="yuyuy">
+                                     data-src="{{Storage::url('theme/teacher4-bg.jpg')}}" alt="{{setting('teacher4.name')}}">
                                 <div class="grid-x grid-padding-x top">
                                     <div class="medium-6  ">
                                     </div>
@@ -281,7 +281,7 @@
                         <div class="grid-container">
                             <div class="info-teacher">
                                 <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                     data-src="{{Storage::url('theme/teacher5-bg.jpg')}}" alt="yuyuy">
+                                     data-src="{{Storage::url('theme/teacher5-bg.jpg')}}" alt="{{setting('teacher5.name')}}">
                                 <div class="grid-x grid-padding-x top">
                                     <div class="medium-6  ">
                                     </div>
@@ -310,7 +310,7 @@
                         <div class="grid-container">
                             <div class="info-teacher">
                                 <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                     data-src="{{Storage::url('theme/teacher6-bg.jpg')}}" alt="yuyuy">
+                                     data-src="{{Storage::url('theme/teacher6-bg.jpg')}}" alt="{{setting('teacher6.name')}}">
                                 <div class="grid-x grid-padding-x top">
                                     <div class="medium-6  ">
                                     </div>
@@ -339,7 +339,7 @@
                         <div class="grid-container">
                             <div class="info-teacher">
                                 <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                     data-src="{{Storage::url('theme/teacher7-bg.jpg')}}" alt="yuyuy">
+                                     data-src="{{Storage::url('theme/teacher7-bg.jpg')}}" alt="{{setting('teacher7.name')}}">
                                 <div class="grid-x grid-padding-x top">
                                     <div class="medium-6  ">
                                     </div>
@@ -368,7 +368,7 @@
                         <div class="grid-container">
                             <div class="info-teacher">
                                 <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                     data-src="{{Storage::url('theme/teacher8-bg.jpg')}}" alt="yuyuy">
+                                     data-src="{{Storage::url('theme/teacher8-bg.jpg')}}" alt="{{setting('teacher8.name')}}">
                                 <div class="grid-x grid-padding-x top">
                                     <div class="medium-6  ">
                                     </div>
@@ -395,7 +395,7 @@
                         <div class="grid-container">
                             <div class="info-teacher">
                                 <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                     data-src="{{Storage::url('theme/teacher9-bg.jpg')}}" alt="yuyuy">
+                                     data-src="{{Storage::url('theme/teacher9-bg.jpg')}}" alt="{{setting('teacher9.name')}}">
                                 <div class="grid-x grid-padding-x top">
                                     <div class="medium-6  ">
                                     </div>
