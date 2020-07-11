@@ -58,7 +58,7 @@
                             </li>
                             <li>
                                 <img src="{{Storage::url('theme/icon-saat.png')}}"
-                                     alt="پکیج &quot;از عکاسی پایه تا آتلیه&zwnj;ای&quot;">
+                                     alt="">
                                 <b>طول دوره:
                                 </b>
                                 <span property="timeRequired">{{number_format($duration/(1440))}} روز</span>
@@ -229,11 +229,8 @@
         </div>
     </div>
 </div>        </section>
-         -->@foreach($category->courses as $course)
-                @foreach($courses->teachers as $teacher)
-                    {{$teacher->name}}
-                    @endforeach
-                @endforeach
+         -->
+
 
         <!-- #Certificate Packages -->
         <section class="teacher-course">
@@ -246,41 +243,17 @@
                             <hr>
                         </div>
                         <ul class="tabs" data-tabs="" id="teacher-tabs" role="tablist" data-e="1qq8yw-e">
+                            @foreach($category->courses as $course)
+                                @foreach($courses->teachers as $teacher)
                             <li class="tabs-title is-active" role="presentation">
                                 <img src="http://dpe.ac/api/file/download/5a7998681a768_dolatkhah.jpg/dolatkhah.jpg"
                                      class="teacher-avatar" width="100px" alt="مهیار دولتخواه">
                                 <a data-tabs-target="teacher-18714" href="#teacher-18714" role="tab"
                                    aria-controls="teacher-18714" aria-selected="true" id="teacher-18714-label"
-                                   tabindex="0">مهیار دولتخواه</a>
+                                   tabindex="0">{{$teacher->name}}</a>
                             </li>
-                            <li class="tabs-title " role="presentation">
-                                <img src="http://dpe.ac/api/file/download/5af26f0ae112d/TEIMOURI2.jpg"
-                                     class="teacher-avatar" width="100px" alt="علیرضا تیموری">
-                                <a data-tabs-target="teacher-18715" href="#teacher-18715" role="tab"
-                                   aria-controls="teacher-18715" aria-selected="false" id="teacher-18715-label"
-                                   tabindex="-1">علیرضا تیموری</a>
-                            </li>
-                            <li class="tabs-title " role="presentation">
-                                <img src="http://dpe.ac/api/file/download/5ab89e2266d01/sanjabi.png"
-                                     class="teacher-avatar" width="100px" alt="فرامرز سنجابی">
-                                <a data-tabs-target="teacher-18704" href="#teacher-18704" role="tab"
-                                   aria-controls="teacher-18704" aria-selected="false" id="teacher-18704-label"
-                                   tabindex="-1">فرامرز سنجابی</a>
-                            </li>
-                            <li class="tabs-title " role="presentation">
-                                <img src="http://dpe.ac/api/file/download/5af282343ccbb/diba-box.jpg"
-                                     class="teacher-avatar" width="100px" alt="فرخ دیبا">
-                                <a data-tabs-target="teacher-18682" href="#teacher-18682" role="tab"
-                                   aria-controls="teacher-18682" aria-selected="false" id="teacher-18682-label"
-                                   tabindex="-1">فرخ دیبا</a>
-                            </li>
-                            <li class="tabs-title " role="presentation">
-                                <img src="http://dpe.ac/api/file/download/5af27ecec71b4/ahmad-hellat-box.jpg"
-                                     class="teacher-avatar" width="100px" alt="احمد حلّت">
-                                <a data-tabs-target="teacher-19776" href="#teacher-19776" role="tab"
-                                   aria-controls="teacher-19776" aria-selected="false" id="teacher-19776-label"
-                                   tabindex="-1">احمد حلّت</a>
-                            </li>
+                                @endforeach
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -671,7 +644,4 @@
 
 
 
-//@php($similarCourses=\Dpsoft\Mehr\Models\Course::whereHas('categories',function ($q) use ($course)
-{
-    $q->whereIn('id',$course->categories->pluck('id'));
-})->get())
+

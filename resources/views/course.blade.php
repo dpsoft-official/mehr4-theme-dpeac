@@ -54,16 +54,16 @@
                     <div class="medium-3 small-12 sticky-container" data-sticky-container="" style="height: 481px;">
                         <div id="example2"></div>
                         <div class="des-side sticky is-anchored is-at-top"  data-stick-to="bottom" data-sticky="" data-top-anchor="example2:top" data-btm-anchor="foo:bottom" data-resize="tlab0p-sticky" data-mutate="tlab0p-sticky" data-e="rj6ejr-e" data-events="resize" style="max-width: 300px; margin-top: 0px; bottom: auto; top: 0px;">
-                            <img src="{{Storage::url('course->image')}}" alt="حسابداری برای همه(کاربردی)">
+                            <img src="{{Storage::url('course->image')}}" alt="{{$course->title}}">
                             <div class="des-side-info">
                                 <b>{{$course->name}}</b>
                                 <p>
                                     <i class="fa fa-clock-o" aria-hidden="true"></i> ساعت آموزشی:
-                                    <span>22 ساعت</span>
+                                    <span>{{number_format($duration/(60))}} ساعت</span>
                                 </p>
                                 <p>
                                     <i class="fa fa-history" aria-hidden="true"></i> طول دوره:
-                                    <span>52 روز</span>
+                                    <span>{{number_format($duration/(1440))}} روز</span>
                                 </p>
                                 <p>
                                     <i class="fa fa-graduation-cap" aria-hidden="true"></i>کاربران:
@@ -106,15 +106,22 @@
                 <div class="medium-10 small-12 sticky-container" data-sticky-container="" data-animate="fade-in fade-out" style="height: 0px;">
                     <div class="stiky-menu sticky is-anchored is-at-top" data-sticky="" data-stick-to="top" data-top-anchor="start-menu-stiky" data-btm-anchor="end-menu-stiky" data-resize="910o5i-sticky" data-mutate="910o5i-sticky" data-e="ipomjr-e" data-events="resize" style="max-width: 1124.16px; margin-top: 0px; bottom: auto; top: 0px;">
                         <ul class="des-side-info">
-                            <img src="http://dpe.ac/api/file/download/5b8fbda90734a/hesabdari-baraye-hame-box-dore_pre.jpg" alt="حسابداری برای همه(کاربردی)">
+                            <img src="{{Storage::url('course->image')}}" alt="{{settong('$course->title')}}">
                             <p>{{$course->name}}</p>
+                            @php($duration=0)
+                            @foreach($category->courses as $course)
+                                @foreach($course->lessons as $lesson)
+                                    @php($duration=+ $lesson->duration)
+                                @endforeach
+                            @endforeach
                             <li>
                                 <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                <span itemprop="timeRequired">22 ساعت</span>
+                                <span itemprop="timeRequired">{{number_format($duration/(60))}} ساعت</span>
                             </li>
                             <li>
+
                                 <i class="fa fa-history" aria-hidden="true"></i>
-                                <span itemprop="timeRequired">52 روز</span>
+                                <span itemprop="timeRequired">{{number_format($duration/(1440))}} روز</span>
                             </li>
                             <li>
                                 <i class="fa fa-graduation-cap" aria-hidden="true"></i>
@@ -134,50 +141,58 @@
                 </div>
             </div>
 {{--            اساتید--}}
-            <div class="header-tabs">
-                <!-- Gride Start -->
-                <div class="grid-container">
-                    <div class="grid-x grid-padding-x">
-                        <div class="head-packege-light">
-                            <h3> اساتید این دوره</h3>
-                            <hr>
-                        </div>
-                        <ul class="tabs" data-tabs="" id="course-tabs" role="tablist" data-e="9v8y1y-e">
-                            <li class="tabs-title is-active" role="presentation">
-                                <img src="" class="teacher-avatar" width="100px" alt="">
-                                <a data-tabs-target="teacher-18710" href="#teacher-18710" role="tab" aria-controls="teacher-18710" aria-selected="true" id="teacher-18710-label" tabindex="0">
+{{--            <div class="header-tabs">--}}
+{{--                <!-- Gride Start -->--}}
+{{--                <div class="grid-container">--}}
+{{--                    <div class="grid-x grid-padding-x">--}}
+{{--                        <div class="head-packege-light">--}}
+{{--                            <h3> اساتید این دوره</h3>--}}
+{{--                            <hr>--}}
+{{--                        </div>--}}
+{{--                        <ul class="tabs" data-tabs="" id="course-tabs" role="tablist" data-e="9v8y1y-e">--}}
+{{--                            @foreach($category->courses as $course)--}}
+{{--                                @foreach($course->teachers as $teacher)--}}
+{{--                            <li class="tabs-title is-active" role="presentation">--}}
+{{--                                <img src="" class="teacher-avatar" width="100px" alt="">--}}
+{{--                                <a data-tabs-target="teacher-18710" href="#teacher-18710" role="tab"--}}
+{{--                                   aria-controls="teacher-18710" aria-selected="true"--}}
+{{--                                   id="teacher-18710-label" tabindex="0">--}}
 {{--                                    {{$course->teachers}}--}}
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+{{--                                    {{$teacher->name}}--}}
+{{--                                </a>--}}
+{{--                            </li>--}}
+
+{{--                                @endforeach--}}
+{{--                            @endforeach--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
             <!-- End Gride -->
 
 
-            <div class="tabs-content float-center" data-tabs-content="course-tabs">
-                <div class="tabs-panel is-active" id="teacher-18710" role="tabpanel" aria-labelledby="teacher-18710-label">
-                    <div class="good-teacher-tab-box">
-                        <div class="grid-container">
-                            <div class="info-teacher">
-                                <img width="100%" style="height:454px!important;position: relative;background: #fff;" src="" alt="">
-                                <div class="grid-x grid-padding-x top">
-                                    <div class="medium-6  ">
-                                    </div>
-                                    <div class="medium-6  small-12 ">
-                                        <h3>
+{{--            <div class="tabs-content float-center" data-tabs-content="course-tabs">--}}
+{{--                <div class="tabs-panel is-active" id="teacher-18710" role="tabpanel" aria-labelledby="teacher-18710-label">--}}
+{{--                    <div class="good-teacher-tab-box">--}}
+{{--                        <div class="grid-container">--}}
+{{--                            <div class="info-teacher">--}}
+{{--                                <img width="100%" style="height:454px!important;position: relative;background: #fff;" src="" alt="">--}}
+{{--                                <div class="grid-x grid-padding-x top">--}}
+{{--                                    <div class="medium-6  ">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="medium-6  small-12 ">--}}
+{{--                                        <h3>--}}
 {{--                                    {{$course->teachers}}--}}
-                                        </h3>
-                                        <a href="" class="profile-teacher-btn">پروفایل استاد</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-            </div>
+{{--                                        </h3>--}}
+{{--                                        <a href="" class="profile-teacher-btn">پروفایل استاد</a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="clear"></div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
             <div class="clear"></div>         </section>
 {{--            متغیر کاربران وارد شود--}}
@@ -231,54 +246,29 @@
             </div>         </section>
 {{--            دوره ها مشابه--}}
         <!-- #Department -->
-        <section class="course-card">
-            <div class="head-packege">
-                <h3>سایر دوره های مشابه</h3>
-            </div>
-            <div class="grid-container">
-                <div class="grid-x grid-padding-x dep-section">
-                    <div class="post4">
-                        <a href="http://dpe.ac/%D8%AF%D9%88%D8%B1%D9%87%E2%80%8C%DB%8C+%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C/80/%D8%AD%D8%B3%D8%A7%D8%A8%D8%AF%D8%A7%D8%B1%DB%8C-%D9%85%D8%A7%D9%84%DB%8C%D8%A7%D8%AA%DB%8C">
-                            <img src="http://dpe.ac/api/file/download/5b8fbda952216/hesabdari-maliati-ghavanin-jadid-maliati-box-dore_pre.jpg" alt="حسابداری مالیاتی">
-                            <h3>حسابداری مالیاتی</h3>
-                            <span></span>
-                            <ins>369,000 تومان</ins>
-                        </a>
-                    </div>
-                    <div class="post4">
-                        <a href="http://dpe.ac/%D8%AF%D9%88%D8%B1%D9%87%E2%80%8C%DB%8C+%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C/81/%D8%AD%D8%B3%D8%A7%D8%A8%D8%AF%D8%A7%D8%B1%DB%8C-%D8%AF%D8%B1-%D8%A7%DA%A9%D8%B3%D9%84">
-                            <img src="http://dpe.ac/api/file/download/5b2a452dadcf8/karbord-excel-dar-hesbdari-box-dore.jpg" alt="حسابداری در اکسل">
-                            <h3>حسابداری در اکسل</h3>
-                            <span></span>
-                            <ins>229,000 تومان</ins>
-                        </a>
-                    </div>
-                    <div class="post4">
-                        <a href="http://dpe.ac/%D8%AF%D9%88%D8%B1%D9%87%E2%80%8C%DB%8C+%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C/390/%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA-%D8%B3%D8%B1%D9%85%D8%A7%DB%8C%D9%87-%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C">
-                            <img src="http://dpe.ac/api/file/download/5b3b567ea08d8/moarefi-dore-modiriat-sarmayeh-gozary-box-dore-daneshpazhouhan-institute.jpg" alt="مدیریت سرمایه گذاری">
-                            <h3>مدیریت سرمایه گذاری</h3>
-                            <span></span>
-                            <ins>819,000 تومان</ins>
-                        </a>
-                    </div>
-                    <div class="post4">
-                        <a href="http://dpe.ac/%D8%AF%D9%88%D8%B1%D9%87%E2%80%8C%DB%8C+%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C/426/%D8%AD%D8%B3%D8%A7%D8%A8%D8%AF%D8%A7%D8%B1%DB%8C-%D9%88%D8%AC%D9%88%D9%87-%D9%86%D9%82%D8%AF">
-                            <img src="http://dpe.ac/api/file/download/5b8fbda986db8/hesabdary-voj_oh-naghd-box-dore-daneshpazhouhan-pre.jpg" alt="حسابداری وجوه نقد">
-                            <h3>حسابداری وجوه نقد</h3>
-                            <span></span>
-                            <ins>339,000 تومان</ins>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-
-
-
+{{--        <section class="course-card">--}}
+{{--            <div class="head-packege">--}}
+{{--                <h3>سایر دوره های مشابه</h3>--}}
+{{--            </div>--}}
+{{--            @php($similarCourses=\Dpsoft\Mehr\Models\Course::whereHas('categories',function ($q) use ($course)--}}
+{{--            {--}}
+{{--              $q->whereIn('id',$course->categories->pluck('id'));--}}
+{{--            })->get())--}}
+{{--            <div class="grid-container">--}}
+{{--                <div class="grid-x grid-padding-x dep-section">--}}
+{{--                    @foreach($similarCourses as $course )--}}
+{{--                    <div class="post4">--}}
+{{--                        <a href="C">--}}
+{{--                            <img src="hjpg" alt="حسابداری مالیاتی">--}}
+{{--                            <h3>{{$course->title}}</h3>--}}
+{{--                            <span></span>--}}
+{{--                            <ins></ins>--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                   @endforeach--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </section>--}}
 
 
 @endsection
