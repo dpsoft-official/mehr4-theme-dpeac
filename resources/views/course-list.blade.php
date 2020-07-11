@@ -37,7 +37,7 @@
         <main class="main" vocab="http://schema.org/">
             <!-- #Slider Package -->
             <section class="slider-main" style="position:relative" typeof="Course">
-                <img style="height:  560px;" id="course-image" src="{{Storage::url('$course->image')}}" alt="پکیج &quot;از عکاسی پایه تا آتلیه&zwnj;ای&quot;">
+                <img style="height:  560px;" id="course-image" src="{{Storage::url('$course->image')}}" alt="{{setting('site.name')}}">
                 <!-- Gride Start -->
                 <div class="grid-container">
                     <div class="grid-x grid-padding-x">
@@ -71,7 +71,7 @@
                         <div class="medium-6">
                             <ul>
                                 <li>
-                                    <img src="http://dpe.ac/theme/dpeac/assets/img/packagehaye-0ta-100--NEW-FACE-Recovered_10.png" alt="پکیج &quot;از عکاسی پایه تا آتلیه&zwnj;ای&quot;">
+                                    <img src="{{Storage::url('theme/icon-time.png')}}" alt="پکیج &quot;از عکاسی پایه تا آتلیه&zwnj;ای&quot;">
                                     <b>ساعت دوره:
                                     </b>
                                     <span property="timeRequired">150 ساعت</span>
@@ -91,7 +91,7 @@
                         100</span>
                                 </li>
                                 <li>
-                                    <img src="http://dpe.ac/theme/dpeac/assets/img/packagehaye-0ta-100--NEW-FACE-Recovered_06.png" alt="پکیج &quot;از عکاسی پایه تا آتلیه&zwnj;ای&quot;">
+                                    <img src="{{Storage::url('theme/price.png')}}" alt="پکیج &quot;از عکاسی پایه تا آتلیه&zwnj;ای&quot;">
                                     <b>قیمت:
                                     </b>
                                     <div rel="offers" typeof="Offer">
@@ -186,7 +186,7 @@
                                     <div class="grid-x grid-padding-x">
                                         @foreach($course->sections as $index=> $section)
                                         <ul id="course-plan-detail" style="overflow-y: hidden;">
-                                            <li>                                                        {{$section->title}}
+                                            <li>
                                                 {{$section->title}}
                                            </li>
                                         </ul>
