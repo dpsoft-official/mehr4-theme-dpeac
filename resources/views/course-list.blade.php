@@ -24,11 +24,19 @@
                                     @endforeach
                                 </div>
                             </section>
+
                         </div>
+
                     </div>
+                    <nav aria-label="Pagination">
+                        {{$courses->render('mehr4-theme-dpeac::pagination.custom')}}
+                    </nav>
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
 

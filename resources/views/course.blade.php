@@ -53,7 +53,7 @@
                 <div class="grid-x grid-padding-x">
                     <div class="medium-3 small-12 sticky-container" data-sticky-container="" style="height: 481px;">
                         <div id="example2"></div>
-                        <div class="des-side sticky is-anchored is-at-top" data-sticky="" data-top-anchor="example2:top" data-btm-anchor="foo:bottom" data-resize="tlab0p-sticky" data-mutate="tlab0p-sticky" data-e="rj6ejr-e" data-events="resize" style="max-width: 300px; margin-top: 0px; bottom: auto; top: 0px;">
+                        <div class="des-side sticky is-anchored is-at-top"  data-stick-to="bottom" data-sticky="" data-top-anchor="example2:top" data-btm-anchor="foo:bottom" data-resize="tlab0p-sticky" data-mutate="tlab0p-sticky" data-e="rj6ejr-e" data-events="resize" style="max-width: 300px; margin-top: 0px; bottom: auto; top: 0px;">
                             <img src="{{Storage::url('course->image')}}" alt="حسابداری برای همه(کاربردی)">
                             <div class="des-side-info">
                                 <b>{{$course->name}}</b>
@@ -272,7 +272,7 @@
                 </div>
             </div>
         </section>
-        </section>
+
 
 
 

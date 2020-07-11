@@ -60,20 +60,10 @@
                   @endforeach
                     </div>
                     <center>
-{{--                        <nav aria-label="Pagination">--}}
-{{--                            <ul class="pagination">--}}
-{{--                                <li class="disabled">--}}
-{{--                                    <span>«قبلی</span>--}}
-{{--                                </li>--}}
+                        <nav aria-label="Pagination">
+                       {{$posts->render('mehr4-theme-dpeac::pagination.custom')}}
+                        </nav>
 
-{{--                                <li class="current">--}}
-{{--                                    <span>1</span>--}}
-{{--                                </li>--}}
-{{--                                <li><a href="http://dpe.ac/%D9%88%D8%A8%D9%84%D8%A7%DA%AF?page=2">2</a></li>--}}
-{{--                                <li><a href="http://dpe.ac/%D9%88%D8%A8%D9%84%D8%A7%DA%AF?page=3">3</a></li>--}}
-{{--                                <li><a href="http://dpe.ac/%D9%88%D8%A8%D9%84%D8%A7%DA%AF?page=2" rel="next">بعدی»</a></li>--}}
-{{--                            </ul>--}}
-{{--                        </nav>--}}
 
                     </center>
                 </div>
