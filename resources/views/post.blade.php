@@ -17,13 +17,14 @@
                                 {{$post->title}}
                             </h3>
                             <div class="caption">
+                                <time datetime="YY">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>{{$post->posted_at}}
+                                </time>
                                 <authors>
                                     <i class="fa fa-user" aria-hidden="true"></i>
                                    {{$post->author->name}}
                                 </authors>
-                                <time datetime="YY">
-                                    <i class="fa fa-calendar" aria-hidden="true"></i>{{$post->posted_at}}
-                                </time>
+
                             </div>
                             <br>
                             <p>

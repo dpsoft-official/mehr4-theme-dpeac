@@ -465,6 +465,7 @@
                 <div class="grid-x grid-padding-x dep-section">
                     <div class="department-crt ">
                         <img src="" width="176" alt="">
+
 {{--                        <H5>{!! \Illuminate\Support\Str::limit(strip_tags($category->title),20,'...') !!}</H5>--}}
                         <p>مشخصات</p>
                         <a href=""
@@ -562,7 +563,7 @@
                                 <div>
                                     <img src="{{Storage::url($post->image)}}" alt="آیا زمان تغییر شغل فرا رسیده است؟">
                                 </div>
-                                <a itemprop="url" href="">
+                                <a itemprop="url" href="{{$post->url}}">
                                     <h4>{{$post->title}}
                                     </h4>
                                     <p itemprop="description">
@@ -577,7 +578,7 @@
                         </div>
                     @endforeach
 
-                    <a href="" class="hollow button secondary"
+                    <a href="{{route('blog')}}" class="hollow button secondary"
                        style="padding: 10px 50px;border-radius: 3px;margin: 64px auto 20px;">اخبار بیشتر</a>
                 </div>
             </div>

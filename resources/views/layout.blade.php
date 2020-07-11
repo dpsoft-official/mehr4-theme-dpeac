@@ -58,8 +58,8 @@
 
 <script src="{{mix('app.js','vendor/mehr4-theme-dpeac')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.min.js')}}"></script>
-<script src="{{asset('/vendor/mehr4-theme-dpeac/js/what-input.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.min.js')}}"></script>
+<script src="{{asset('/vendor/mehr4-theme-dpeac/js/what-input.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/app.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.lazy.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.easy-autocomplete.min.js')}}"></script>

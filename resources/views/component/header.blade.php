@@ -190,8 +190,8 @@
                 </nav>
             </div>
             <div class="medium-2 small-12 cell mobile-support-none ">
-                <a href="http://dpe.ac/panel/login" class="button hollow button reg-log-btn">
-                    <i class="fa fa-sign-in" aria-hidden="true"></i> ورود / ثبت نام
+                <a href="{{route('login')}}" class="button hollow button reg-log-btn">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i> ورود
                 </a>
 
             </div>
