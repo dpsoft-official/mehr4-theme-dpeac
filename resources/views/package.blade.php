@@ -258,141 +258,141 @@
                     </div>
                 </div>
             </div>
-            <div class="tabs-content float-center" data-tabs-content="teacher-tabs">
-                <div class="tabs-panel is-active" id="teacher-18714" role="tabpanel"
-                     aria-labelledby="teacher-18714-label">
-                    <div class="good-teacher-tab-box">
-                        <div class="grid-container">
-                            <div class="info-teacher">
-                                <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                     data-src="http://dpe.ac/api/file/download/5b7c016e30212/mahyar-dolatkhah.png"
-                                     alt="مهیار دولتخواه"
-                                     src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
-                                <div class="grid-x grid-padding-x top">
-                                    <div class="medium-6  ">
-                                    </div>
-                                    <div class="medium-6  small-12 ">
-                                        <h3>مهیار دولتخواه</h3>
-                                        <span>برگزیده جشنواره بین المللی عکس خیام ایران اولین دوره 2012</span>
-                                        <span>برگزیده جشنواره بین المللی عکس سیتروئن پژو فرانسه 2011</span>
-                                        <span>برگزیده جشنواره بین المللی عکس اکسپوز اسلوونی 2010</span>
-                                        <span>عضو کمیته فنی داوری آثار و سیاست گذاری خط مشی آموزشی (کانون عکاسان انجمن سینمای جوانان اصفهان)</span>
-                                        <span>مدیر بخش هنرهای تجسمی موسسه فرهنگی هنری راه فرزانگان اصفهان</span>
-                                        <span>دبیر عکس خبرگزاری کلان شهر اصفهان ایمنا (imna.ir)</span>
-                                        <a href="http://dpe.ac/%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF/18714/%D9%85%D9%87%DB%8C%D8%A7%D8%B1-%D8%AF%D9%88%D9%84%D8%AA%D8%AE%D9%88%D8%A7%D9%87"
-                                           class="profile-teacher-btn">پروفایل استاد</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-                <div class="tabs-panel " id="teacher-18715" role="tabpanel" aria-labelledby="teacher-18715-label"
-                     aria-hidden="true">
-                    <div class="good-teacher-tab-box">
-                        <div class="grid-container">
-                            <div class="info-teacher">
-                                <img width="100%" style="position: relative; height: 454px;" class="lazy"
-                                     alt="علیرضا تیموری"
-                                     src="http://dpe.ac/api/file/download/5b7c017130fdc/teimouri.png">
-                                <div class="grid-x grid-padding-x top">
-                                    <div class="medium-6  ">
-                                    </div>
-                                    <div class="medium-6  small-12 ">
-                                        <h3>علیرضا تیموری</h3>
-                                        <span>دانش آموخته رشته&zwnj;ی شیمی دانشگاه اصفهان</span>
-                                        <span>دانش آموخته در کالج دولتی داوسون مونترال کانادا</span>
-                                        <a href="http://dpe.ac/%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF/18715/%D8%B9%D9%84%DB%8C%D8%B1%D8%B6%D8%A7-%D8%AA%DB%8C%D9%85%D9%88%D8%B1%DB%8C"
-                                           class="profile-teacher-btn">پروفایل استاد</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-                <div class="tabs-panel " id="teacher-18704" role="tabpanel" aria-labelledby="teacher-18704-label"
-                     aria-hidden="true">
-                    <div class="good-teacher-tab-box">
-                        <div class="grid-container">
-                            <div class="info-teacher">
-                                <img width="100%" style="position: relative; height: 454px;" class="lazy"
-                                     alt="فرامرز سنجابی"
-                                     src="http://dpe.ac/api/file/download/5b7c016da8e64/faribourz-sanjabi.png">
-                                <div class="grid-x grid-padding-x top">
-                                    <div class="medium-6  ">
-                                    </div>
-                                    <div class="medium-6  small-12 ">
-                                        <h3>فرامرز سنجابی</h3>
-                                        <span>استاد نرم افزارهای گرافیک در مرکز آموزش سازمان فاوا، سال های 1380-1388</span>
-                                        <span>مدرس نرم افزارهای گرافیکی در هنرستان هنرهای زیبا، سال های 1382-1388</span>
-                                        <span>مدرس نرم افزارهای گرافیکی مرکز آموزش متاکو، سال های 1394-1396</span>
-                                        <span>استاد گروه گرافیک در دانشگاه های واحد فلاورجان و مبارکه ، سال های 1380-1382</span>
-                                        <span>استاد گروه گرافیک دانشگاه غیر انتفاعی بزرگمهر ، سپهر ، امین فولاد شهر و دانشگاه های علمی کاربردی نقش جهان ، مبارکه و زرین شهر</span>
-                                        <a href="http://dpe.ac/%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF/18704/%D9%81%D8%B1%D8%A7%D9%85%D8%B1%D8%B2-%D8%B3%D9%86%D8%AC%D8%A7%D8%A8%DB%8C"
-                                           class="profile-teacher-btn">پروفایل استاد</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-                <div class="tabs-panel " id="teacher-18682" role="tabpanel" aria-labelledby="teacher-18682-label"
-                     aria-hidden="true">
-                    <div class="good-teacher-tab-box">
-                        <div class="grid-container">
-                            <div class="info-teacher">
-                                <img width="100%" style="position: relative; height: 454px;" class="lazy" alt="فرخ دیبا"
-                                     src="http://dpe.ac/api/file/download/5af2dbd6a95d7/diba.jpg">
-                                <div class="grid-x grid-padding-x top">
-                                    <div class="medium-6  ">
-                                    </div>
-                                    <div class="medium-6  small-12 ">
-                                        <h3>فرخ دیبا</h3>
-                                        <span>بنیانگذار آژانس بین المللی کسب و کار دیبانژ و مکتب خانه عالی زندگی و تجارت در حوزه مشاوره و آموزش</span>
-                                        <span>خالق برند شادیبا و رییس هیات مدیره - خط تولید شیرینی و شکلات</span>
-                                        <span>موسس آکادمی فروش ایران و گروه تخصصی عقاب های فروش</span>
-                                        <span>سهامدار و رییس هیات مدیره کمپانی معین در کردستان عراق سلیمانیه - صنعت تبلیغات و برند سازی</span>
-                                        <span>مشاور ارشد مدیر عامل هولدینگ فن آوران زرین گالری هومن و شرکت پرنسس امارات در صنعت جواهر</span>
-                                        <a href="http://dpe.ac/%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF/18682/%D9%81%D8%B1%D8%AE-%D8%AF%DB%8C%D8%A8%D8%A7"
-                                           class="profile-teacher-btn">پروفایل استاد</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-                <div class="tabs-panel " id="teacher-19776" role="tabpanel" aria-labelledby="teacher-19776-label"
-                     aria-hidden="true">
-                    <div class="good-teacher-tab-box">
-                        <div class="grid-container">
-                            <div class="info-teacher">
-                                <img width="100%" style="position: relative; height: 454px;" class="lazy"
-                                     alt="احمد حلّت" src="http://dpe.ac/api/file/download/5af2dbd6cf6e2/hellat.jpg">
-                                <div class="grid-x grid-padding-x top">
-                                    <div class="medium-6  ">
-                                    </div>
-                                    <div class="medium-6  small-12 ">
-                                        <h3>احمد حلّت</h3>
-                                        <span>استاد پروازی دانشگاه دوشنبه تاجیکستان</span>
-                                        <span>رئیس سخنرانان حرفه ای ایران</span>
-                                        <span>بنیانگذار و مدیر مسئول دوهفته&zwnj;نامه ی موفقیت ، پرتیراژترین نشریه در کشور در زمینه موفقیت</span>
-                                        <span>کارشناس علوم ارتباطات از دانشگاه علامه طباطبایی</span>
-                                        <span>کارشناس ارشد روان&zwnj;شناسی تربیتی</span>
-                                        <span>دکترای روانشناسی تربیتی از دانشگاه پداکوژی</span>
-                                        <a href="http://dpe.ac/%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF/19776/%D8%A7%D8%AD%D9%85%D8%AF-%D8%AD%D9%84%D9%91%D8%AA"
-                                           class="profile-teacher-btn">پروفایل استاد</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-            </div>
+{{--            <div class="tabs-content float-center" data-tabs-content="teacher-tabs">--}}
+{{--                <div class="tabs-panel is-active" id="teacher-18714" role="tabpanel"--}}
+{{--                     aria-labelledby="teacher-18714-label">--}}
+{{--                    <div class="good-teacher-tab-box">--}}
+{{--                        <div class="grid-container">--}}
+{{--                            <div class="info-teacher">--}}
+{{--                                <img width="100%" style="height:454px!important;position: relative;" class="lazy"--}}
+{{--                                     data-src="http://dpe.ac/api/file/download/5b7c016e30212/mahyar-dolatkhah.png"--}}
+{{--                                     alt="مهیار دولتخواه"--}}
+{{--                                     src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">--}}
+{{--                                <div class="grid-x grid-padding-x top">--}}
+{{--                                    <div class="medium-6  ">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="medium-6  small-12 ">--}}
+{{--                                        <h3>مهیار دولتخواه</h3>--}}
+{{--                                        <span>برگزیده جشنواره بین المللی عکس خیام ایران اولین دوره 2012</span>--}}
+{{--                                        <span>برگزیده جشنواره بین المللی عکس سیتروئن پژو فرانسه 2011</span>--}}
+{{--                                        <span>برگزیده جشنواره بین المللی عکس اکسپوز اسلوونی 2010</span>--}}
+{{--                                        <span>عضو کمیته فنی داوری آثار و سیاست گذاری خط مشی آموزشی (کانون عکاسان انجمن سینمای جوانان اصفهان)</span>--}}
+{{--                                        <span>مدیر بخش هنرهای تجسمی موسسه فرهنگی هنری راه فرزانگان اصفهان</span>--}}
+{{--                                        <span>دبیر عکس خبرگزاری کلان شهر اصفهان ایمنا (imna.ir)</span>--}}
+{{--                                        <a href="http://dpe.ac/%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF/18714/%D9%85%D9%87%DB%8C%D8%A7%D8%B1-%D8%AF%D9%88%D9%84%D8%AA%D8%AE%D9%88%D8%A7%D9%87"--}}
+{{--                                           class="profile-teacher-btn">پروفایل استاد</a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="clear"></div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="tabs-panel " id="teacher-18715" role="tabpanel" aria-labelledby="teacher-18715-label"--}}
+{{--                     aria-hidden="true">--}}
+{{--                    <div class="good-teacher-tab-box">--}}
+{{--                        <div class="grid-container">--}}
+{{--                            <div class="info-teacher">--}}
+{{--                                <img width="100%" style="position: relative; height: 454px;" class="lazy"--}}
+{{--                                     alt="علیرضا تیموری"--}}
+{{--                                     src="http://dpe.ac/api/file/download/5b7c017130fdc/teimouri.png">--}}
+{{--                                <div class="grid-x grid-padding-x top">--}}
+{{--                                    <div class="medium-6  ">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="medium-6  small-12 ">--}}
+{{--                                        <h3>علیرضا تیموری</h3>--}}
+{{--                                        <span>دانش آموخته رشته&zwnj;ی شیمی دانشگاه اصفهان</span>--}}
+{{--                                        <span>دانش آموخته در کالج دولتی داوسون مونترال کانادا</span>--}}
+{{--                                        <a href="http://dpe.ac/%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF/18715/%D8%B9%D9%84%DB%8C%D8%B1%D8%B6%D8%A7-%D8%AA%DB%8C%D9%85%D9%88%D8%B1%DB%8C"--}}
+{{--                                           class="profile-teacher-btn">پروفایل استاد</a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="clear"></div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="tabs-panel " id="teacher-18704" role="tabpanel" aria-labelledby="teacher-18704-label"--}}
+{{--                     aria-hidden="true">--}}
+{{--                    <div class="good-teacher-tab-box">--}}
+{{--                        <div class="grid-container">--}}
+{{--                            <div class="info-teacher">--}}
+{{--                                <img width="100%" style="position: relative; height: 454px;" class="lazy"--}}
+{{--                                     alt="فرامرز سنجابی"--}}
+{{--                                     src="http://dpe.ac/api/file/download/5b7c016da8e64/faribourz-sanjabi.png">--}}
+{{--                                <div class="grid-x grid-padding-x top">--}}
+{{--                                    <div class="medium-6  ">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="medium-6  small-12 ">--}}
+{{--                                        <h3>فرامرز سنجابی</h3>--}}
+{{--                                        <span>استاد نرم افزارهای گرافیک در مرکز آموزش سازمان فاوا، سال های 1380-1388</span>--}}
+{{--                                        <span>مدرس نرم افزارهای گرافیکی در هنرستان هنرهای زیبا، سال های 1382-1388</span>--}}
+{{--                                        <span>مدرس نرم افزارهای گرافیکی مرکز آموزش متاکو، سال های 1394-1396</span>--}}
+{{--                                        <span>استاد گروه گرافیک در دانشگاه های واحد فلاورجان و مبارکه ، سال های 1380-1382</span>--}}
+{{--                                        <span>استاد گروه گرافیک دانشگاه غیر انتفاعی بزرگمهر ، سپهر ، امین فولاد شهر و دانشگاه های علمی کاربردی نقش جهان ، مبارکه و زرین شهر</span>--}}
+{{--                                        <a href="http://dpe.ac/%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF/18704/%D9%81%D8%B1%D8%A7%D9%85%D8%B1%D8%B2-%D8%B3%D9%86%D8%AC%D8%A7%D8%A8%DB%8C"--}}
+{{--                                           class="profile-teacher-btn">پروفایل استاد</a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="clear"></div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="tabs-panel " id="teacher-18682" role="tabpanel" aria-labelledby="teacher-18682-label"--}}
+{{--                     aria-hidden="true">--}}
+{{--                    <div class="good-teacher-tab-box">--}}
+{{--                        <div class="grid-container">--}}
+{{--                            <div class="info-teacher">--}}
+{{--                                <img width="100%" style="position: relative; height: 454px;" class="lazy" alt="فرخ دیبا"--}}
+{{--                                     src="http://dpe.ac/api/file/download/5af2dbd6a95d7/diba.jpg">--}}
+{{--                                <div class="grid-x grid-padding-x top">--}}
+{{--                                    <div class="medium-6  ">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="medium-6  small-12 ">--}}
+{{--                                        <h3>فرخ دیبا</h3>--}}
+{{--                                        <span>بنیانگذار آژانس بین المللی کسب و کار دیبانژ و مکتب خانه عالی زندگی و تجارت در حوزه مشاوره و آموزش</span>--}}
+{{--                                        <span>خالق برند شادیبا و رییس هیات مدیره - خط تولید شیرینی و شکلات</span>--}}
+{{--                                        <span>موسس آکادمی فروش ایران و گروه تخصصی عقاب های فروش</span>--}}
+{{--                                        <span>سهامدار و رییس هیات مدیره کمپانی معین در کردستان عراق سلیمانیه - صنعت تبلیغات و برند سازی</span>--}}
+{{--                                        <span>مشاور ارشد مدیر عامل هولدینگ فن آوران زرین گالری هومن و شرکت پرنسس امارات در صنعت جواهر</span>--}}
+{{--                                        <a href="http://dpe.ac/%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF/18682/%D9%81%D8%B1%D8%AE-%D8%AF%DB%8C%D8%A8%D8%A7"--}}
+{{--                                           class="profile-teacher-btn">پروفایل استاد</a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="clear"></div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="tabs-panel " id="teacher-19776" role="tabpanel" aria-labelledby="teacher-19776-label"--}}
+{{--                     aria-hidden="true">--}}
+{{--                    <div class="good-teacher-tab-box">--}}
+{{--                        <div class="grid-container">--}}
+{{--                            <div class="info-teacher">--}}
+{{--                                <img width="100%" style="position: relative; height: 454px;" class="lazy"--}}
+{{--                                     alt="احمد حلّت" src="http://dpe.ac/api/file/download/5af2dbd6cf6e2/hellat.jpg">--}}
+{{--                                <div class="grid-x grid-padding-x top">--}}
+{{--                                    <div class="medium-6  ">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="medium-6  small-12 ">--}}
+{{--                                        <h3>احمد حلّت</h3>--}}
+{{--                                        <span>استاد پروازی دانشگاه دوشنبه تاجیکستان</span>--}}
+{{--                                        <span>رئیس سخنرانان حرفه ای ایران</span>--}}
+{{--                                        <span>بنیانگذار و مدیر مسئول دوهفته&zwnj;نامه ی موفقیت ، پرتیراژترین نشریه در کشور در زمینه موفقیت</span>--}}
+{{--                                        <span>کارشناس علوم ارتباطات از دانشگاه علامه طباطبایی</span>--}}
+{{--                                        <span>کارشناس ارشد روان&zwnj;شناسی تربیتی</span>--}}
+{{--                                        <span>دکترای روانشناسی تربیتی از دانشگاه پداکوژی</span>--}}
+{{--                                        <a href="http://dpe.ac/%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF/19776/%D8%A7%D8%AD%D9%85%D8%AF-%D8%AD%D9%84%D9%91%D8%AA"--}}
+{{--                                           class="profile-teacher-btn">پروفایل استاد</a>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="clear"></div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </section>
 
         <!-- #Geatting Us Packages -->
@@ -463,180 +463,8 @@
                 <h4>{{setting('post-content')}}</h4>
             </div>
         </section>
-        <!-- #Comments Packages -->
-        <section class="comments-course">
-            <h3>نظرات</h3>
-            <!-- Gride Start -->
-            <div class="grid-container">
-                <div class="grid-x grid-padding-x">
-                    <div class="medium-4 small-12">
-                        <div class="comments-course-form">
-                            <div class="comments-course-form-stars">
-                                <h2>ارسال دیدگاه</h2>
-
-                            </div>
-                            <form name="course-comment" class="comments-course-form-validate formcomment">
-                                <label for="">
-                                    <input type="text" name="name" placeholder="نام و نام خانوادگی: "
-                                           required="required">
-                                </label>
-                                <label for="">
-                                    <input type="email" name="email" placeholder="ایمیل شما: " required="required">
-                                </label>
-                                <label for="">
-                                    <textarea name="body" id="" rows="3" placeholder="نظر شما: "
-                                              required="required"></textarea>
-                                </label>
-                                <input type="hidden" name="csrf_name" value="csrf5f059793ea716">
-                                <input type="hidden" name="csrf_value" value="9a7e45f35e303c5c4a69d00f09b2023e">
-                                <button type="submit" id="btn-course-comment-submit"
-                                        class="comments-course-form-validate-btn">ارسال
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="medium-8 small-12" itemscope="itemscope" itemprop="http://schema.org/Comment">
-                        <div class="comments-course-box">
-                            <article style="overflow: hidden; max-height: none;">
-
-                                <b itemprop="author">افسون زارعی</b>
-                                <p itemprop="description">درانتها مدرکی داده میشه؟</p>
-                            </article>
-                        </div>
-                        <div class="comments-course-box">
-                            <article style="overflow: hidden; max-height: none;">
-
-                                <b itemprop="author">پشتیبانی دانش پژوهان</b>
-                                <p itemprop="description">بله در انتها تاییدیه حرفه ای آموزش از طرف اساتید دوره ها به
-                                    شما اهدا خواهد شد.</p>
-                            </article>
-                        </div>
-                        <div class="comments-course-box">
-                            <article style="overflow: hidden; max-height: none;">
-
-                                <b itemprop="author">بابک محمدی</b>
-                                <p itemprop="description">سلام. من قصد دارم دوره عکاسی آتلیه&zwnj; ای را تهیه کنم و بعدش
-                                    کارم رو شروع کنم. لازمه دوره عکاسی پیشرفته هم بگذرونم؟</p>
-                            </article>
-                        </div>
-                        <div class="comments-course-box">
-                            <article style="overflow: hidden; max-height: none;">
-
-                                <b itemprop="author">پشتیبانی دانش پژوهان</b>
-                                <p itemprop="description">سلام و وقت بخیر.<br>
-                                    بستگی به خودتون داره که اطلاعات&zwnj;تون در زمینه عکاسی چقدر هست. مسلما با یادگیری و
-                                    گذروندن دوره عکاسی پیشرفته،&zwnj; اطلاعات&zwnj;تون در این زمینه بیشتر میشه و هر چه
-                                    اطلاعات&zwnj;تون بیشتر باشه موفق&zwnj;تر خواهید بود.<br>
-                                    موفق باشید</p>
-                            </article>
-                        </div>
-                        <div class="comments-course-box">
-                            <article style="overflow: hidden; max-height: none;">
-
-                                <b itemprop="author">نازنین عباسی</b>
-                                <p itemprop="description">سلام. من دوره مقدماتی رو خریدم خیلی راضی بودم و قصد دارم بقیه
-                                    دوره&zwnj; های عکاسی رو هم تهیه کنم.ممنونم</p>
-                            </article>
-                        </div>
-                        <div class="comments-course-box">
-                            <article style="overflow: hidden; max-height: none;">
-
-                                <b itemprop="author">پشتیبانی دانش پژوهان</b>
-                                <p itemprop="description">سلام و وقت بخیر.<br>
-                                    خیلی خوشحالیم که راضی بودید. امیدواریم بقیه&zwnj;ی دوره&zwnj;ها هم براتون مفید باشن.<br>
-                                    موفق و پیروز باشید.</p>
-                            </article>
-                        </div>
-                        <div class="comments-course-box">
-                            <article style="overflow: hidden; max-height: none;">
-
-                                <b itemprop="author">حسین جنگی پور</b>
-                                <p itemprop="description">باسلام من قبلا هم دوره ی دکوراسیون رو از موسسه شما تهیه کرده
-                                    بودم وخیلی راضی بود الان هم این دوره رو برای خواهرزادم مریم نبوی منش تهیه کردم و
-                                    ایشون هم خیلی راضی هستن به خصوص اموزش لایت روم.ممنون از شما</p>
-                            </article>
-                        </div>
-                        <div class="comments-course-box">
-                            <article style="overflow: hidden; max-height: none;">
-
-                                <b itemprop="author">کیمیا بهرامی</b>
-                                <p itemprop="description">سلام <br>
-                                    من دوره عکاسی تون رو شرکت کردم و خیلی مفید و عالی بود خواستم تشکر کنم ازتون. </p>
-                            </article>
-                        </div>
-                        <div class="comments-course-box">
-                            <article style="overflow: hidden; max-height: none;">
-
-                                <b itemprop="author">پشتیبانی دانش پژوهان</b>
-                                <p itemprop="description">با سلام خدمت خانم بهرامی و آقای جنگی پور ، خوشحالیم ان شا الله
-                                    بهتون کمک کنه با کمک این مهارت ها ، کار شخصی تون رو داشته باشید </p>
-                            </article>
-                        </div>
-                        <div class="comments-course-box">
-                            <article style="overflow: hidden; max-height: none;">
-
-                                <b itemprop="author">احمد اکبری</b>
-                                <p itemprop="description">سلام. چندتا سوال درمورد نصب دارم باید چیکار کنم؟</p>
-                            </article>
-                        </div>
-                        <div class="comments-course-box">
-                            <article style="overflow: hidden; max-height: none;">
-
-                                <b itemprop="author">پشتیبانی دانش پژوهان</b>
-                                <p itemprop="description">سلام و وقت بخیر.<br>
-                                    میتونید با شماره های 03136001070 و 03136001080 نماس بگیرید. پشتیبان های ما حتما کمک
-                                    تون می کنند.<br>
-                                    موفق باشید.</p>
-                            </article>
-                        </div>
-                        <div class="comments-course-box">
-                            <article style="overflow: hidden; max-height: none;">
-
-                                <b itemprop="author">صادق رضایی</b>
-                                <p itemprop="description">سلام. آزمونی که در پایان گرفته میشه حضوری هست یا مجازی؟</p>
-                            </article>
-                        </div>
-                        <div class="comments-course-box">
-                            <article style="overflow: hidden; max-height: none;">
-
-                                <b itemprop="author">پشتیبانی دانش پژوهان</b>
-                                <p itemprop="description">سلام و وقت بخیر.<br>
-                                    آزمون به صورت مجازی برگزار میشه.<br>
-                                    موفق باشید.</p>
-                            </article>
-                        </div>
-                        <div class="comments-course-box">
-                            <article style="overflow: hidden; max-height: none;">
-
-                                <b itemprop="author">Leila</b>
-                                <p itemprop="description">خسته نباشید. ازابتدای دوره دوربین عکاسی لازمه؟</p>
-                            </article>
-                        </div>
-                        <div class="comments-course-box">
-                            <article style="overflow: hidden; max-height: none;">
-
-                                <b itemprop="author">پشتیبانی دانش پژوهان</b>
-                                <p itemprop="description">با سلام این به نظر شما و بودجه فعلی تون بستگی داره. خوبی آموزش
-                                    مجازی این هست که همیشه همراه شماست تا هر زمان که توانایی خرید دوربین پیدا کنید می
-                                    توانید یک مرتبه آموزش ها را قبل از خرید دوربین ببینید و یک مرتبه بعد از خرید تا
-                                    مباحث بهتر در ذهن تان جا بیفتد و دفعه دوم به صورت عملی آموزش ها را پیاده سازی
-                                    کنید</p>
-                            </article>
-                        </div>
-                    </div>
 
 
-                </div>
-                <div id="end-menu-stiky"></div>
-            </div>
-        </section>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
     </main>
 @endsection
 
