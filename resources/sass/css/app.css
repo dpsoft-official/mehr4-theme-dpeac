@@ -6519,7 +6519,7 @@ select[multiple] {
 }
 
 .is-dropdown-submenu-parent.opens-right > .is-dropdown-submenu {
-    right: auto;
+    left: auto!important;
     left: 100%
 }
 
@@ -18134,4 +18134,8 @@ header.header nav.menu-header ul>li ul {
 }
 .tp-leftarrow.tparrows.gyges{
     display:none;
+}
+.dropdown.menu>li.opens-right>.is-dropdown-submenu {
+
+    right: 0!important;
 }

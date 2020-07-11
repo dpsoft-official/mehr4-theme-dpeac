@@ -133,6 +133,13 @@ class InstallThemeCommand extends Command
         \Mehr::updateOrNewSetting('phone.buy4','03136001090 ','شماره تلفن پشتیبانی 3 ');
         \Mehr::updateOrNewSetting('product_id',30,'کد محصول');
         \Mehr::updateOrNewSetting('source_id',121,'کد ورودی');
+        \Mehr::updateOrNewSetting('post-content','ارسال توسط پست ویژه و دریافت طی 3 روز','متن ارسال پستی');
+        \Mehr::updateOrNewSetting('title1cat','پکیج جامع','شعار 1 صفحه دسته بندی');
+        \Mehr::updateOrNewSetting('title2cat','رفع اشکال با استاد','شعار 2 صفحه دسته بندی');
+        \Mehr::updateOrNewSetting('title3cat','تحویل طی سه روز کاری','شعار 3 صفحه دسته بندی');
+        \Mehr::updateOrNewSetting('title4cat','پشتیبانی یکساله پرسش و پاسخ از طریق سامانه','شعار 4 صفحه دسته بندی');
+        \Mehr::updateOrNewSetting('title5cat','تأییدیه تخصصی اساتید دوره','شعار 5 صفحه دسته بندی');
+        \Mehr::updateOrNewSetting('title6cat','LMS','شعار 6 صفحه دسته بندی');
 
 
 
