@@ -10,7 +10,7 @@
                 <div class="grid-x grid-padding-x">
                     <div class="title-caption">
                         <h1 id="course-title" property="name" style="color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 4px 3px;">{{$category->title}}</h1>
-                        <p id="course-description" property="description" style="color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 2px 3px;">{{$category->excerpt}}</p>
+                        <p id="course-description" property="description" style="color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 2px 3px;">{{$category->description}}</p>
                     </div>
                     <p style="text-align:  left;float:  left;display:block;margin: 0 auto 0 0;position:  relative;">
                         <a class="float-left video-embed-teacher-free" data-open="video-head-course" data-video="video-202343244" aria-controls="video-head-course" aria-haspopup="true" tabindex="0">
@@ -20,7 +20,6 @@
                 </div>
             </div>
         </section>
-
         <!-- #Info Package -->
         <section class="info-course-graphic" typeof="Course">
             <style>
@@ -62,7 +61,7 @@
                                 <b>قیمت:
                                 </b>
                                 <div rel="offers" typeof="Offer">
-                                    <span>{{number_format($course->price )}}</span>
+                                    <span>قیمت دسته بندی</span>
                                 </div>
                             </li>
                         </ul>
@@ -71,7 +70,6 @@
                 </div>
             </div>
         </section>
-
         <!-- #Description Packge -->
         <section class="info-courses-graphic">
             <!-- Gride Start -->
@@ -79,8 +77,8 @@
                 <div class="medium-10 small-12 sticky-container" data-sticky-container="data-sticky-container" data-animate="fade-in fade-out" style="height: 0px;">
                     <div class="stiky-menu sticky is-anchored is-at-top" data-sticky="data-sticky" data-stick-to="top" data-top-anchor="start-menu-stiky" data-btm-anchor="end-menu-stiky" data-resize="wesh9q-sticky" data-mutate="wesh9q-sticky" data-e="8fyukc-e" data-events="resize" style="max-width: 1124.16px; margin-top: 0px; bottom: auto; top: 0px;">
                         <ul class="des-side-info">
-                            <img src="{{Storage::url('$category->image')}}" alt="{{$course->title}}">
-                            <p>{{$course->title}}</p>
+                            <img src="{{Storage::url('$category->image')}}" alt="{{$category->title}}">
+                            <p>{{$category->title}}</p>
                             <li>
                                 <i class="fa fa-clock-o" aria-hidden="true"></i>
                                 <span itemprop="timeRequired">150</span>
@@ -103,7 +101,6 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="medium-2 small-12 sticky-container" data-sticky-container="data-sticky-container" style="height: 0px;">
                     <div class="stiky-menu-btn sticky is-anchored is-at-top" data-sticky="data-sticky" data-stick-to="top" data-top-anchor="start-menu-stiky" data-btm-anchor="end-menu-stiky" data-resize="rreshp-sticky" data-mutate="rreshp-sticky" data-e="nqfflu-e" data-events="resize" style="max-width: 224.828px; margin-top: 0px; bottom: auto; top: 0px;">
                         <a href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نام آنلاین دوره</a>
@@ -111,7 +108,7 @@
                 </div>
             </div>
             <div class="menu-mobile-cert">
-                <p>{{$course->title}}</p>
+                <p>{{$category->title}}</p>
                 <a href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نام آنلاین</a>
             </div>
             <div class="grid-container">
@@ -123,15 +120,13 @@
                     <div class="content-course-graphic">
                         <h3>توضیحات</h3>
                         <p>
-                            {{$$category->description}}
+                            {{$category->description}}
                         </p>
-
                     </div>
                 </div>
                 <div id="foo"></div>
             </div>
         </section>
-
         <!-- #Package Courses -->
         <section class="section-graphics">
             <div class="grid-container">
