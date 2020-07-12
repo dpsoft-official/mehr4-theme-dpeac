@@ -1,5 +1,4 @@
 @extends("mehr4-theme-dpeac::layout")
-
 @section('main')
         <!-- #Slider -->
         <section class="slider-course">
@@ -59,19 +58,19 @@
                                 <b>{{$course->name}}</b>
                                 <p>
                                     <i class="fa fa-clock-o" aria-hidden="true"></i> ساعت آموزشی:
-                                    <span>{{number_format($duration ?? ''/(60))}} ساعت</span>
+                                    <span>  {{number_format($course->duration/60)}} ساعت</span>
                                 </p>
                                 <p>
                                     <i class="fa fa-history" aria-hidden="true"></i> طول دوره:
-                                    <span>{{number_format($duration ?? ''/(1440))}} روز</span>
+                                    <span>  {{number_format($course->duration/1440)}} روز</span>
                                 </p>
                                 <p>
                                     <i class="fa fa-graduation-cap" aria-hidden="true"></i>کاربران:
-                                    <span dir="ltr">+ 100</span>
+                                    <span dir="ltr">+ {{$course->id*date('m')+(date('d')*2)}} </span>
                                 </p>
                                 <p>
                                     <i class="fa fa-money" aria-hidden="true"></i> قیمت:
-                                    <span>{{number_format($course->price )}} ریال </span>
+                                    <span>  {{number_format($course->price)}} ریال</span>
                                 </p>
                                 <a href="{{\Mehr4Payment::courseBuyUrl($course)}}" class="des-side-info-btn">ثبت نام آنلاین </a>
                             </div>
@@ -82,7 +81,7 @@
                             <div class="des-content-par">
                                 <h4>توضیحات</h4>
                                 <p>
-                                    {{$course->description}}
+                                    {!! $course->description !!}
                                 </p>
                             </div>
 
@@ -108,24 +107,19 @@
                         <ul class="des-side-info">
                             <img src="{{Storage::url('course->image')}}" alt="{{('$course->title')}}">
                             <p>{{$course->name}}</p>
-                            @php($duration ?? ''=0)
-                            @foreach($category->courses as $course)
-                                @foreach($course->lessons as $lesson)
-                                    @php($duration ?? ''=+$lesson->duration)
-                                @endforeach
-                            @endforeach
+
                             <li>
                                 <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                <span itemprop="timeRequired">{{number_format( $duration ?? '' ?? '' )/(60)}} ساعت</span>
+                                <span itemprop="timeRequired"></span>
                             </li>
                             <li>
 
                                 <i class="fa fa-history" aria-hidden="true"></i>
-                                <span itemprop="timeRequired">{{number_format($duration ?? ''/(1440))}} روز</span>
+                                <span itemprop="timeRequired"> روز</span>
                             </li>
                             <li>
                                 <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                                <span dir="ltr">+ 100</span>
+                                <span dir="ltr">  {{$course->id*date('m')+(date('d')*2)}} +</span>
                             </li>
                             <li>
                                 <i class="fa fa-money" aria-hidden="true"></i>
@@ -140,62 +134,34 @@
                     </div>
                 </div>
             </div>
-{{--            اساتید--}}
-{{--            <div class="header-tabs">--}}
-{{--                <!-- Gride Start -->--}}
-{{--                <div class="grid-container">--}}
-{{--                    <div class="grid-x grid-padding-x">--}}
-{{--                        <div class="head-packege-light">--}}
-{{--                            <h3> اساتید این دوره</h3>--}}
-{{--                            <hr>--}}
-{{--                        </div>--}}
-{{--                        <ul class="tabs" data-tabs="" id="course-tabs" role="tablist" data-e="9v8y1y-e">--}}
-{{--                            @foreach($category->courses as $course)--}}
-{{--                                @foreach($course->teachers as $teacher)--}}
-{{--                            <li class="tabs-title is-active" role="presentation">--}}
-{{--                                <img src="" class="teacher-avatar" width="100px" alt="">--}}
-{{--                                <a data-tabs-target="teacher-18710" href="#teacher-18710" role="tab"--}}
-{{--                                   aria-controls="teacher-18710" aria-selected="true"--}}
-{{--                                   id="teacher-18710-label" tabindex="0">--}}
-{{--                                    {{$course->teachers}}--}}
-{{--                                    {{$teacher->name}}--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
 
-{{--                                @endforeach--}}
-{{--                            @endforeach--}}
-{{--                        </ul>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-            <!-- End Gride -->
+            <section class="teacher-course">
+                <div class="header-tabs">
+                    <!-- Gride Start -->
+                    <div class="grid-container">
+                        <div class="grid-x grid-padding-x">
+                            <div class="head-packege-light">
+                                <h3>اساتید این پکیج</h3>
+                                <hr>
+                            </div>
+                            <ul class="tabs" data-tabs="" id="teacher-tabs" role="tablist" data-e="1qq8yw-e">
+                                    @foreach($course->teachers as $teacher)
+                                        <li class="tabs-title " role="presentation">
+                                            <img src="{{Storage::url('theme/user.png')}}"
+                                                 class="teacher-avatar" width="100px" alt="{{$teacher->name}}">
+                                            <a data-tabs-target="teacher-18714" href="" role="tab"
+                                               aria-controls="teacher-18714" aria-selected="true" id=""
+                                               tabindex="0">{{$teacher->name}}</a>
+                                        </li>
+                                    @endforeach
 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-{{--            <div class="tabs-content float-center" data-tabs-content="course-tabs">--}}
-{{--                <div class="tabs-panel is-active" id="teacher-18710" role="tabpanel" aria-labelledby="teacher-18710-label">--}}
-{{--                    <div class="good-teacher-tab-box">--}}
-{{--                        <div class="grid-container">--}}
-{{--                            <div class="info-teacher">--}}
-{{--                                <img width="100%" style="height:454px!important;position: relative;background: #fff;" src="" alt="">--}}
-{{--                                <div class="grid-x grid-padding-x top">--}}
-{{--                                    <div class="medium-6  ">--}}
-{{--                                    </div>--}}
-{{--                                    <div class="medium-6  small-12 ">--}}
-{{--                                        <h3>--}}
-{{--                                    {{$course->teachers}}--}}
-{{--                                        </h3>--}}
-{{--                                        <a href="" class="profile-teacher-btn">پروفایل استاد</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="clear"></div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
+            </section>
 
-            <div class="clear"></div>         </section>
-{{--            متغیر کاربران وارد شود--}}
         <!-- #Comments -->
             @if($course->commentable==true)
             <section class="comments-course">
@@ -243,34 +209,41 @@
             <div class="menu-mobile-cert">
                 <p>{{$course->title}}</p>
                 <a href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نام آنلاین</a>
-            </div>         </section>
-{{--            دوره ها مشابه--}}
+            </div>
+        </section>
+
+{{--        @php($similarCourses=\Dpsoft\Mehr\Models\Course::whereHas('categories',function ($q) use ($course)--}}
+{{--           {--}}
+{{--             $q->whereIn('id',$course->categories->pluck('id'));--}}
+{{--           })->get());--}}
+
+
+
+        @php($similarCourses=\Dpsoft\Mehr\Models\Course::whereHas('categories',function ($q) use ($course)
+        {
+        $q->whereIn('categories.id',$course->categories->pluck('id')->toArray());
+        })->get())
+
         <!-- #Department -->
-{{--        <section class="course-card">--}}
-{{--            <div class="head-packege">--}}
-{{--                <h3>سایر دوره های مشابه</h3>--}}
-{{--            </div>--}}
-{{--            @php($similarCourses=\Dpsoft\Mehr\Models\Course::whereHas('categories',function ($q) use ($course)--}}
-{{--            {--}}
-{{--              $q->whereIn('id',$course->categories->pluck('id'));--}}
-{{--            })->get())--}}
-{{--            <div class="grid-container">--}}
-{{--                <div class="grid-x grid-padding-x dep-section">--}}
-{{--                    @foreach($similarCourses as $course )--}}
-{{--                    <div class="post4">--}}
-{{--                        <a href="C">--}}
-{{--                            <img src="hjpg" alt="حسابداری مالیاتی">--}}
-{{--                            <h3>{{$course->title}}</h3>--}}
-{{--                            <span></span>--}}
-{{--                            <ins></ins>--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                   @endforeach--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </section>--}}
-
-
+        <section class="course-card">
+            <div class="head-packege">
+                <h3>سایر دوره های مشابه</h3>
+            </div>
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x dep-section">
+{{--                    @foreach(Dpsoft\Mehr\Models\Category::whereFeatured(true)->take(4)->get() as $featuredCategory)--}}
+                    @foreach($similarCourses->take(4) as $course)
+                    <div class="post4">
+                        <a href="{{$course->url}}" style="height: 300px;">
+                            <img src="{{Storage::url($course->image)}}">
+                            <h3>{{$course->title}}</h3>
+                            <span>{{number_format($course->price)}} ریال</span>
+                        </a>
+                    </div>
+                   @endforeach
+                </div>
+            </div>
+        </section>
 @endsection
 
 

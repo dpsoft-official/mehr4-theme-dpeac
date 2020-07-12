@@ -1,6 +1,6 @@
 (function () {
     var image_id = 'course-image';
-    var title_id = 'course-title';
+    var title_id = 'c';
     var description_id = 'course-description';
 
     var rgb = getAverageRGB(document.getElementById(image_id));

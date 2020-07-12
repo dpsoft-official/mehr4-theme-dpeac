@@ -18313,3 +18313,37 @@ header.header nav.menu-header ul>li ul {
     box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
     border-radius: 3px!important;
 }
+.course-card .post4 {
+    box-shadow: 5px 5px 25px 0 rgba(46,61,73,.4);
+    padding-bottom: 71px;
+    position: relative;
+    border-radius: 5px;
+    background: #fff;
+    height: 350px;
+    display: -ms-inline-grid;
+    display: inline-grid;
+    width: 22%;
+    margin: 35px 19px 200px auto;
+}
+.course-card .head-packege {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+@media print, screen and (min-width: 40em){
+    .grid-container:not(.full)>.grid-padding-x {
+        margin-right: -.9375rem;
+        margin-left: -.9375rem;
+    }}
+.course-card .post4 a:after, .course-card .post4 a:hover:after {
+    height: 40px;
+    padding-top: 10px;
+    display: inline-block;
+    z-index: 3;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: all ease-in-out .5s;
+    text-align: center;
+    cursor: pointer;
+}

@@ -4,18 +4,22 @@
         <section class="slider-main">
             <img id="course-image"
                 src="{{Storage::url('theme/avator-category.jpg')}}">
-
             <div class="title-department">
                 <h2 id="course-title" itemprop="name" style="color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 4px 3px;">دپارتمان
                     @if($selectedCategory)
                         <small>«{{$selectedCategory->title}}»</small>
                         @endif
                 </h2>
+
+                @if($query)
+                    <div>
+                        <small>«{{$query}}»</small>
+                    </div>
+                @endif
+
             </div>
             <div class="grid-container">
-
                 <div class="grid-x grid-padding-x">
-
                     <div class="department-boxes">
                         @foreach($categories as $category)
                         <a class="departman-boxa"
@@ -68,6 +72,7 @@
                                     </a>
                         </div>
                                 @endforeach
+
                             @endif
 
 

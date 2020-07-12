@@ -59,21 +59,25 @@
             </div>
             <!-- END REVOLUTION SLIDER -->
         </article>
+
         <div class="grid-container">
             <div class="grid-x grid-padding-x">
                 <div class="row medium-8 small-12">
                     <div class="search-head">
-                        <form action="{{route('course-list')}}">
-                            <input id="search_course" type="search" name="q" value="" id="search-input-field"
+                        <form  role="search" action="{{route('course-list')}}">
+                            <input id="search_course" type="search" name="q" value="{{request('q')}}" id="search-input-field"
                                    class="search__input" placeholder="جستجوی دوره">
                             <button type="send" class="search-btn">جستجو کن</button>
                         </form>
+
+
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- #Packege 0-100 -->
+
         <section class="packege">
             <div class="head-packege">
                 <h3>پکیج های صفر تا صد</h3>
@@ -118,7 +122,7 @@
                             <hr>
                         </div>
                         <ul class="tabs" data-tabs="" id="teacher-tabs" role="tablist" data-e="ds568c-e">
-                            <li class="tabs-title" role="presentation">
+                            <li class="tabs-title is-active" role="presentation">
                                 <img src="{{Storage::url('theme/teacher1.png')}}" class="teacher-avatar" width="100px"
                                      alt="{{setting('teacher1.name')}}">
                                 <a data-tabs-target="teacher-1" href="#teacher-1" role="tab"
@@ -139,7 +143,7 @@
                                    aria-controls="teacher-19253" aria-selected="false" id="teacher-19253-label"
                                    tabindex="-1">{{setting('teacher3.name')}}</a>
                             </li>
-                            <li class="tabs-title is-active" role="presentation">
+                            <li class="tabs-title " role="presentation">
                                 <img src="{{Storage::url('theme/teacher4.png')}}" class="teacher-avatar" width="100px"
                                      alt="{{setting('teacher4.name')}}">
                                 <a data-tabs-target="teacher-4" href="#teacher-4" role="tab"
@@ -510,9 +514,9 @@
                             @foreach($category->courses as $i=>$course)
                                 @if($i<4)
                                 <div class="post4">
-                                    <a href="{{$course->url}} ">
-                                        <img src="{{$course->image}}" alt="{{$course->title}}">
-                                        <h3>{{$course->title}}</h3>
+                                    <a href="{{$course->url}}">
+                                        <img id="course-image" src="{{$course->image}}" alt="{{$course->title}}">
+                                        <h3 id="course-title">{{$course->title}}</h3>
                                         <span></span>
                                         <ins> </ins>
                                     </a>
@@ -621,8 +625,8 @@
             </div>
 
         </section>
-
     </main>
+
 @endsection
 
 
