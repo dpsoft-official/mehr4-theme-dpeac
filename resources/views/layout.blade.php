@@ -68,7 +68,6 @@
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/what-input.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/app.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.plugins.js')}}"></script>
-<script src="{{asset('/vendor/mehr4-theme-dpeac/js/sweetalert.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.lazy.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.easy-autocomplete.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.parallax.min.js')}}"></script>
@@ -93,6 +92,8 @@
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.navigation.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.video.min.js')}}"></script>
+<script src="{{asset('/vendor/mehr4-theme-dpeac/js/sweetalert.min.js')}}"></script>
+
 <script type="text/javascript">
     function setREVStartSize(e) {
         try {
