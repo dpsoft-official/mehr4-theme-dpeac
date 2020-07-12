@@ -18228,3 +18228,88 @@ header.header nav.menu-header ul>li ul {
     padding:11px 13px;
     cursor:auto;
     color:#cacaca;}
+.dep-pages .department-crt {
+    background: #8f0324;
+    color: #fff;
+    text-align: center;
+    padding: 30px 10px;
+    width: 100%;
+    position: relative;
+    height: 340px;
+}
+.slider-main .title-department h2, .slider-main .title-department p {
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0px 4px 4px #000;
+}
+.dep-pages .post4 {
+    box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.4);
+    padding-bottom: 71px;
+    position: relative;
+    border-radius: 5px;
+    background: #fff;
+    height: 280px;
+    margin-right: 48px;
+    display: -ms-inline-grid;
+    display: inline-grid;
+    width: 19%;
+    margin-top: 35px;
+}
+.department .department-crt .dep-crt-btn {
+    border: 1px solid #fff;
+    color: #e1e1e1;
+    font-size: 13px;
+    font-weight: 100;
+    width: 100%;
+    padding: 8px 25px !important;
+    position: relative;
+    border-radius: 2px;
+}
+@media screen and (max-width: 39.9375em) {.dep-pages .post4 {
+    box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.4);
+    padding-bottom: 71px;
+    position: relative;
+    border-radius: 5px;
+    background: #fff;
+    height: 195px;
+    margin-right: 10px;
+    display: -ms-inline-grid!important;
+    display: inline-grid!important;
+    width: 40%;
+    margin-top: 35px;
+}}
+.dep-pages .post4 {
+    box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.4);
+    padding-bottom: 71px;
+    position: relative;
+    border-radius: 5px;
+    background: #fff;
+    height: 280px;
+    margin-right: 48px;
+    display: -ms-inline-grid;
+    display: inline-grid;
+    width: 19%;
+    margin-top: 35px;
+}
+.slider-main .department-boxes {
+    margin-top: -100px;
+    margin-bottom: 100px;
+    width:100%;
+}
+.slider-main .department-boxes .departman-box img {
+    border-radius: 5px;
+}
+.slider-main .department-boxes .departman-box:nth-child(1) {
+    background: #545456;
+}
+.slider-main .department-boxes .departman-box {
+    cursor: pointer;
+    filter: grayscale(100%);
+    margin: 10px;
+    display: -ms-inline-grid;
+    display: inline-grid;
+    width: 23%;
+    text-align: center;
+    box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
+    border-radius: 3px!important;
+}

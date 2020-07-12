@@ -503,15 +503,15 @@
 
                             <H5>{{$category->title}}</H5>
                             <p>مشخصات</p>
-                            <a href=""
+                            <a href="{{$category->url}}"
                                class="dep-crt-btn">مشاهده کل دوره ها</a>
                         </div>
                         @if($category->courses() !=null)
                             @foreach($category->courses as $i=>$course)
                                 @if($i<4)
                                 <div class="post4">
-                                    <a href="888 ">
-                                        <img src="{{Storage::url('$course->image')}}" alt="{{$course->title}}">
+                                    <a href="{{$course->url}} ">
+                                        <img src="{{$course->image}}" alt="{{$course->title}}">
                                         <h3>{{$course->title}}</h3>
                                         <span></span>
                                         <ins> </ins>

@@ -59,11 +59,11 @@
                                 <b>{{$course->name}}</b>
                                 <p>
                                     <i class="fa fa-clock-o" aria-hidden="true"></i> ساعت آموزشی:
-                                    <span>{{number_format($duration/(60))}} ساعت</span>
+                                    <span>{{number_format($duration ?? ''/(60))}} ساعت</span>
                                 </p>
                                 <p>
                                     <i class="fa fa-history" aria-hidden="true"></i> طول دوره:
-                                    <span>{{number_format($duration/(1440))}} روز</span>
+                                    <span>{{number_format($duration ?? ''/(1440))}} روز</span>
                                 </p>
                                 <p>
                                     <i class="fa fa-graduation-cap" aria-hidden="true"></i>کاربران:
@@ -106,22 +106,22 @@
                 <div class="medium-10 small-12 sticky-container" data-sticky-container="" data-animate="fade-in fade-out" style="height: 0px;">
                     <div class="stiky-menu sticky is-anchored is-at-top" data-sticky="" data-stick-to="top" data-top-anchor="start-menu-stiky" data-btm-anchor="end-menu-stiky" data-resize="910o5i-sticky" data-mutate="910o5i-sticky" data-e="ipomjr-e" data-events="resize" style="max-width: 1124.16px; margin-top: 0px; bottom: auto; top: 0px;">
                         <ul class="des-side-info">
-                            <img src="{{Storage::url('course->image')}}" alt="{{settong('$course->title')}}">
+                            <img src="{{Storage::url('course->image')}}" alt="{{('$course->title')}}">
                             <p>{{$course->name}}</p>
-                            @php($duration=0)
+                            @php($duration ?? ''=0)
                             @foreach($category->courses as $course)
                                 @foreach($course->lessons as $lesson)
-                                    @php($duration=+ $lesson->duration)
+                                    @php($duration ?? ''=+$lesson->duration)
                                 @endforeach
                             @endforeach
                             <li>
                                 <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                <span itemprop="timeRequired">{{number_format($duration/(60))}} ساعت</span>
+                                <span itemprop="timeRequired">{{number_format( $duration ?? '' ?? '' )/(60)}} ساعت</span>
                             </li>
                             <li>
 
                                 <i class="fa fa-history" aria-hidden="true"></i>
-                                <span itemprop="timeRequired">{{number_format($duration/(1440))}} روز</span>
+                                <span itemprop="timeRequired">{{number_format($duration ?? ''/(1440))}} روز</span>
                             </li>
                             <li>
                                 <i class="fa fa-graduation-cap" aria-hidden="true"></i>
