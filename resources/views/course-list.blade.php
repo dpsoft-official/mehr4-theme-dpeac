@@ -7,13 +7,13 @@
             <div class="title-department">
                 <h2 id="course-title" itemprop="name" style="color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 4px 3px;">دپارتمان
                     @if($selectedCategory)
-                        <small>«{{$selectedCategory->title}}»</small>
+                        <small >«{{$selectedCategory->title}}»</small>
                         @endif
                 </h2>
 
                 @if($query)
                     <div>
-                        <small>«{{$query}}»</small>
+                        <h3 style="color: white;">«{{$query}}»</h3>
                     </div>
                 @endif
 
@@ -54,7 +54,7 @@
                                 <img src="{{Storage::url($selectedCategory->image)}}" width="176" alt="">
                                 <h5>
                                     «{{$selectedCategory->title}}»
-                                    @endif
+                            @endif
                                 </h5>
 
                         </div>
@@ -72,14 +72,13 @@
                                     </a>
                         </div>
                                 @endforeach
-
-                            @endif
-
-
+                                                        @endif
                     </div>
             @endif
+
                 </div>
             </div>
+
         </section>
 
 

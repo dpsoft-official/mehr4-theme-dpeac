@@ -51,8 +51,8 @@ class InstallThemeCommand extends Command
 //        $this->call('vendor:publish',['--tag'=>'mehr-theme-azarbs-auth-views']);
 
         $this->info('Creating new settings...');
-        \Mehr::updateOrNewSetting('site_facebook','@siteAccount','Facebook account...');
         \Mehr::updateOrNewSetting('site.logo',\Storage::url('theme/logo.png'),'لوگوی سایت');
+        \Mehr::updateOrNewSetting('mob.logo',\Storage::url('theme/logomob.png'),'لوگوی  موبایل سایت');
         \Mehr::updateOrNewSetting('institute.token',"37f93923afd5f7a5a9faf7a9bffdd6443ce976b4",'توکن سازمان ');
        \Mehr::updateOrNewSetting('teacher1.name','نیما کیمیایی','نام استاد اول');
         \Mehr::updateOrNewSetting('exp1.teacher1.name','مشاور و مدرس بیش از 80 برند معتبر مانند: هیوندای ،سوبارو ،صنایع غذایی آوازه،ثبت ویونا،آقای فرش،سپاهان همراه ،فرش فرهی،مرسدس بنز، نایلون سپید','توضیح 1 استاد اول');

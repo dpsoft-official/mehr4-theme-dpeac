@@ -18347,3 +18347,40 @@ header.header nav.menu-header ul>li ul {
     text-align: center;
     cursor: pointer;
 }
+.stiky-menu ul li {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 10px 35px !important;
+    border-left: 1px solid #ddd;
+}
+.sticky.is-stuck {
+    position: fixed;
+    z-index: 5;
+}
+.stiky-menu, .stiky-menu-btn {
+    display: none !important;
+}
+.stiky-menu-btn.is-at-top.is-stuck, .stiky-menu.is-at-top.is-stuck {
+    display: block!important;
+    width: 100%!important;
+    margin-top: 0!important;
+}
+.sticky.is-stuck.is-at-top {
+    top: 0;
+}
+.sticky.is-stuck {
+    position: fixed;
+    z-index: 5;
+}
+.stiky-menu {
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 0 12px -4px #000;
+}
+.stiky-menu, .stiky-menu-btn {
+    display: none!important;
+}
+.sticky {
+    z-index: 0;
+    transform: translate3d(0,0,0);
+}

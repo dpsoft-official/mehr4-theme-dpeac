@@ -45,21 +45,22 @@
 @include("mehr4-theme-dpeac::component.footer")
 <!--/footer-->
 <!-- COMMON SCRIPTS -->
-@yield('footer')
+
 <script src="{{mix('app.js','vendor/mehr4-theme-dpeac')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/app.js')}}"></script>
+<script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.lazy.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.plugins.js')}}"></script>
-
+{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.sticky.js')}}"></script>--}}
 {{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.core.js')}}"></script>--}}
+{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.tabs.js')}}"></script>--}}
 {{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.keyboard.js')}}"></script>--}}
 {{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.touch.js')}}"></script>--}}
 {{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.triggers.js')}}"></script>--}}
 {{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.mediaQuery.js')}}"></script>--}}
 {{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.motion.js')}}"></script>--}}
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/what-input.min.js')}}"></script>
-<script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.lazy.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.easy-autocomplete.min.js')}}"></script>
 {{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.parallax.min.js')}}"></script>--}}
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.addon.beforeafter.min.js')}}"></script>
@@ -365,7 +366,7 @@ $(document).ready(function () {
 
 });
 </script>
-
+@yield('footer')
 @include('sweet::alert')
 </body>
 </html>

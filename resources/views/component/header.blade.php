@@ -2,7 +2,7 @@
     <div class="">
         <div class="grid-x grid-padding-x">
             <div class="medium-2 small-12 cell mobile-support-none">
-                <img src="http://dpe.ac/api/file/download/5e4cc37103672/%D8%AF%D8%A7%D9%86%D8%B4-%D9%BE%DA%98%D9%88%D9%87%D8%A7%D9%863-%D9%86%D9%88%DB%8C%D9%86.png" alt="نوین دانش پژوهان">
+                <img src="{{setting('site.logo')}}" alt="{{setting('site.name')}}">
             </div>
             <div class="small-6 none-desk">
                 <div class="menu-responsive-mob" data-responsive-toggle="home-animated-menu" data-hide-for="medium" data-e="b8c3kf-e" style="display: none;">
@@ -15,7 +15,7 @@
             </div>
 
             <div class="menu-responsive-mob-left small-6">
-                <img class="moblie-logo" src="" alt="{{setting('site.name')}}">
+                <img class="moblie-logo" src="{{setting('site.logomob')}}" alt="{{setting('site.name')}}">
             </div>
             <div class="medium-8 small-12 cell">
                 <nav class="menu-header" id="home-animated-menu" data-animate="hinge-in-from-top hinge-out-from-top">
