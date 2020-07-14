@@ -39,9 +39,7 @@
         </section>
 
         <br>
-        <br>
-<br>
-        <br>
+
     <!-- #Department -->
     @if($selectedCategory)
         <section class="department dep-pages">
@@ -80,6 +78,43 @@
             </div>
 
         </section>
+
+        @if($query)
+            <section class="department dep-pages">
+                <!-- Gride Start -->
+                <div class="grid-container">
+                    <div class="grid-x grid-padding-x ">
+
+
+                        <div class="medium-12 small-12">
+                            @if($courses->count()!=0)
+                                @foreach($courses as $course)
+                                    <div class="post4">
+                                        <a href="{{$course->url}}">
+                                            <img src="{{Storage::url('$course->image')}}" alt="{{$course->title}}">
+                                            <h3>{{$course->title}}</h3>
+                                            <span></span>
+                                            <ins>{{number_format($course->price )}}</ins>
+                                        </a>
+                                    </div>
+                                @endforeach
+                            @else
+                                <div class="callout warning">
+                                    <h2 style="text-align: center;color: black;">
+                                        دوره مورد نظر یافت نشد
+                                    </h2>
+                                </div>
+
+                            @endif
+                        </div>
+                        @endif
+
+                    </div>
+                </div>
+
+            </section>
+
+
 
 
 

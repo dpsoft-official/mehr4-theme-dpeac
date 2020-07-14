@@ -11107,12 +11107,13 @@ div#comment-send i {
 }
 
 .course-card .post4 span {
-    text-align: center;
+    text-align: left !important;
     padding-top: 8px;
     color: #E67E22;
     display: block;
     height: 60px;
-    margin: auto
+    margin: auto;
+    padding: 4px;
 }
 
 .course-card .post4 h3 {
@@ -18383,4 +18384,29 @@ header.header nav.menu-header ul>li ul {
 .sticky {
     z-index: 0;
     transform: translate3d(0,0,0);
+}
+/* Style the header */
+.header {
+    /*padding: 10px 16px;*/
+    background: #ffffff;
+    color: #f1f1f1;
+    box-shadow: 0 0 12px -4px #000;
+}
+
+/* Page content */
+.content {
+    /*padding: 16px;*/
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 102px;
 }

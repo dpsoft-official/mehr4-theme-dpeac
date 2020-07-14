@@ -26,7 +26,7 @@
                             <img src="{{Storage::url('theme/transparent.png')}}" data-bgcolor='#ffb900'
                                  style='background:#ffb900' data-bgposition="center center"
                                  data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg"
-                                 alt="دانش پژوهان" data-no-retina>
+                                 alt="{{setting('site.name')}}" data-no-retina>
                             <!-- LAYERS -->
 
                             <!-- LAYER NR. 1 -->
@@ -39,7 +39,7 @@
                                  data-paddingright="[0,0,0,0]"
                                  data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;">
                                 <img src="{{Storage::url('theme/ee920-SLIDER-site-FINAl1.png')}}" data-ww="auto"
-                                     alt="دانش پژوهان" data-hh="auto" data-no-retina></div>
+                                     alt="{{setting('site.name')}}" data-hh="auto" data-no-retina></div>
 
                             <!-- LAYER NR. 2 -->
                             <div class="tp-caption   tp-resizeme" id="slide-36-layer-64" data-x="1" data-y="-113"
@@ -50,7 +50,7 @@
                                  data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
                                  data-paddingright="[0,0,0,0]"
                                  data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6;">
-                                <img src="{{Storage::url('theme/ee920-SLIDER-site-FINAL2.png')}}" alt="دانش پژوهان"
+                                <img src="{{Storage::url('theme/ee920-SLIDER-site-FINAL2.png')}}" alt="{{setting('site.name')}}"
                                      data-ww="auto" data-hh="auto" data-no-retina></div>
                         </li>
                     </ul>
@@ -499,12 +499,13 @@
             {{--                @endforeach--}}
             {{--                @endif--}}
             {{--            </div>--}}
+
             <div class="grid-container">
                 @foreach($categories as $category)
+
                     <div class="grid-x grid-padding-x dep-section">
                         <div class="department-crt ">
                             <img src="" width="176" alt="">
-
                             <H5>{{$category->title}}</H5>
                             <p>مشخصات</p>
                             <a href="{{$category->url}}"
@@ -563,7 +564,7 @@
                         <div class="medium-3 small-6">
                             <div class="graph-des">
                                 <h1 class="timer count-title before-numb count-number" data-to="{{setting('num4')}}"
-                                    data-speed="1500"></h1>
+                                    data-speed="1000"></h1>
                                 <b>{{setting('title4')}}</b>
                             </div>
                         </div>
@@ -612,7 +613,8 @@
                                         {!! \Illuminate\Support\Str::limit(strip_tags($post->description),120,'...') !!}
                                     </p>
                                 </a>
-                                <span>ادامه مطلب » </span>
+
+                                <a href="{{$post->url}}">  <span>ادامه مطلب » </span></a>
 
                                 </a>
                             </section>
