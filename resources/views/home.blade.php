@@ -291,7 +291,6 @@
                                     </div>
                                     <div class="medium-6  small-12 ">
                                         <h3>{{setting('teacher4.name')}}</h3>
-
                                         <span>{{setting('exp1.teacher4.name')}}</span>
                                         <span>{{setting('exp2.teacher4.name')}}</span>
                                         <span>{{setting('exp3.teacher4.name')}}</span>
@@ -321,7 +320,6 @@
                                     </div>
                                     <div class="medium-6  small-12 ">
                                         <h3>{{setting('teacher5.name')}}</h3>
-
                                         <span>{{setting('exp1.teacher5.name')}}</span>
                                         <span>{{setting('exp2.teacher5.name')}}</span>
                                         <span>{{setting('exp3.teacher5.name')}}</span>
@@ -351,7 +349,6 @@
                                     </div>
                                     <div class="medium-6  small-12 ">
                                         <h3>{{setting('teacher6.name')}}</h3>
-
                                         <span>{{setting('exp1.teacher6.name')}}</span>
                                         <span>{{setting('exp2.teacher6.name')}}</span>
                                         <span>{{setting('exp3.teacher6.name')}}</span>
@@ -501,20 +498,20 @@
             {{--            </div>--}}
 
             <div class="grid-container">
-                @foreach($categories as $category)
-
-                    <div class="grid-x grid-padding-x dep-section">
-                        <div class="department-crt ">
+                @foreach($categories as $r=>$category)
+                       <div class="grid-x grid-padding-x dep-section" >
+                            <div class="department-crt department-crt{{$r}} " id="color{{$r}}" >
                             <img src="" width="176" alt="">
                             <H5>{{$category->title}}</H5>
                             <p>مشخصات</p>
                             <a href="{{$category->url}}"
                                class="dep-crt-btn">مشاهده کل دوره ها</a>
                         </div>
+
                         @if($category->courses() !=null)
                             @foreach($category->courses as $i=>$course)
                                 @if($i<4)
-                                <div class="post4">
+                                <div class="post4" >
                                     <a href="{{$course->url}}">
                                         <img id="course-image" src="{{$course->image}}" alt="{{$course->title}}">
                                         <h3 id="course-title">{{$course->title}}</h3>
@@ -525,10 +522,10 @@
                                 @endif
                             @endforeach
                         @endif
-
                     </div>
+
                 @endforeach
-            </div>
+
         </section>
 
         <!-- #DaneshPajohaniShavid -->
@@ -599,7 +596,7 @@
                 </h2>
                 <hr>
                 <div class="grid-x grid-padding-x">
-                    @foreach($posts as $post)
+                    @foreach($posts->take(4) as $post)
                         <div class="medium-6">
                             <section class="thumbpost">
                                 <div>
@@ -616,13 +613,16 @@
 
                                 <a href="{{$post->url}}">  <span>ادامه مطلب » </span></a>
 
-                                </a>
+
                             </section>
                         </div>
                     @endforeach
 
-                    <a href="{{route('blog')}}" class="hollow button secondary"
-                       style="padding: 10px 50px;border-radius: 3px;margin: 64px auto 20px;">اخبار بیشتر</a>
+
+                </div>
+                <div style="text-align: center;">
+                <a href="{{route('blog')}}" class="hollow button secondary"
+                   style="padding: 10px 50px;border-radius: 3px;margin: 64px auto 20px;">اخبار بیشتر</a>
                 </div>
             </div>
 

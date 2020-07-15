@@ -36,35 +36,37 @@
     <link rel="stylesheet" href="{{asset('/vendor/mehr4-theme-dpeac/fonts/font.css')}}">
     <link href="{{mix('app.css','vendor/mehr4-theme-dpeac')}}" rel="stylesheet">
 
+
 </head>
 <body >
 @include('mehr4-theme-dpeac::component.header')
 <main class="main">
-    <main>@yield('main')</main>
+   @yield('main')
 </main>
 @include("mehr4-theme-dpeac::component.footer")
+
+@yield('script')
 <!--/footer-->
 <!-- COMMON SCRIPTS -->
 
 <script src="{{mix('app.js','vendor/mehr4-theme-dpeac')}}"></script>
+
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.min.js')}}"></script>
-<script src="{{asset('/vendor/mehr4-theme-dpeac/js/app.js')}}"></script>
+{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.reveal.js')}}"></script>--}}
+
+<script src="{{asset('/vendor/mehr4-theme-dpeac/js/what-input.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.lazy.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.plugins.js')}}"></script>
-
-
-<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.core.js')}}"></script>
-<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.sticky.js')}}"></script>
-{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.tabs.js')}}"></script>--}}
+<script src="{{asset('/vendor/mehr4-theme-dpeac/js/app.js')}}"></script>
+{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.core.js')}}"></script>--}}
 {{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.keyboard.js')}}"></script>--}}
 {{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.touch.js')}}"></script>--}}
-<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.triggers.js')}}"></script>
-<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.mediaQuery.js')}}"></script>
+{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.triggers.js')}}"></script>--}}
+{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.mediaQuery.js')}}"></script>--}}
 {{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.motion.js')}}"></script>--}}
-<script src="{{asset('/vendor/mehr4-theme-dpeac/js/what-input.min.js')}}"></script>
-<script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.easy-autocomplete.min.js')}}"></script>
-{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.parallax.min.js')}}"></script>--}}
+{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.tabs.js')}}"></script>--}}
+{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.sticky.js')}}"></script>--}}
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.addon.beforeafter.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.addon.particles.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/jquery.themepunch.revolution.min.js')}}"></script>
@@ -81,13 +83,22 @@
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.actions.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.carousel.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
+<script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.parallax.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.migration.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.navigation.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.video.min.js')}}"></script>
-{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/course-title-color.js')}}"></script>--}}
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/sweetalert.min.js')}}"></script>
+{{--<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>--}}
+
+<script>
+    function myfunction(){
+    jQuery(document).foundation();
+    jQuery('#myModal').foundation('_disableScroll', scrollTop);
+    }
+   </script>
+
 <script type="text/javascript">
     function setREVStartSize(e) {
         try {
@@ -368,29 +379,14 @@ $(document).ready(function () {
 
 });
 </script>
+
 <script>
-    // When the user scrolls the page, execute myFunction
-    window.onscroll = function() {myFunction()};
 
-    // Get the header
-    var header = document.getElementById("myHeader");
-
-    // Get the offset position of the navbar
-    var sticky = header.offsetTop;
-
-    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function myFunction() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-          document.getElementById("myHeader").style.display= "block";
-        } else {
-            header.classList.remove("sticky");
-            document.getElementById("myHeader").style.display= "none";
-
-        }
-    }
 </script>
+
+
 @yield('footer')
+
 @include('sweet::alert')
 </body>
 </html>

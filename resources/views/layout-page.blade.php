@@ -1,5 +1,4 @@
 @extends('mehr4-theme-dpeac::layout')
-
 @section('main')
     <section class="contact-us-content" id="custome-page">
         <!-- #contact Us Header -->

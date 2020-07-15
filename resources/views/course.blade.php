@@ -294,17 +294,45 @@ border-radius: 3px;" href="/lms/index.php/buy/course?plan_id=664">ثبت نام 
                     @foreach($similarCourses->take(4) as $course)
                         <div class="post4 ">
                             <a href="{{$course->url}}" style="height: 300px;">
-                                <img src="{{$course->image? Storage::url('$course->image'):Storage::url('theme/similar.jpg')}}">
-                                <h3>{{$course->title}}</h3>
-                                <span>{{number_format($course->price)}} ریال</span>
+{{--                                <img src="{{$course->image? Storage::url('$course->image'):Storage::url('theme/similar.jpg')}}">--}}
+                                <img src="{{Storage::url('theme/similar.jpg')}}">
+
                             </a>
+                            <ins>{{number_format($course->price)}} ریال</ins>
+{{--                            <span style="text-align: right;">   </span>--}}
                         </div>
                     @endforeach
                     </div>
                 </div>
             </div>
         </section>
-@endsection
+        @endsection
+    @section('script')
+            <script>
+                // When the user scrolls the page, execute myFunction
+                window.onscroll = function() {myFunction()};
+
+                // Get the header
+                var header = document.getElementById("myHeader");
+
+                // Get the offset position of the navbar
+                var sticky = header.offsetTop;
+
+                // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+                function myFunction() {
+                    if (window.pageYOffset > sticky) {
+                        header.classList.add("sticky");
+                        document.getElementById("myHeader").style.display= "block";
+                    } else {
+                        header.classList.remove("sticky");
+                        document.getElementById("myHeader").style.display= "none";
+
+                    }
+                }
+            </script>
+    @endsection
+
+
 
 
 

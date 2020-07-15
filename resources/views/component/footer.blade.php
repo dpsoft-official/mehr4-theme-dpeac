@@ -21,8 +21,11 @@
     padding: 10px 18px;
     border-radius: 3px;
     color: white!important;">
+
                     </form>
+
                 </div>
+
                 <div class="row medium-8 small-12">
                     <div class="column-right">
                         {!! setting('samandehi')!!}
