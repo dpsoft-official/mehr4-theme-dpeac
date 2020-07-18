@@ -44,7 +44,7 @@
                         <ul>
                             <li>
                                 <img src="{{Storage::url('theme/icon-time.png')}}"
-                                     alt="پکیج &quot;از عکاسی پایه تا آتلیه&zwnj;ای&quot;">
+                                     alt="{{$category->title}}">
                                 <b>ساعت دوره:
                                 </b>
                                 @php($duration=0)
@@ -69,7 +69,7 @@
                                     کاربران:
                                 </b>
                                 <span property="interactionStatistic">+
-                        100</span>
+                        </span>
                             </li>
                             <li>
                                 <img src="{{Storage::url('theme/price.png')}}" alt="">
@@ -102,11 +102,11 @@
                             <p>{{$category->title}}</p>
                             <li>
                                 <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                <span itemprop="timeRequired">{{$duration}}</span>
+                                <span itemprop="timeRequired">{{number_format($duration/60)}}  ساعت</span>
                             </li>
                             <li>
                                 <i class="fa fa-history" aria-hidden="true"></i>
-                                <span itemprop="timeRequired">349
+                                <span itemprop="timeRequired">{{number_format($duration/(1440))}} روز
                     </span>
                             </li>
                             <li>
@@ -242,19 +242,19 @@
                             <h3>اساتید این پکیج</h3>
                             <hr>
                         </div>
-                        <ul class="tabs" data-tabs="" id="teacher-tabs" role="tablist" data-e="1qq8yw-e">
-                            @foreach($category->courses as $course)
-                                @foreach($courses->teachers as $teacher)
-                            <li class="tabs-title is-active" role="presentation">
-                                <img src="http://dpe.ac/api/file/download/5a7998681a768_dolatkhah.jpg/dolatkhah.jpg"
-                                     class="teacher-avatar" width="100px" alt="مهیار دولتخواه">
-                                <a data-tabs-target="teacher-18714" href="#teacher-18714" role="tab"
-                                   aria-controls="teacher-18714" aria-selected="true" id="teacher-18714-label"
-                                   tabindex="0">{{$teacher->name}}</a>
-                            </li>
-                                @endforeach
-                            @endforeach
-                        </ul>
+{{--                        <ul class="tabs" data-tabs="" id="teacher-tabs" role="tablist" data-e="1qq8yw-e">--}}
+{{--                            @foreach($category->courses as $course)--}}
+{{--                                @foreach($courses->teachers as $teacher)--}}
+{{--                            <li class="tabs-title is-active" role="presentation">--}}
+{{--                                <img src="http://dpe.ac/api/file/download/5a7998681a768_dolatkhah.jpg/dolatkhah.jpg"--}}
+{{--                                     class="teacher-avatar" width="100px" alt="مهیار دولتخواه">--}}
+{{--                                <a data-tabs-target="teacher-18714" href="#teacher-18714" role="tab"--}}
+{{--                                   aria-controls="teacher-18714" aria-selected="true" id="teacher-18714-label"--}}
+{{--                                   tabindex="0">{{$teacher->name}}</a>--}}
+{{--                            </li>--}}
+{{--                                @endforeach--}}
+{{--                            @endforeach--}}
+{{--                        </ul>--}}
                     </div>
                 </div>
             </div>
