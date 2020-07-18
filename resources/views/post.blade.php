@@ -22,7 +22,7 @@
                                 </time>
                                 <authors>
                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                   {{$post->author->name}}
+                                    {{$post->author->name}}
                                 </authors>
 
                             </div>
@@ -32,7 +32,7 @@
                             </p>
                         </div>
                     </div>
-<hr>
+                    <hr>
 
                     <section class="comments-course">
                         <h3>نظرات</h3>

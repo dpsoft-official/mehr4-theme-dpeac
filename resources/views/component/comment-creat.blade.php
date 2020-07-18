@@ -19,7 +19,7 @@
                         <textarea class="column one" name="body" id="" rows="6" placeholder="نظر شما ...">
                                   </textarea>
 {{--                        <button type="submit" id="btn-course-comment-submit" class="comments-course-form-validate-btn">--}}
-                            ارسال
+
 {{--                        </button>--}}
                         <button type="submit" id="btn-course-comment-submit" class="comments-course-form-validate-btn">
                             ارسال

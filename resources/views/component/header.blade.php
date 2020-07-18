@@ -13,7 +13,6 @@
                     <i class="fa fa-sign-in" aria-hidden="true"></i>
                 </a>
             </div>
-
             <div class="menu-responsive-mob-left small-6">
                 <img class="moblie-logo" src="{{setting('site.logomob')}}" alt="{{setting('site.name')}}">
             </div>
@@ -26,13 +25,9 @@
                         <li @if(Route::currentRouteName()=='course-list') role="menuitem" class="current-menu-item" @endif>
                        <a href="{{route('course-list')}}"><span>دپارتمان ها</span></a>
                         </li>
-
                         <li @if(Route::currentRouteName()=='blog') role="menuitem" class="current-menu-item" @endif>
                             <a href="{{route('blog')}}"><span>اخبار</span></a>
                         </li>
-
-
-
                         @if(Dpsoft\Mehr\Models\Page::find(1)!=null)
                         <li @if(Route::currentRouteName()=='page') class="current-menu-item" @endif role="menuitem">
                             <a href="{{Dpsoft\Mehr\Models\Page::find(1)->url}}"><span>استخدام</span></a>
@@ -193,7 +188,6 @@
                 <a href="{{route('login')}}" class="button hollow button reg-log-btn">
                     <i class="fa fa-sign-in" aria-hidden="true"></i> ورود
                 </a>
-
             </div>
         </div>
     </div>

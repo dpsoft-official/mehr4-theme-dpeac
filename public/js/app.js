@@ -5,18 +5,19 @@
 //     data.append('mobile', $(`input[name='mob']`).val());
 //     let token = $(this).data('token')
 //     let url = 'https://demo.ava-crm.ir/api/v1/customers/' + token + '/api?' + data;
-//     axios.get(url).then((r) =>
-//     {
+//     axios.get(url).then((r) => {
+//         // $('#regModal').modal('show');
+//         // $('#popup-modal').foundation('reveal', 'open');
 //
+//         $('#exampleModal2').foundation('open');
+//         // var popup = new Foundation.Reveal($('#exampleModalHeader11'));
+//         // popup.open();
 //
 //
 //     }, error => {
 //     });
 // });
 
-
-
-$(document).foundation();
 $("[data-circle-graph]").each(function() {
     var $graph = $(this),
         percent = parseInt($graph.data('percent'), 10),

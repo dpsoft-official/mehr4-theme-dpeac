@@ -459,61 +459,23 @@
                 <h3>دپارتمان ها</h3>
                 <hr>
             </div>
-            <!-- Gride Start -->
-            {{--            <div class="grid-container">--}}
-            {{--                <div class="grid-x grid-padding-x dep-section">--}}
-            {{--                    @foreach($categories as $category)--}}
-            {{--                    <div class="department-crt red">--}}
-            {{--                        <img src="http://dpe.ac/api/file/download/5b8fbdaa2483e/icon-koochak-department-of-management-daneshpazhou_pre.png" width="176" alt="مدیریت ، فروش ، بازاریابی">--}}
-            {{--                        <h5>مدیریت ، فروش ، بازاریابی</h5>--}}
-            {{--                        <p>مدیریت را یاد بگیر تجربیاتتو ثبت کن</p>--}}
-            {{--                        <a href="http://dpe.ac/%D8%AF%D9%BE%D8%A7%D8%B1%D8%AA%D9%85%D8%A7%D9%86/5/%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA-%D8%8C-%D9%81%D8%B1%D9%88%D8%B4-%D8%8C-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1%DB%8C%D8%A7%D8%A8%DB%8C/1" class="dep-crt-btn">مشاهده کل دوره ها</a>--}}
-            {{--                    </div>--}}
-
-            {{--                    <div class="post4">--}}
-            {{--                        <a href="http://dpe.ac/%D8%AF%D9%88%D8%B1%D9%87%E2%80%8C%DB%8C+%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C/389/%D8%A7%D8%B1%D8%B2%D9%87%D8%A7%DB%8C-%D8%AF%DB%8C%D8%AC%DB%8C%D8%AA%D8%A7%D9%84-%D9%88-%D8%B3%D8%B1%D9%85%D8%A7%DB%8C%D9%87-%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C-%D8%AF%D8%B1-%DA%A9%D8%B3%D8%A8-%D9%88-%DA%A9%D8%A7%D8%B1%D9%87%D8%A7%DB%8C-%D8%AF%DB%8C%D8%AC%DB%8C%D8%AA%D8%A7%D9%84">--}}
-            {{--                            <img src="http://dpe.ac/api/file/download/5b8fbdaa59282/moarefi-dore-arzhaye-digital-box-dore-daneshpazhou_pre.jpg" alt="ارزهای دیجیتال و سرمایه گذاری در کسب و کارهای دیجیتال">--}}
-            {{--                            <h3>ارزهای دیجیتال و سرمایه گذاری در کسب و کارهای دیجیتال</h3>--}}
-            {{--                            <span></span>--}}
-            {{--                            <ins>959,000 تومان</ins>--}}
-            {{--                        </a>--}}
-            {{--                    </div>--}}
-
-
-            {{--                </div>--}}
-            {{--                @endforeach--}}
-
-            {{--                @if($categories!=null)--}}
-            {{--                <div class="grid-x grid-padding-x dep-section">--}}
-            {{--                    @foreach($categories as $category)--}}
-            {{--                    <div class="department-crt red">--}}
-            {{--                            <img  src="" width="176" alt="">--}}
-            {{--                            <p></p>--}}
-            {{--                            <a href="" class="dep-crt-btn">مشاهده کل دوره ها</a>--}}
-            {{--                        </div>--}}
-
-            {{--                </div>--}}
-            {{--                @endforeach--}}
-            {{--                @endif--}}
-            {{--            </div>--}}
 
             <div class="grid-container">
                 @foreach($categories as $r=>$category)
                        <div class="grid-x grid-padding-x dep-section" >
                             <div class="department-crt department-crt{{$r}} " id="color{{$r}}" >
-                            <img src="" width="176" alt="">
+                            <img src="{{Storage::url('$category->image')}}" width="176" alt="{{$category->title}}">
                             <H5>{{$category->title}}</H5>
-                            <p>مشخصات</p>
+{{--                            <p>مشخصات</p>--}}
                             <a href="{{$category->url}}"
                                class="dep-crt-btn">مشاهده کل دوره ها</a>
                         </div>
-
                         @if($category->courses() !=null)
                             @foreach($category->courses as $i=>$course)
                                 @if($i<4)
                                 <div class="post4" >
                                     <a href="{{$course->url}}">
-                                        <img id="course-image" src="{{$course->image}}" alt="{{$course->title}}">
+                                        <img id="course-image" src="{{Storage::url('$course->image')}}" alt="{{$course->title}}">
                                         <h3 id="course-title">{{$course->title}}</h3>
                                         <span></span>
                                         <ins> </ins>
@@ -523,11 +485,8 @@
                             @endforeach
                         @endif
                     </div>
-
                 @endforeach
-
         </section>
-
         <!-- #DaneshPajohaniShavid -->
         <section class="dpe" id="dpe">
             <div class="head-packege-light">
@@ -572,22 +531,15 @@
                 <div class="grid-container">
                     <div class="grid-x grid-padding-x">
                         <div class="row medium-12 cell">
-                            {{--                            <video width="100%" height="auto" id="video" preload="none" controls poster="{{Storage::url('')}}">--}}
-                            {{--                                --}}{{--                                <source src="{{home_video.url}}">--}}
-                            {{--                            </video>--}}
                             <video width="100%" height="auto" id="video" preload="none" controls=""
                                    poster="{{Storage::url('theme/video-poster.jpg')}}">
                                 <source src="">
                             </video>
-
-
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-
         <!-- #Blog -->
         <section class="newsbar" style="margin-top:303px !important;">
             <div class="grid-container">
@@ -600,32 +552,25 @@
                         <div class="medium-6">
                             <section class="thumbpost">
                                 <div>
-                                    <img src="{{Storage::url($post->image)}}" alt="آیا زمان تغییر شغل فرا رسیده است؟">
+                                    <img src="{{Storage::url($post->image)}}" alt="{{$post->title}}">
                                 </div>
                                 <a itemprop="url" href="{{$post->url}}">
                                     <h4>{{$post->title}}
                                     </h4>
                                     <p itemprop="description">
-
                                         {!! \Illuminate\Support\Str::limit(strip_tags($post->description),120,'...') !!}
                                     </p>
                                 </a>
-
                                 <a href="{{$post->url}}">  <span>ادامه مطلب » </span></a>
-
-
                             </section>
                         </div>
                     @endforeach
-
-
                 </div>
                 <div style="text-align: center;">
                 <a href="{{route('blog')}}" class="hollow button secondary"
                    style="padding: 10px 50px;border-radius: 3px;margin: 64px auto 20px;">اخبار بیشتر</a>
                 </div>
             </div>
-
         </section>
     </main>
 

@@ -12,8 +12,6 @@
                style="color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 2px 3px;">{{$course->expert}}</p>
         </div>
     </section>
-
-
     <!-- #Info Course  -->
     <section class="info-course">
         <!-- Gride Start -->
@@ -152,7 +150,6 @@
                 </div>
             </div>
         </div>
-
         <section class="teacher-course">
             <div class="header-tabs">
                 <!-- Gride Start -->
@@ -200,8 +197,8 @@ border-radius: 3px;" href="/lms/index.php/buy/course?plan_id=664">ثبت نام 
                             </ul>
                         </div>
                     </div>
-
                 </div>
+
                 <div class="grid-container">
                     <div class="grid-x grid-padding-x">
                         <div class="head-packege-light">
@@ -225,7 +222,11 @@ border-radius: 3px;" href="/lms/index.php/buy/course?plan_id=664">ثبت نام 
             </div>
 
         </section>
-
+    </section>
+    @php($similarCourses=\Dpsoft\Mehr\Models\Course::whereHas('categories',function ($q) use ($course)
+{
+$q->whereIn('categories.id',$course->categories->pluck('id')->toArray());
+})->get())
         <!-- #Comments -->
         @if($course->commentable==true)
             <section class="comments-course">
@@ -277,12 +278,6 @@ border-radius: 3px;" href="/lms/index.php/buy/course?plan_id=664">ثبت نام 
             </div>
         </section>
 
-
-    @php($similarCourses=\Dpsoft\Mehr\Models\Course::whereHas('categories',function ($q) use ($course)
-    {
-    $q->whereIn('categories.id',$course->categories->pluck('id')->toArray());
-    })->get())
-
     <!-- #Department -->
         <section class="course-card">
             <div class="head-packege">
@@ -306,7 +301,7 @@ border-radius: 3px;" href="/lms/index.php/buy/course?plan_id=664">ثبت نام 
                 </div>
             </div>
         </section>
-        @endsection
+      @endsection
     @section('script')
             <script>
                 // When the user scrolls the page, execute myFunction

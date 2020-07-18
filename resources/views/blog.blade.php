@@ -3,7 +3,7 @@
     <section class="weblog-content">
         <!-- #contact Us Header -->
         <div class="back-header">
-            <img src="{{Storage::url('theme/robane-package.png')}}" alt="">
+            <img src="{{Storage::url('theme/robane-package.png')}}" alt="{{setting('site.name')}}">
         </div>
         <!-- Gride Start -->
         <div class="weblog-content-parent">
@@ -18,8 +18,8 @@
                         <div class=" blog-box" itemscope="" itemtype="http://schema.org/Article">
                             <div itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
                                 <div itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
-                                    <img style="display:none" src="" alt="">
-                                    <meta itemprop="url" content="ood-Floors.jpg">
+                                    <img style="display:none" src="{{Storage::url($post->image)}}" alt="{{$post->title}}">
+                                    <meta itemprop="url" content="">
                                     <meta itemprop="width" content="600">
                                     <meta itemprop="height" content="60">
                                 </div>
@@ -28,15 +28,14 @@
                             <meta itemprop="datePublished" content=" ">
                             <meta itemprop="dateModified" content="">
                             <div itemprop="image" itemscope="" itemtype="">
-                                <img src=" alt="">
+                                <img src="" alt="{{setting('site.name')}}">
                                 <meta itemprop="url" content="">
                                 <meta itemprop="width" content="70">
                                 <meta itemprop="height" content="70">
                             </div>
-                            <meta itemprop="author" content="Twitter">
-                            <h4 itemprop="headline">!!{{$post->title}}!!
 
 
+                            <h4 itemprop="headline">{{$post->title}}
                             </h4>
                             <div class="caption">
                                 <time datetime="YY">
@@ -46,12 +45,9 @@
                                 <authors>
                                     <i class="fa fa-user" aria-hidden="true"></i>{{$post->author->name}}
                                 </authors>
-
                             </div>
-
                             <p itemprop="description">
                                 {!! \Illuminate\Support\Str::limit(strip_tags($post->description),320,'...') !!}
-
                             </p>
                             <a itemprop="url" href="{{$post->url}}" class="load-more">ادامه مطلب
                                 <i class="fa fa-chevron-left" aria-hidden="true"></i>
@@ -63,8 +59,6 @@
                         <nav aria-label="Pagination">
                        {{$posts->render('mehr4-theme-dpeac::pagination.custom')}}
                         </nav>
-
-
                     </center>
                 </div>
                 <div class="clear"></div>

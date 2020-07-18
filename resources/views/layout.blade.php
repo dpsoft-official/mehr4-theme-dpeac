@@ -19,24 +19,11 @@
     <meta name="enamad" content="{{setting('enemad')}}">
     <meta name="enamad" content="{{setting('samandehi')}}">
     <!-- Favicons-->
-    <link rel="apple-touch-icon" sizes="57x57" href="{{Storage::url('theme/apple-icon-57x57.png')}}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{Storage::url('theme/apple-icon-60x60.png')}}" >
-    <link rel="apple-touch-icon" sizes="72x72"  href="{{Storage::url('theme/apple-icon-72x72.png')}}" >
-    <link rel="apple-touch-icon" sizes="76x76" href="{{Storage::url('theme/apple-icon-76x76.png')}}" >
-    <link rel="apple-touch-icon" sizes="114x114" href="{{Storage::url('theme/apple-icon-114x114.png')}}" >
-    <link rel="apple-touch-icon" sizes="120x120" href="{{Storage::url('theme/apple-icon-120x120.png')}}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{Storage::url('theme/apple-icon-144x144.png')}}" >
-    <link rel="apple-touch-icon" sizes="152x152" href="{{Storage::url('theme/apple-icon-152x152.png')}}" >
-    <link rel="apple-touch-icon" sizes="180x180" href="{{Storage::url('theme/apple-icon-180x180.png')}}">
-    <link rel="shortcut icon" type="image/png" sizes="192x192"  href="{{Storage::url('theme/android-icon-192x192.png')}} ">
-    <link rel="shortcut icon" type="image/png" sizes="32x32" href="{{Storage::url('theme/favicon-32x32.png')}}  ">
-    <link rel="shortcut icon" type="image/png" sizes="96x96" href="{{Storage::url('theme/favicon-96x96.png')}} ">
+    <link rel="shortcut icon" type="image/x-icon"    href="{{Storage::url('theme/favicon.png')}} ">
     <!-- BASE CSS -->
     @yield('head')
     <link rel="stylesheet" href="{{asset('/vendor/mehr4-theme-dpeac/fonts/font.css')}}">
     <link href="{{mix('app.css','vendor/mehr4-theme-dpeac')}}" rel="stylesheet">
-
-
 </head>
 <body >
 @include('mehr4-theme-dpeac::component.header')
@@ -44,29 +31,15 @@
    @yield('main')
 </main>
 @include("mehr4-theme-dpeac::component.footer")
-
 @yield('script')
 <!--/footer-->
 <!-- COMMON SCRIPTS -->
-
 <script src="{{mix('app.js','vendor/mehr4-theme-dpeac')}}"></script>
-
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.min.js')}}"></script>
-{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.reveal.js')}}"></script>--}}
-
-<script src="{{asset('/vendor/mehr4-theme-dpeac/js/what-input.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.lazy.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.plugins.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/app.js')}}"></script>
-{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.core.js')}}"></script>--}}
-{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.keyboard.js')}}"></script>--}}
-{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.touch.js')}}"></script>--}}
-{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.triggers.js')}}"></script>--}}
-{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.mediaQuery.js')}}"></script>--}}
-{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.motion.js')}}"></script>--}}
-{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.tabs.js')}}"></script>--}}
-{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.sticky.js')}}"></script>--}}
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.addon.beforeafter.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.addon.particles.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/jquery.themepunch.revolution.min.js')}}"></script>
@@ -82,7 +55,6 @@
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.video.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.actions.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.carousel.min.js')}}"></script>
-<script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.parallax.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.migration.min.js')}}"></script>
@@ -90,18 +62,25 @@
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.video.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/sweetalert.min.js')}}"></script>
-{{--<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>--}}
-
 <script>
     function myfunction(){
     jQuery(document).foundation();
         $('#exampleModal1').foundation('open');
-        jQuery('#exampleModal1').foundation('_disableScroll', scrollTop);
+
 
 
     }
    </script>
-
+<script>
+$(document).ready(function(){
+setTimeout(
+function()
+{
+//do something special
+$('#exampleModal1').foundation('reveal', 'open')
+}, 10000);
+});
+</script>
 <script type="text/javascript">
     function setREVStartSize(e) {
         try {
@@ -382,14 +361,7 @@ $(document).ready(function () {
 
 });
 </script>
-
-<script>
-
-</script>
-
-
 @yield('footer')
-
 @include('sweet::alert')
 </body>
 </html>

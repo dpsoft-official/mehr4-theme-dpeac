@@ -1,23 +1,20 @@
 @extends("mehr4-theme-dpeac::layout")
 @section('main')
-
     <section class="contact-us-content">
         <!-- #contact Us Header -->
         <div class="back-header">
-            <img src="{{Storage::url('theme/robane-package.png')}}" alt="">
+            <img src="{{Storage::url('theme/robane-package.png')}}" alt="{{setting('site.name')}}">
         </div>
         <!-- Gride Start -->
         <div class="contact-us-content-parent">
             <div class="grid-container">
                 <div class="contact-us-content-box">
-                    <img src="{{Storage::url('theme/about.png')}}" alt="" width="300px">
+                    <img src="{{Storage::url('theme/about.png')}}" alt="{{setting('site.name')}}" width="300px">
                     <div class="head-packege">
                         <h3>تماس باما</h3>
                         <hr>
                     </div>
-
                     <div class="grid-x grid-padding-x">
-
                         <div class="medium-5 small-12 contact-us-content-box-section-style">
                             <i class="icon-uniF106"></i>
                             <dt>آدرس : </dt>
@@ -48,7 +45,6 @@
                             <dt>تلفن ها : </dt>
                             <dd>تلفن ثبت نام:
                                 {{setting('contact.phone')}}
-
                             </dd>
                         </div>
                     </div>
@@ -56,5 +52,4 @@
             </div>
         </div>
     </section>
-
 @endsection
