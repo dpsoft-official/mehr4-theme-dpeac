@@ -17,14 +17,31 @@
                         <input type="hidden" name="source_id" value="{{setting('resource_id')}}">
                         <input type="tel"  name="mob" id="inputMobile"  required="required" pattern="[\u06F0-\u06F90-9\u0660-\u0669]{11}"
                                value=""   size="40"    placeholder="091212345678">
-                        <input type="submit"   value="با من تماس بگیرید"   style="background: #2ac489;
+{{--                        <input type="submit"   value="با من تماس بگیرید"   style="background: #2ac489;--}}
+{{--    padding: 10px 18px;--}}
+{{--    border-radius: 3px;--}}
+{{--    color: white!important;">--}}
+                        <p><button class="button" data-open="exampleModal1" style="background: #2ac489;
     padding: 10px 18px;
     border-radius: 3px;
-    color: white!important;">
-
+    color: white!important;">با من تماس بگیرید</button></p>
                     </form>
 
+
                 </div>
+                <div class="reveal" id="exampleModal1" data-reveal>
+                    <h2>
+
+                    </h2>
+                    <p class="lead" style="text-align: center;">با تشکر از شما</p>
+                    <p>کارشناسان ما با شما تماس خواهند گرفت</p>
+                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+
+
 
                 <div class="row medium-8 small-12">
                     <div class="column-right">

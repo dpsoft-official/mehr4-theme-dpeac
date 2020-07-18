@@ -5,13 +5,9 @@
 //     data.append('mobile', $(`input[name='mob']`).val());
 //     let token = $(this).data('token')
 //     let url = 'https://demo.ava-crm.ir/api/v1/customers/' + token + '/api?' + data;
-//     axios.get(url).then((r) => {
-//         // $('#regModal').modal('show');
-//         // $('#popup-modal').foundation('reveal', 'open');
+//     axios.get(url).then((r) =>
+//     {
 //
-//         $('#exampleModal2').foundation('open');
-//         // var popup = new Foundation.Reveal($('#exampleModalHeader11'));
-//         // popup.open();
 //
 //
 //     }, error => {

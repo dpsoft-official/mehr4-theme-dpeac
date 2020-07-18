@@ -95,7 +95,10 @@
 <script>
     function myfunction(){
     jQuery(document).foundation();
-    jQuery('#myModal').foundation('_disableScroll', scrollTop);
+        $('#exampleModal1').foundation('open');
+        jQuery('#exampleModal1').foundation('_disableScroll', scrollTop);
+
+
     }
    </script>
 
