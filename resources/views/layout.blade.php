@@ -37,9 +37,16 @@
 <script src="{{mix('app.js','vendor/mehr4-theme-dpeac')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.min.js')}}"></script>
+<script src="{{asset('/vendor/mehr4-theme-dpeac/js/app.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.lazy.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.plugins.js')}}"></script>
-<script src="{{asset('/vendor/mehr4-theme-dpeac/js/app.js')}}"></script>
+{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.tabs.js')}}"></script>--}}
+{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.core.js')}}"></script>--}}
+{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.keyboard.js')}}"></script>--}}
+{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.touch.js')}}"></script>--}}
+{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.triggers.js')}}"></script>--}}
+{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.mediaQuery.js')}}"></script>--}}
+{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.motion.js')}}"></script>--}}
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.addon.beforeafter.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.addon.particles.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/jquery.themepunch.revolution.min.js')}}"></script>
@@ -66,9 +73,21 @@
     function myfunction(){
     jQuery(document).foundation();
         $('#exampleModal1').foundation('open');
+
+
+
     }
    </script>
-
+<script>
+$(document).ready(function(){
+setTimeout(
+function()
+{
+//do something special
+$('#exampleModal1').foundation('reveal', 'open')
+}, 10000);
+});
+</script>
 <script type="text/javascript">
     function setREVStartSize(e) {
         try {

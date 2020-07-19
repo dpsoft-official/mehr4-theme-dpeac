@@ -17,7 +17,7 @@
 //     }, error => {
 //     });
 // });
-
+$(document).foundation();
 $("[data-circle-graph]").each(function() {
     var $graph = $(this),
         percent = parseInt($graph.data('percent'), 10),

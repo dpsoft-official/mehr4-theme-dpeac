@@ -1,6 +1,6 @@
 @extends("mehr4-theme-dpeac::layout")
 @section('main')
-    <main class="main">
+
         <!-- #Slider -->
 
         <article class="content">
@@ -572,7 +572,7 @@
                 </div>
             </div>
         </section>
-    </main>
+
 
 @endsection
 
