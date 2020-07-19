@@ -5,6 +5,8 @@
 @section('content')
     {!! $page->content !!}
     <hr>
+    @if($page->commentable==true)
+
     <section class="comments-course">
         <h3>نظرات</h3>
         <!-- Gride Start -->
@@ -32,4 +34,5 @@
             </div>
         </div>
     </section>
+    @endif
 @endsection

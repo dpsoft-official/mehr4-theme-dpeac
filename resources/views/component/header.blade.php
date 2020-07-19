@@ -28,9 +28,9 @@
                         <li @if(Route::currentRouteName()=='blog') role="menuitem" class="current-menu-item" @endif>
                             <a href="{{route('blog')}}"><span>اخبار</span></a>
                         </li>
-                        @if(Dpsoft\Mehr\Models\Page::find(1)!=null)
+                        @if(Dpsoft\Mehr\Models\Page::find(5)!=null)
                         <li @if(Route::currentRouteName()=='page') class="current-menu-item" @endif role="menuitem">
-                            <a href="{{Dpsoft\Mehr\Models\Page::find(1)->url}}"><span>استخدام</span></a>
+                            <a href="{{Dpsoft\Mehr\Models\Page::find(5)->url}}"><span>استخدام</span></a>
                         </li>
                         @endif
                         <li class="is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true" aria-label="امور کاربران">
@@ -39,29 +39,29 @@
                                 <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://dpe.ac/lms/index.php">پروفایل کاربران</a></li>
                                 <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="http://app.dpe.ac">دریافت برنامه&zwnj;ی اندروید</a></li>
 
-                                @if(Dpsoft\Mehr\Models\Page::find(2)!=null)
+                                @if(Dpsoft\Mehr\Models\Page::find(1)!=null)
                                     <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                        <a href="{{Dpsoft\Mehr\Models\Page::find(2)->url}}"><span>راهنمای استفاده از پروفایل کاربری</span></a>
-                                    </li>
-                                @endif
-                                @if(Dpsoft\Mehr\Models\Page::find(3)!=null)
-                                    <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                        <a href="{{Dpsoft\Mehr\Models\Page::find(3)->url}}"><span>درخواست معرفی به کار</span></a>
-                                    </li>
-                                @endif
-                                @if(Dpsoft\Mehr\Models\Page::find(4)!=null)
-                                    <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                        <a href="{{Dpsoft\Mehr\Models\Page::find(4)->url}}"><span>درخواست شرکت در کارگاه های آنلاین</span></a>
-                                    </li>
-                                @endif
-                                @if(Dpsoft\Mehr\Models\Page::find(5)!=null)
-                                    <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                        <a href="{{Dpsoft\Mehr\Models\Page::find(5)->url}}"><span>سوالات متداول</span></a>
+                                        <a href="{{Dpsoft\Mehr\Models\Page::find(1)->url}}"><span>راهنمای استفاده از پروفایل کاربری</span></a>
                                     </li>
                                 @endif
                                 @if(Dpsoft\Mehr\Models\Page::find(6)!=null)
                                     <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                        <a href="{{Dpsoft\Mehr\Models\Page::find(6)->url}}"><span>دانلود نرم افزارهای مرتبط</span></a>
+                                        <a href="{{Dpsoft\Mehr\Models\Page::find(6)->url}}"><span>درخواست معرفی به کار</span></a>
+                                    </li>
+                                @endif
+                                @if(Dpsoft\Mehr\Models\Page::find(7)!=null)
+                                    <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
+                                        <a href="{{Dpsoft\Mehr\Models\Page::find(7)->url}}"><span>درخواست شرکت در کارگاه های آنلاین</span></a>
+                                    </li>
+                                @endif
+                                @if(Dpsoft\Mehr\Models\Page::find(8)!=null)
+                                    <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
+                                        <a href="{{Dpsoft\Mehr\Models\Page::find(8)->url}}"><span>سوالات متداول</span></a>
+                                    </li>
+                                @endif
+                                @if(Dpsoft\Mehr\Models\Page::find(6)!=null)
+                                    <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
+                                        <a href="{{Dpsoft\Mehr\Models\Page::find(9)->url}}"><span>دانلود نرم افزارهای مرتبط</span></a>
                                     </li>
                                 @endif
                             </ul>
@@ -70,44 +70,44 @@
                             <a href="#">راهنمای ثبت نام</a>
                             <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" role="menu">
 
-                                @if(Dpsoft\Mehr\Models\Page::find(7)!=null)
+                                @if(Dpsoft\Mehr\Models\Page::find(11)!=null)
                                     <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                        <a href="{{Dpsoft\Mehr\Models\Page::find(7)->url}}"><span>روند برگزاری دوره ها</span></a>
+                                        <a href="{{Dpsoft\Mehr\Models\Page::find(11)->url}}"><span>روند برگزاری دوره ها</span></a>
                                     </li>
                                 @endif
 
-                                @if(Dpsoft\Mehr\Models\Page::find(8)!=null)
+                                @if(Dpsoft\Mehr\Models\Page::find(12)!=null)
                                     <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                        <a href="{{Dpsoft\Mehr\Models\Page::find(8)->url}}"><span>راهنمای تصویری ثبت نام</span></a>
+                                        <a href="{{Dpsoft\Mehr\Models\Page::find(12)->url}}"><span>راهنمای تصویری ثبت نام</span></a>
                                     </li>
                                 @endif
 
-                                @if(Dpsoft\Mehr\Models\Page::find(9)!=null)
+                                @if(Dpsoft\Mehr\Models\Page::find(14)!=null)
                                     <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                        <a href="{{Dpsoft\Mehr\Models\Page::find(9)->url}}"><span>قوانین و مقررات</span></a>
+                                        <a href="{{Dpsoft\Mehr\Models\Page::find(14)->url}}"><span>قوانین و مقررات</span></a>
                                     </li>
                                 @endif
-                                    @if(Dpsoft\Mehr\Models\Page::find(10)!=null)
+                                    @if(Dpsoft\Mehr\Models\Page::find(15)!=null)
                                         <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                            <a href="{{Dpsoft\Mehr\Models\Page::find(10)->url}}"><span>ثبت شکایات</span></a>
+                                            <a href="{{Dpsoft\Mehr\Models\Page::find(15)->url}}"><span>ثبت شکایات</span></a>
                                         </li>
                                     @endif
-                                    @if(Dpsoft\Mehr\Models\Page::find(11)!=null)
+                                    @if(Dpsoft\Mehr\Models\Page::find(17)!=null)
                                         <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                            <a href="{{Dpsoft\Mehr\Models\Page::find(11)->url}}"><span>درخواست مشاوره رایگان</span></a>
+                                            <a href="{{Dpsoft\Mehr\Models\Page::find(17)->url}}"><span>درخواست مشاوره رایگان</span></a>
                                         </li>
                                     @endif
-                                    @if(Dpsoft\Mehr\Models\Page::find(12)!=null)
+                                    @if(Dpsoft\Mehr\Models\Page::find(16)!=null)
                                         <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                            <a href="{{Dpsoft\Mehr\Models\Page::find(12)->url}}"><span>محتویات پکیج های آموزشی</span></a>
+                                            <a href="{{Dpsoft\Mehr\Models\Page::find(16)->url}}"><span>محتویات پکیج های آموزشی</span></a>
                                         </li>
                                     @endif
                             </ul>
                         </li>
 
-                        @if(Dpsoft\Mehr\Models\Page::find(13)!=null)
+                        @if(Dpsoft\Mehr\Models\Page::find(18)!=null)
                             <li @if(Route::currentRouteName()=='page') class="" @endif role="menuitem">
-                                <a href="{{Dpsoft\Mehr\Models\Page::find(13)->url}}"><span>تاییدیه ها</span></a>
+                                <a href="{{Dpsoft\Mehr\Models\Page::find(18)->url}}"><span>تاییدیه ها</span></a>
                             </li>
                         @endif
 
@@ -118,42 +118,41 @@
                                     <a href="{{route('about')}}"><span>داستان ما</span></a>
                                 </li>
 
-                                @if(Dpsoft\Mehr\Models\Page::find(14)!=null)
+                                @if(Dpsoft\Mehr\Models\Page::find(19)!=null)
                                     <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                        <a href="{{Dpsoft\Mehr\Models\Page::find(14)->url}}"><span>مجوزات و افتخارات</span></a>
+                                        <a href="{{Dpsoft\Mehr\Models\Page::find(19)->url}}"><span>مجوزات و افتخارات</span></a>
                                     </li>
                                 @endif
-                                @if(Dpsoft\Mehr\Models\Page::find(15)!=null)
+                                @if(Dpsoft\Mehr\Models\Page::find(20)!=null)
                                     <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                        <a href="{{Dpsoft\Mehr\Models\Page::find(15)->url}}"><span>همکاران</span></a>
+                                        <a href="{{Dpsoft\Mehr\Models\Page::find(20)->url}}"><span>همکاران</span></a>
                                     </li>
                                 @endif
-                                @if(Dpsoft\Mehr\Models\Page::find(16)!=null)
+                                @if(Dpsoft\Mehr\Models\Page::find(21)!=null)
                                     <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                        <a href="{{Dpsoft\Mehr\Models\Page::find(16)->url}}"><span>سمینار ها</span></a>
+                                        <a href="{{Dpsoft\Mehr\Models\Page::find(21)->url}}"><span>سمینار ها</span></a>
                                     </li>
                                 @endif
-                                <li role="menuitem" class="is-dropdown-submenu-parent is-submenu-item is-dropdown-submenu-item opens-left" aria-haspopup="true" aria-label="محصولات ما"><a href="http://dpe.ac/page/%D8%B3%D9%85%DB%8C%D9%86%D8%A7%D8%B1%D9%87%D8%A7/16">محصولات ما</a>
+                                <li role="menuitem" class="is-dropdown-submenu-parent is-submenu-item is-dropdown-submenu-item opens-left" aria-haspopup="true" aria-label="محصولات ما"><a >محصولات ما</a>
                                     <ul class="submenu is-dropdown-submenu vertical" data-submenu="" role="menu">
-                                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="">مدیریت محتوای نویسه</a></li>
-                                        @if(Dpsoft\Mehr\Models\Page::find(17)!=null)
+                                        @if(Dpsoft\Mehr\Models\Page::find(22)!=null)
                                             <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                                <a href="{{Dpsoft\Mehr\Models\Page::find(17)->url}}"><span>سمینار ها</span></a>
+                                                <a href="{{Dpsoft\Mehr\Models\Page::find(22)->url}}"><span> مدیریت محتوای نویسه</span></a>
                                             </li>
                                         @endif
-                                        @if(Dpsoft\Mehr\Models\Page::find(18)!=null)
+                                        @if(Dpsoft\Mehr\Models\Page::find(23)!=null)
                                             <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                                <a href="{{Dpsoft\Mehr\Models\Page::find(18)->url}}"><span>سامانه آموزش مجازی مهر</span></a>
+                                                <a href="{{Dpsoft\Mehr\Models\Page::find(23)->url}}"><span>سامانه آموزش مجازی مهر</span></a>
                                             </li>
                                         @endif
-                                        @if(Dpsoft\Mehr\Models\Page::find(19)!=null)
+                                        @if(Dpsoft\Mehr\Models\Page::find(24)!=null)
                                             <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                                <a href="{{Dpsoft\Mehr\Models\Page::find(19)->url}}"><span>سامانه بازاریابی و فروش تلفنی آوا</span></a>
+                                                <a href="{{Dpsoft\Mehr\Models\Page::find(24)->url}}"><span>سامانه بازاریابی و فروش تلفنی آوا</span></a>
                                             </li>
                                         @endif
-                                        @if(Dpsoft\Mehr\Models\Page::find(20)!=null)
+                                        @if(Dpsoft\Mehr\Models\Page::find(25)!=null)
                                             <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                                <a href="{{Dpsoft\Mehr\Models\Page::find(20)->url}}"><span>دارکوب جاب</span></a>
+                                                <a href="{{Dpsoft\Mehr\Models\Page::find(25)->url}}"><span>دارکوب جاب</span></a>
                                             </li>
                                         @endif
                                     </ul>
@@ -168,14 +167,14 @@
                                 <li @if(Route::currentRouteName()=='contact') role="menuitem" class="is-submenu-item is-dropdown-submenu-item current-menu-item" @endif>
                                     <a href="{{route('contact')}}"><span>تماس با ما</span></a>
                                 </li>
-                                @if(Dpsoft\Mehr\Models\Page::find(21)!=null)
+                                @if(Dpsoft\Mehr\Models\Page::find(26)!=null)
                                     <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                        <a href="{{Dpsoft\Mehr\Models\Page::find(21)->url}}"><span>درخواست همکاری با دانش پژوهان</span></a>
+                                        <a href="{{Dpsoft\Mehr\Models\Page::find(26)->url}}"><span>درخواست همکاری با دانش پژوهان</span></a>
                                     </li>
                                 @endif
-                                @if(Dpsoft\Mehr\Models\Page::find(22)!=null)
+                                @if(Dpsoft\Mehr\Models\Page::find(27)!=null)
                                     <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
-                                        <a href="{{Dpsoft\Mehr\Models\Page::find(22)->url}}"><span>دانش پژوهان در رسانه های اجتماعی</span></a>
+                                        <a href="{{Dpsoft\Mehr\Models\Page::find(27)->url}}"><span>دانش پژوهان در رسانه های اجتماعی</span></a>
                                     </li>
                                 @endif
 
