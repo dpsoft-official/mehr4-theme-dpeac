@@ -66,21 +66,9 @@
     function myfunction(){
     jQuery(document).foundation();
         $('#exampleModal1').foundation('open');
-
-
-
     }
    </script>
-<script>
-$(document).ready(function(){
-setTimeout(
-function()
-{
-//do something special
-$('#exampleModal1').foundation('reveal', 'open')
-}, 10000);
-});
-</script>
+
 <script type="text/javascript">
     function setREVStartSize(e) {
         try {
