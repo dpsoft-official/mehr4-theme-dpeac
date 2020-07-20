@@ -55,7 +55,7 @@
                             @foreach($courses as $course)
                                 <div class="post4">
                                     <a href="{{$course->url}}">
-                                        <img src="{{Storage::url('$course->image')}}" alt="{{$course->title}}">
+                                        <img src="{{Storage::url($course->image)}}" alt="{{$course->title}}">
                                         <h3>{{$course->title}}</h3>
 {{--                                        <span></span>--}}
                                         <ins>{{number_format($course->price )}}</ins>
@@ -78,7 +78,7 @@
                                 @foreach($courses as $course)
                                     <div class="post4">
                                         <a href="{{$course->url}}">
-                                            <img src="{{Storage::url('$course->image')}}" alt="{{$course->title}}">
+                                            <img src="{{Storage::url($course->image)}}" alt="{{$course->title}}">
                                             <h3>{{$course->title}}</h3>
                                             <span></span>
                                             <ins>{{number_format($course->price )}}</ins>
