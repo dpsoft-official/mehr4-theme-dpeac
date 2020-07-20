@@ -464,7 +464,7 @@
                 @foreach($categories as $r=>$category)
                        <div class="grid-x grid-padding-x dep-section" >
                             <div class="department-crt department-crt{{$r}} " id="color{{$r}}" >
-                            <img src="{{Storage::url('$category->image')}}" width="176" alt="{{$category->title}}">
+                            <img src="{{Storage::url($category->image)}}" width="176" alt="{{$category->title}}">
                             <H5>{{$category->title}}</H5>
 {{--                            <p>مشخصات</p>--}}
                             <a href="{{$category->url}}"
@@ -475,7 +475,7 @@
                                 @if($i<4)
                                 <div class="post4" >
                                     <a href="{{$course->url}}">
-                                        <img id="course-image" src="{{Storage::url('$course->image')}}" alt="{{$course->title}}">
+                                        <img id="course-image" src="{{Storage::url($course->image)}}" alt="{{$course->title}}">
                                         <h3 id="course-title">{{$course->title}}</h3>
                                         <span></span>
                                         <ins> </ins>
