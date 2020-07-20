@@ -1,11 +1,7 @@
 @extends("mehr4-theme-dpeac::layout")
 @section('main')
-
         <!-- #Slider -->
-
         <article class="content">
-
-
             <div id="rev_slider_13_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
                  data-alias="beforeafterslider14" data-source="gallery"
                  style="margin:0px auto;background:#252525;padding:0px;margin-top:0px;margin-bottom:0px;">
@@ -69,8 +65,6 @@
                                    class="search__input" placeholder="جستجوی دوره">
                             <button type="send" class="search-btn">جستجو کن</button>
                         </form>
-
-
                     </div>
                 </div>
             </div>
@@ -466,7 +460,7 @@
                             <div class="department-crt department-crt{{$r}} " id="color{{$r}}" >
                             <img src="{{Storage::url($category->image)}}" width="176" alt="{{$category->title}}">
                             <H5>{{$category->title}}</H5>
-{{--                            <p>مشخصات</p>--}}
+                            <p>{{$category->description}}</p>
                             <a href="{{$category->url}}"
                                class="dep-crt-btn">مشاهده کل دوره ها</a>
                         </div>
@@ -533,7 +527,7 @@
                         <div class="row medium-12 cell">
                             <video width="100%" height="auto" id="video" preload="none" controls=""
                                    poster="{{Storage::url('theme/video-poster.jpg')}}">
-                                <source src="">
+                                <source src="{{Storage::url('theme/video.mp4')}}">
                             </video>
                         </div>
                     </div>
