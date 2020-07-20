@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token"
-          content="{{ csrf_token() }}">
+    content="{{ csrf_token() }}">
     @include('mehr::component.seo')
     @if(!empty(setting('google.analytics')))
         <script async src="https://www.googletagmanager.com/gtag/js?id={{setting('google.analytics')}}"></script>
@@ -24,8 +24,9 @@
     @yield('head')
     <link rel="stylesheet" href="{{asset('/vendor/mehr4-theme-dpeac/fonts/font.css')}}">
     <link href="{{mix('app.css','vendor/mehr4-theme-dpeac')}}" rel="stylesheet">
+
 </head>
-<body >
+<body>
 @include('mehr4-theme-dpeac::component.header')
 <main class="main">
    @yield('main')
@@ -73,9 +74,6 @@
     function myfunction(){
     jQuery(document).foundation();
         $('#exampleModal1').foundation('open');
-
-
-
     }
    </script>
 <script>
