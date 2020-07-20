@@ -60,7 +60,7 @@
                          data-top-anchor="example2:top" data-btm-anchor="foo:bottom" data-resize="tlab0p-sticky"
                          data-mutate="tlab0p-sticky" data-e="rj6ejr-e" data-events="resize"
                          style="max-width: 300px; margin-top: 0px; bottom: auto; top: 0px;">
-                        <img src="{{Storage::url('course->image')}}" alt="{{$course->title}}">
+                        <img src="{{Storage::url($course->image)}}" alt="{{$course->title}}">
                         <div class="des-side-info">
                             <b>{{$course->name}}</b>
                             <p>
@@ -118,7 +118,7 @@
                      data-mutate="910o5i-sticky" data-e="ipomjr-e" data-events="resize"
                      style="max-width: 1124.16px; margin-top: 0px; bottom: auto; top: 0px;">
                     <ul class="des-side-info">
-                        <img src="{{Storage::url('course->image')}}" alt="{{('$course->title')}}">
+                        <img src="{{Storage::url($course->image)}}" alt="{{('$course->title')}}">
                         <p>{{$course->name}}</p>
 
                         <li>
@@ -159,7 +159,7 @@
                         <div class="" style="bottom: auto; top: 0px;margin-bottom: 0;">
                             <ul class="des-side-info" style="margin-bottom: 0;">
                                 <img
-                                    src="{{$course->image? Storage::url('$course->image'):Storage::url('theme/head.jpg')}}"
+                                    src="{{$course->image? Storage::url($course->image):Storage::url('theme/head.jpg')}}"
                                     alt="{{$course->title}}"
                                     style="width: 5%;margin-top: 14px;margin-bottom: -10px;float: right;display: block;">
                                 <p style="color:black;display: inline-block;margin-top: 18px;margin-right: 30px;">{{$course->title}}</p>

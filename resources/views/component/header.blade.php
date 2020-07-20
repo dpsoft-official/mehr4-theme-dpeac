@@ -19,9 +19,10 @@
             <div class="medium-8 small-12 cell">
                 <nav class="menu-header" id="home-animated-menu" data-animate="hinge-in-from-top hinge-out-from-top">
                     <ul class="dropdown menu" data-dropdown-menu="" role="menubar" data-e="eduajc-e">
-                        <li class="" role="menuitem">
+                        <li @if(Route::currentRouteName()=='home') class="navbar-active" role="menuitem" @endif>
                             <a href="/">صفحه اصلی</a>
                         </li>
+
                         <li @if(Route::currentRouteName()=='course-list') role="menuitem" class="current-menu-item" @endif>
                        <a href="{{route('course-list')}}"><span>دپارتمان ها</span></a>
                         </li>
