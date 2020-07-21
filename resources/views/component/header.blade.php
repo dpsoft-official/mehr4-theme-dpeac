@@ -115,9 +115,11 @@
                         <li class="is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true" aria-label="درباره ما">
                             <a href="">درباره ما</a>
                             <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" role="menu">
-                                <li @if(Route::currentRouteName()=='about') role="menuitem" class="is-submenu-item is-dropdown-submenu-item current-menu-item" @endif>
-                                    <a href="{{route('about')}}"><span>داستان ما</span></a>
+                               @if (Dpsoft\Mehr\Models\Page::find(28)!=null)
+                                <li @if(Route::currentRouteName()=='page') role="menuitem" class="is-submenu-item is-dropdown-submenu-item current-menu-item" @endif>
+                                    <a href="{{Dpsoft\Mehr\Models\Page::find(28)->url}}"><span>داستان ما</span></a>
                                 </li>
+                                @endif
 
                                 @if(Dpsoft\Mehr\Models\Page::find(19)!=null)
                                     <li @if(Route::currentRouteName()=='page') class="is-submenu-item is-dropdown-submenu-item" @endif role="menuitem">
