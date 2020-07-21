@@ -22,6 +22,6 @@
             </div>
             <hr>
         </div>
-
     </section>
 @endsection
+@yield('footer')

@@ -22,19 +22,23 @@
     <link rel="shortcut icon" type="image/x-icon"    href="{{Storage::url('theme/favicon.png')}} ">
     <!-- BASE CSS -->
     @yield('head')
+
     <link rel="stylesheet" href="{{asset('/vendor/mehr4-theme-dpeac/fonts/font.css')}}">
     <link href="{{mix('app.css','vendor/mehr4-theme-dpeac')}}" rel="stylesheet">
 
 </head>
+
 <body>
 @include('mehr4-theme-dpeac::component.header')
 <main class="main">
     @yield('main')
 </main>
+
 @include("mehr4-theme-dpeac::component.footer")
 @yield('script')
 <!--/footer-->
 <!-- COMMON SCRIPTS -->
+@yield('footer')
 <script src="{{mix('app.js','vendor/mehr4-theme-dpeac')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.min.js')}}"></script>
@@ -70,22 +74,14 @@
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.extension.video.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/sweetalert.min.js')}}"></script>
+
 <script>
     function myfunction(){
         jQuery(document).foundation();
         $('#exampleModal1').foundation('open');
     }
 </script>
-<script>
-    $(document).ready(function(){
-        setTimeout(
-            function()
-            {
-//do something special
-                $('#exampleModal1').foundation('reveal', 'open')
-            }, 10000);
-    });
-</script>
+
 <script type="text/javascript">
     function setREVStartSize(e) {
         try {
@@ -356,6 +352,7 @@
         });
     });
 </script>
+
 <script>
     $(document).ready(function () {
         $("div.tabs-title.is-active").click(function (e) {

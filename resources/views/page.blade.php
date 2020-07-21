@@ -1,5 +1,4 @@
 @extends('mehr4-theme-dpeac::layout-page')
-
 @section('title')
     {{$page->title}}
 @endsection
@@ -7,7 +6,6 @@
     {!! $page->content !!}
     <hr>
     @if($page->commentable==true)
-
     <section class="comments-course">
         <h3>نظرات</h3>
         <!-- Gride Start -->
