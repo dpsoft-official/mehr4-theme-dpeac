@@ -1,6 +1,6 @@
 @extends("mehr4-theme-dpeac::layout")
 @section('main')
-    <div class="reveal" id="exampleModal1" data-reveal>
+    <div class="reveal" id="exampleModal1" data-reveal data-append-to="body"	>
         <h5 style="text-align:center;">
             با تشکر از شما
         </h5>
@@ -101,7 +101,7 @@
                     @endforeach
                     @foreach(\Dpsoft\Mehr\Models\Course::withAnyTags(['پکیج'])->get() as $course)
                         <div class="medium-4">
-                            <a href="{{$course->courses_url}}">
+                            <a href="{{$course->url}}">
                 <span class="dpe-dep-box">
                     <img src="{{Storage::url($course->image)}}" alt="{{$course->title}}">
                     <p>{{($course->title)}}</p>
