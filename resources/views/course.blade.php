@@ -3,7 +3,7 @@
     <!-- #Slider -->
     <section class="slider-course">
         <div class="back-header">
-            <img src="{{$course->image? Storage::url('$course->image'):Storage::url('theme/head.jpg')}}">
+            <img src="{{$course->image? Storage::url($course->image):Storage::url('theme/head.jpg')}}">
         </div>
         <div class="title-course">
             <h2 id="course-title"
@@ -60,7 +60,7 @@
                          data-top-anchor="example2:top" data-btm-anchor="foo:bottom" data-resize="tlab0p-sticky"
                          data-mutate="tlab0p-sticky" data-e="rj6ejr-e" data-events="resize"
                          style="max-width: 300px; margin-top: 0px; bottom: auto; top: 0px;">
-                        <img src="{{Storage::url('course->image')}}" alt="{{$course->title}}">
+                        <img src="{{Storage::url($course->image)}}" alt="{{$course->title}}">
                         <div class="des-side-info">
                             <b>{{$course->name}}</b>
                             <p>
@@ -118,15 +118,13 @@
                      data-mutate="910o5i-sticky" data-e="ipomjr-e" data-events="resize"
                      style="max-width: 1124.16px; margin-top: 0px; bottom: auto; top: 0px;">
                     <ul class="des-side-info">
-                        <img src="{{Storage::url('course->image')}}" alt="{{('$course->title')}}">
+                        <img src="{{Storage::url($course->image)}}" alt="{{('$course->title')}}">
                         <p>{{$course->name}}</p>
-
                         <li>
                             <i class="fa fa-clock-o" aria-hidden="true"></i>
                             <span itemprop="timeRequired"></span>
                         </li>
                         <li>
-
                             <i class="fa fa-history" aria-hidden="true"></i>
                             <span itemprop="timeRequired"> روز</span>
                         </li>
@@ -246,7 +244,7 @@ $q->whereIn('categories.id',$course->categories->pluck('id')->toArray());
                                     <section class="comments-course-box">
                                         <article style="overflow: hidden; max-height: none;">
                                             <b itemprop="author"><a>{{$comment->creator ? $comment->creator->name:"نظر دهنده"}}
-                                                    "</a></b>
+                                                    </a></b>
                                             <p itemprop="description">
                                                 {{$comment->body}}
                                             </p>
@@ -290,7 +288,7 @@ $q->whereIn('categories.id',$course->categories->pluck('id')->toArray());
                         <div class="post4 ">
                             <a href="{{$course->url}}" style="height: 300px;">
 {{--                                <img src="{{$course->image? Storage::url('$course->image'):Storage::url('theme/similar.jpg')}}">--}}
-                                <img src="{{Storage::url('theme/similar.jpg')}}">
+                                <img src="{{$course->image? Storage::url($course->image):Storage::url('theme/similar.jpg')}}">
 
                             </a>
                             <ins>{{number_format($course->price)}} ریال</ins>
