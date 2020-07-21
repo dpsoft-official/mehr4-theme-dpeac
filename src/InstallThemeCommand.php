@@ -44,12 +44,6 @@ class InstallThemeCommand extends Command
         $this->info('copy theme directory...');
         $this->call('vendor:publish',['--provider'=>Mehr4ThemeDpeacServiceProvider::class,'--tag'=>'theme','--force' => true]);
 
-//        $this->info('Publishing page404...');
-//        $this->call('vendor:publish',['--provider'=>Mehr4ThemeAzarbsServiceProvider::class,'--tag'=>'page404','--force' => true]);
-//
-//        $this->info('Publishing auth pages view...');
-//        $this->call('vendor:publish',['--tag'=>'mehr-theme-azarbs-auth-views']);
-
         $this->info('Creating new settings...');
         \Mehr::updateOrNewSetting('site.logo',\Storage::url('theme/logo.png'),'لوگوی سایت');
         \Mehr::updateOrNewSetting('mob.logo',\Storage::url('theme/logomob.png'),'لوگوی  موبایل سایت');
