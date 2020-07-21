@@ -1,5 +1,15 @@
 @extends("mehr4-theme-dpeac::layout")
 @section('main')
+    <div class="reveal" id="exampleModal1" data-reveal>
+        <h5 style="text-align:center;">
+            با تشکر از شما
+        </h5>
+        <p class="lead" style="text-align: center;">شماره تماس شما ثبت شد.</p>
+        <p>کارشناسان ما با شما تماس خواهند گرفت</p>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
         <!-- #Slider -->
         <article class="content">
             <div id="rev_slider_13_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container"

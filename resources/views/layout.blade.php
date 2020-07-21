@@ -40,6 +40,7 @@
 <!-- COMMON SCRIPTS -->
 @yield('footer')
 <script src="{{mix('app.js','vendor/mehr4-theme-dpeac')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/app.js')}}"></script>
@@ -76,10 +77,10 @@
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/sweetalert.min.js')}}"></script>
 
 <script>
-    function myfunction(){
-        jQuery(document).foundation();
-        $('#exampleModal1').foundation('open');
-    }
+    // function myfunction(){
+    //     jQuery(document).foundation();
+    //     $('#exampleModal1').foundation('open');
+    // }
 </script>
 
 <script type="text/javascript">

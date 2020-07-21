@@ -1,4 +1,3 @@
-
 <footer class="footer" style="background-image:url('{{Storage::url('theme/footer.png')}}')">
     <!-- Gride Start -->
     <div class="grid-container">
@@ -11,31 +10,19 @@
                         role="form"
                         name="ava-crm-form"
                         class="wpcf7-form"
-                        data-token="{{setting('ava3.token')}}"
+                        data-token="{{setting('institute.token')}}"
                         novalidate="novalidate">
                         <input type="hidden" name="product_id" value="{{setting('product_id')}}">
-                        <input type="hidden" name="source_id" value="{{setting('resource_id')}}">
+                        <input type="hidden" name="source_id" value="{{setting('source_id')}}">
                         <input type="tel"  name="mob" id="inputMobile"  required="required" pattern="[\u06F0-\u06F90-9\u0660-\u0669]{11}"
                                value=""   size="40"    placeholder="091212345678">
-
                         <p><button class="button" data-open="exampleModal1" style="background: #2ac489;
     padding: 10px 18px;
     border-radius: 3px;
     color: white!important;">با من تماس بگیرید</button></p>
                     </form>
-
-
                 </div>
-                <div class="reveal" id="exampleModal1" data-reveal>
-                    <h5 style="text-align:center;">
-با تشکر از شما
-                    </h5>
-                    <p class="lead" style="text-align: center;">شماره تماس شما ثبت شد.</p>
-                    <p>کارشناسان ما با شما تماس خواهند گرفت</p>
-                    <button class="close-button" data-close aria-label="Close modal" type="button">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+
 
 
 
