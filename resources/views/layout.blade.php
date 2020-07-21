@@ -15,6 +15,10 @@
             gtag('js', new Date());
             gtag('config', "{{setting('google.analytics')}}");
         </script>
+        <script type="text/javascript">
+            !function(){function g(){var g=document.createElement("script"),s="https://www.goftino.com/widget/l10H5N";g.type="text/javascript", g.async=!0,g.src=localStorage.getItem("goftino")?s+"?o="+localStorage.getItem("goftino"):s;var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(g, e);}
+                var a = window;"complete" === document.readyState ? g() : a.attachEvent ? a.attachEvent("onload", g) : a.addEventListener("load", g, !1);}();
+        </script>
     @endif
     <meta name="enamad" content="{{setting('enemad')}}">
     <meta name="enamad" content="{{setting('samandehi')}}">
