@@ -1,5 +1,5 @@
 @extends('mehr4-theme-dpeac::layout-page')
-@section('main')
+
 @section('title')
     {{$page->title}}
 @endsection
@@ -37,4 +37,4 @@
     </section>
     @endif
 @endsection
-@endsection
+
