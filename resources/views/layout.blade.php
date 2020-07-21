@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token"
-    content="{{ csrf_token() }}">
+          content="{{ csrf_token() }}">
     @include('mehr::component.seo')
     @if(!empty(setting('google.analytics')))
         <script async src="https://www.googletagmanager.com/gtag/js?id={{setting('google.analytics')}}"></script>
@@ -14,10 +14,6 @@
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', "{{setting('google.analytics')}}");
-        </script>
-        <script type="text/javascript">
-            !function(){function g(){var g=document.createElement("script"),s="https://www.goftino.com/widget/l10H5N";g.type="text/javascript", g.async=!0,g.src=localStorage.getItem("goftino")?s+"?o="+localStorage.getItem("goftino"):s;var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(g, e);}
-                var a = window;"complete" === document.readyState ? g() : a.attachEvent ? a.attachEvent("onload", g) : a.addEventListener("load", g, !1);}();
         </script>
     @endif
     <meta name="enamad" content="{{setting('enemad')}}">
@@ -33,7 +29,7 @@
 <body>
 @include('mehr4-theme-dpeac::component.header')
 <main class="main">
-   @yield('main')
+    @yield('main')
 </main>
 @include("mehr4-theme-dpeac::component.footer")
 @yield('script')
@@ -76,19 +72,19 @@
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/sweetalert.min.js')}}"></script>
 <script>
     function myfunction(){
-    jQuery(document).foundation();
+        jQuery(document).foundation();
         $('#exampleModal1').foundation('open');
     }
-   </script>
+</script>
 <script>
-$(document).ready(function(){
-setTimeout(
-function()
-{
+    $(document).ready(function(){
+        setTimeout(
+            function()
+            {
 //do something special
-$('#exampleModal1').foundation('reveal', 'open')
-}, 10000);
-});
+                $('#exampleModal1').foundation('reveal', 'open')
+            }, 10000);
+    });
 </script>
 <script type="text/javascript">
     function setREVStartSize(e) {
@@ -359,16 +355,16 @@ $('#exampleModal1').foundation('reveal', 'open')
             carousel: false
         });
     });
-    </script>
+</script>
 <script>
-$(document).ready(function () {
-    $("div.tabs-title.is-active").click(function (e) {
-        var a = $('div.tabs-title.is-active').find('img.body');
-        var b = $('div.tabs-title.is-active').find('a.body');
-        $('div.tabs-title.is-loop').appendTo('.is-active').show('fast');
-    });
+    $(document).ready(function () {
+        $("div.tabs-title.is-active").click(function (e) {
+            var a = $('div.tabs-title.is-active').find('img.body');
+            var b = $('div.tabs-title.is-active').find('a.body');
+            $('div.tabs-title.is-loop').appendTo('.is-active').show('fast');
+        });
 
-});
+    });
 </script>
 @yield('footer')
 @include('sweet::alert')
