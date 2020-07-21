@@ -12,7 +12,7 @@
                 <div class="post-content-box">
                     <div class="grid-x grid-padding-x">
                         <div class=" post-box" itemscope="" itemtype="http://schema.org/Blog">
-                            <img src="{{Storage::url('$post->image')}}" alt="">
+                            <img src="{{Storage::url($post->image)}}" alt="{{$post->title}}">
                             <h3 itemprop="name">
                                 {{$post->title}}
                             </h3>
