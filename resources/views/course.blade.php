@@ -283,19 +283,18 @@ $q->whereIn('categories.id',$course->categories->pluck('id')->toArray());
             </div>
             <div class="grid-container">
                 <div class="grid-x grid-padding-x dep-section">
-                    <div class="">
                     @foreach($similarCourses->take(4) as $course)
                         <div class="post4 ">
                             <a href="{{$course->url}}" style="height: 300px;">
-{{--                                <img src="{{$course->image? Storage::url('$course->image'):Storage::url('theme/similar.jpg')}}">--}}
                                 <img src="{{$course->image? Storage::url($course->image):Storage::url('theme/similar.jpg')}}">
-
+                                <h3>{{$course->title}}</h3>
                             </a>
                             <ins>{{number_format($course->price)}} ریال</ins>
 {{--                            <span style="text-align: right;">   </span>--}}
                         </div>
+
                     @endforeach
-                    </div>
+
                 </div>
             </div>
         </section>

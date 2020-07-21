@@ -18463,3 +18463,10 @@ background-color: #0199e7;
 .department .department-crt7:after{
     border-right: 20px solid #ff5f94;
 }
+.course-card .post4 h3 {
+    font-size: 13px;
+    text-align: center;
+    color: #2C3E50;
+    line-height: 30px;
+    margin-top: 14px;
+}
