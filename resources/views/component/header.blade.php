@@ -2,7 +2,9 @@
     <div class="">
         <div class="grid-x grid-padding-x">
             <div class="medium-2 small-12 cell mobile-support-none">
-                <img src="{{setting('site.logo')}}" alt="{{setting('site.name')}}">
+                <a href="/">
+                    <img src="{{setting('site.logo')}}" alt="{{setting('site.name')}}">
+                </a>
             </div>
             <div class="small-6 none-desk">
                 <div class="menu-responsive-mob" data-responsive-toggle="home-animated-menu" data-hide-for="medium" data-e="b8c3kf-e" style="display: none;">
@@ -186,11 +188,32 @@
                     </ul>
                 </nav>
             </div>
+{{--            <div class="medium-2 small-12 cell mobile-support-none ">--}}
+{{--                <a href="{{route('login')}}" class="button hollow button reg-log-btn">--}}
+{{--                    <i class="fa fa-sign-in" aria-hidden="true"></i> ورود--}}
+{{--                </a>--}}
+{{--            </div>--}}
             <div class="medium-2 small-12 cell mobile-support-none ">
-                <a href="{{route('login')}}" class="button hollow button reg-log-btn">
-                    <i class="fa fa-sign-in" aria-hidden="true"></i> ورود
-                </a>
+                @guest
+                    <ul class="btn_1">
+                        @if (Route::has('register'))
+                            <li>
+                                @endif<a class="button hollow button reg-log-btn" href="{{ route('login') }}">ورود</a></li>
+                    </ul>
+                @else
+                    <ul class="btn_1">
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                        <a  style="width:49%;" href="/panel" class="button hollow button reg-log-btn"><span class="icon-user"></span> {{ Auth::user()->name }}</a></li>
+                        <a href="http://127.0.0.1:8000/logout" onclick="event.preventDefault();
+document.getElementById('logout-form').submit();"  style="width:49%;" class="button hollow button reg-log-btn" style="background-color: #14679e;
+color: #fefefe;">خروج </a>
+                    </ul>
+                @endguest
             </div>
+
         </div>
     </div>
 </header>

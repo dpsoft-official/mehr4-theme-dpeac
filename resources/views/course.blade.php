@@ -1,6 +1,5 @@
 @extends("mehr4-theme-dpeac::layout")
-@section('main')
-    @if($course->withAnyTags(['پکیج']))
+@if($course->tags()->where('id', 41)->exists())
 @section('main')
         <style>
             header.header nav.menu-header ul>li ul li ul {
@@ -77,7 +76,6 @@
                 border: none;
             }
         </style>
-
             <!-- #Slider Package -->
             <section class="slider-main" style="position:relative" typeof="Course">
                 <img style="height:  560px;" id="course-image" src="{{Storage::url($course->image)}}" alt="{{$course->title}}">
@@ -89,7 +87,7 @@
                             <p id="course-description" property="description" style="color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 2px 3px;">{{$course->excerpt}}</div>
                         <p style="text-align:  left;float:  left;display:block;margin: 0 auto 0 0;position:  relative;">
                             <a class="float-left video-embed-teacher-free" data-open="video-head-course" data-video="video-1093834994" aria-controls="video-head-course" aria-haspopup="true" tabindex="0">
-                                <img class="video-graphic" src="http://dpe.ac/api/file/download/5bfbbb47f24b6/axasy.gif" alt="{{$course->title}}">
+                                <img class="video-graphic" src="{{Storage::url('theme/axasy.gif')}}" alt="{{$course->title}}">
                             </a>
                         </p>
 
@@ -102,7 +100,6 @@
                     </div>
                 </div>
             </section>
-
             <!-- #Info Package -->
             <section class="info-course-graphic" typeof="Course">
                 <style>
@@ -123,7 +120,7 @@
                                     <img src="/vendor/mehr4-theme-dpeac/images/time.png" alt="{{$course->title}}">
                                     <b>ساعت دوره:
                                     </b>
-                                    <span property="timeRequired"></span>
+                                    <span property="timeRequired">{{number_format($course->duration/60)}} ساعت </span>
                                 </li>
                                 <li>
                                     <img src="/vendor/mehr4-theme-dpeac/images/icon-saat.png" alt="{{$course->title}}">
@@ -151,12 +148,11 @@
                                     </div>
                                 </li>
                             </ul>
-                            <a href="{{$course->url}}" property="url" class="btn-graphic-sell">ثبت نام آنلاین</a>
+                            <a href="{{\Mehr4Payment::courseBuyUrl($course)}}" property="url" class="btn-graphic-sell">ثبت نام آنلاین</a>
                         </div>
                     </div>
                 </div>
             </section>
-
             <!-- #Description Packge -->
             <section class="info-courses-graphic">
                 <!-- Gride Start -->
@@ -164,7 +160,7 @@
                     <div class="medium-10 small-12 sticky-container" data-sticky-container="data-sticky-container" data-animate="fade-in fade-out" style="height: 0px;">
                         <div class="stiky-menu sticky is-anchored is-at-top" data-sticky="data-sticky" data-stick-to="top" data-top-anchor="start-menu-stiky" data-btm-anchor="end-menu-stiky" data-resize="f8m58d-sticky" data-mutate="f8m58d-sticky" data-e="7ob48p-e" data-events="resize" style="max-width: 1527.48px; margin-top: 0px; bottom: auto; top: 0px;">
                             <ul class="des-side-info">
-                                <img src="{{Storage::url('$course->image')}}" alt="{{$course->title}}">
+                                <img src="{{Storage::url($course->image)}}" alt="{{$course->title}}">
                                 <p>{{$course->title}}</p>
                                 <li>
                                     <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -191,13 +187,13 @@
 
                     <div class="medium-2 small-12 sticky-container" data-sticky-container="data-sticky-container" style="height: 0px;">
                         <div class="stiky-menu-btn sticky is-anchored is-at-top" data-sticky="data-sticky" data-stick-to="top" data-top-anchor="start-menu-stiky" data-btm-anchor="end-menu-stiky" data-resize="2bfw0z-sticky" data-mutate="2bfw0z-sticky" data-e="q26jw4-e" data-events="resize" style="max-width: 305.5px; margin-top: 0px; bottom: auto; top: 0px;">
-                            <a href="{{$course->url}}">ثبت نام آنلاین دوره</a>
+                            <a href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نام آنلاین دوره</a>
                         </div>
                     </div>
                 </div>
                 <div class="menu-mobile-cert">
                     <p>{{$course->title}}</p>
-                    <a href="{{$course->url}}">ثبت نام آنلاین</a>
+                    <a href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نام آنلاین</a>
                 </div>
                 <div class="grid-container">
                     <div class="grid-x grid-padding-x">
@@ -208,20 +204,17 @@
                         <div class="content-course-graphic">
                                                    <p>
                               {!!$course->description!!}
-
                           </p>
                         </div>
                     </div>
                     <div id="foo"></div>
                 </div>
             </section>
-
             <!-- #Package Courses -->
             <section class="section-graphics">
                 <div class="grid-container">
                     <ul>
                         <h2>مدت دوره در برنامه هوشمند</h2>
-
                         <li>
                             <div class="grid-x grid-padding-x">
                                 <div class="section-boxes-img medium-3" data-content="10 روز">
@@ -255,11 +248,52 @@
                         </li>
                     </ul>
                 </div>        </section>
-
-
-
             <!-- #Certificate Packages -->
             <section class="teacher-course">
+                <div class="header hide-for-small-only show-for-medium" id="myHeader" >
+                    <div class="medium-12 small-12 sticky-container">
+                        <div class="" style="bottom: auto; top: 0px;margin-bottom: 0;">
+                            <ul class="des-side-info" style="margin-bottom: 0;">
+                                <img
+                                    src="{{$course->image? Storage::url('$course->image'):Storage::url('theme/head.jpg')}}"
+                                    alt="{{$course->title}}"
+                                    style="width: 5%;margin-top: 14px;margin-bottom: -10px;float: right;display: block;">
+                                <p style="color:black;display: inline-block;margin-top: 18px;margin-right: 30px;">{{$course->title}}</p>
+                                <li style="display: inline-flex;padding: 10px 35px !important;color: black;">
+
+                                </li>
+                                <li style="display: inline-flex;padding: 10px 35px !important;border-left: 1px solid #ddd;color: black;">
+                                    <i class="fa fa-clock-o" aria-hidden="true" style="margin-left: 5px;"></i>
+                                    <span itemprop="timeRequired"> {{number_format($course->duration/60)}}ساعت  </span>
+                                </li>
+                                <li style="display: inline-flex;padding: 10px 35px !important;border-left: 1px solid #ddd;color: black;">
+                                    <i class="fa fa-history" aria-hidden="true" style="margin-left: 5px;"></i>
+                                    <span itemprop="timeRequired"> {{number_format($course->duration/1440)}} روز</span>
+                                </li>
+                                <li style="display: inline-flex;padding: 10px 35px !important;border-left: 1px solid #ddd;color: black;">
+                                    <i class="fa fa-graduation-cap" aria-hidden="true" style="margin-left: 5px;"> </i>
+                                    <span itemprop="timeRequired" style="color: black;"> {{$course->id*date('m')+(date('d')*2)}}  +</span>
+                                </li>
+                                <li style="display: inline-flex;padding: 10px 35px !important;border-left: 1px solid #ddd;color: black;">
+                                    <i class="fa fa-money" aria-hidden="true" style="margin-left: 5px;"></i>
+                                    <span itemprop="timeRequired" style="color: black;"> {{number_format($course->price)}} ریال </span>
+                                </li>
+                                <li style="float:left;display: inline-flex;padding: 10px 35px !important;color: black;">
+                                    <a  style="animation-name: flash;
+animation-duration: 1s;
+animation-timing-function: linear;
+text-align: center;
+margin: auto;
+display: block;
+background: #00c621;
+color: #fff;
+padding: 10px 20px;
+border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نام آنلاین دوره</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <div class="header-tabs">
                     <!-- Gride Start -->
                     <div class="grid-container">
@@ -410,7 +444,6 @@
                     </div>
                 </div>
             </section>
-
             <!-- #Geatting Us Packages -->
             <section class="getting-us">
                 <!-- Gride Start -->
@@ -443,13 +476,11 @@
                         </div>
                     </div>
                 </div>        </section>
-
             <!-- #varanty Packages -->
             <section class="varanty">
                 <div class="grid-container">
                     <img src="{{Storage::url('theme/guarantee.jpg')}}" alt="گارانتی">
                 </div>        </section>
-
             <!-- #Price Packages -->
             <section class="reg-sellers">
                 <div class="grid-container">
@@ -462,11 +493,10 @@
                             </div>
                         </div>
                         <div class="medium-12">
-                            <a href="{{$course->url}}" class="btn-reg-sellers">ثبت نام آنلاین با تخفیف</a>
+                            <a href="{{\Mehr4Payment::courseBuyUrl($course)}}" class="btn-reg-sellers">ثبت نام آنلاین با تخفیف</a>
                         </div>
                     </div>
                 </div>        </section>
-
             <!-- #Post Package -->
             <section class="post-send">
                 <div class="grid-container">
@@ -475,7 +505,7 @@
                 </div>
             </section>
             <!-- #Comments Packages -->
-        @if($course->commentable==true)
+
             <section class="comments-course">
                 <h3>نظرات</h3>
                 <!-- Gride Start -->
@@ -502,6 +532,9 @@
                                 @endforeach
                             </div>
                         @endif
+                        <br>
+                        <br>
+                        <br>
 
                         {{--                        <div class="medium-4 small-12">--}}
                         {{--                        <div class="comment">--}}
@@ -512,11 +545,16 @@
                     </div>
                 </div>
             </section>
-        @endif
+
+        <br>
+        <br>
+        <br>
         <br>
 @endsection
     @else
 @section('main')
+
+    <h2>{{$course->title}}</h2>
     <!-- #Slider -->
     <section class="slider-course">
         <div class="back-header">
@@ -539,7 +577,7 @@
                         @if (isset($course->meta['future']))
                             <h3>آنچه می آموزید</h3>
                             <ul class="learning-course">
-                                <li>                                                                        {{$course->meta['future']}}
+                                <li> {{$course->meta['future']}}
                                     {{$course->meta['future']}}
                                 </li>
 
@@ -707,7 +745,7 @@ display: block;
 background: #00c621;
 color: #fff;
 padding: 10px 20px;
-border-radius: 3px;" href="/lms/index.php/buy/course?plan_id=664">ثبت نام آنلاین دوره</a>
+border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نام آنلاین دوره</a>
                                 </li>
                             </ul>
                         </div>
@@ -815,7 +853,10 @@ $q->whereIn('categories.id',$course->categories->pluck('id')->toArray());
                 </div>
             </div>
         </section>
-      @endsection
+    <br>
+    <br>
+    <br>
+@endsection
 
 @endif
 

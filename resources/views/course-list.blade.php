@@ -2,8 +2,15 @@
 @section('main')
     <!-- #Slider -->
     <section class="slider-main">
-        <img id="course-image"
-             src="{{Storage::url('theme/avator-category.jpg')}}">
+        @if($selectedCategory)
+               <img id="course-image"
+             src="{{Storage::url($selectedCategory->image)}}">
+        @else
+            <div style="background: #00a6bc;">
+                <img id="course-image" src="{{Storage::url('theme/robane package.png')}}">
+            </div>
+             <div>
+         @endif
         <div class="title-department">
             <h2 id="course-title" itemprop="name"
                 style="color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 4px 3px;">دپارتمان
@@ -20,18 +27,19 @@
         <div class="grid-container">
             <div class="grid-x grid-padding-x">
                 <div class="department-boxes">
-                    @foreach($categories as $category)
+                    @foreach(Dpsoft\Mehr\Models\Category::whereFeatured(true)->take(6)->get() as $featuredCategory)
                         <a class="departman-boxa"
-                           href="{{$category->courses_url}}">
+                           href="{{$featuredCategory->courses_url}}">
     <span class="departman-box">
-            <img src="{{Storage::url($category->image)}}" alt="{{$category->title}}">
-            <p>{{$category->title}}</p>
+            <img src="{{Storage::url($featuredCategory->image)}}" alt="{{$featuredCategory->title}}">
+            <p>{{$featuredCategory->title}}</p>
         </span>
                         </a>
                     @endforeach
                 </div>
             </div>
         </div>
+             </div>
     </section>
     <br>
     <!-- #Department -->
@@ -85,6 +93,7 @@
                                         </a>
                                     </div>
                                 @endforeach
+                                    {{$course->render('mehr4-theme-dpeac::pagination.custom')}}
                             @else
                                 <div class="callout warning">
                                     <h2 style="text-align: center;color: black;">
