@@ -453,7 +453,7 @@
         </div>
 
         <div class="grid-container">
-                @foreach(Dpsoft\Mehr\Models\Category::whereFeatured(true)->take(6)->get() as $r=>$category)
+                @foreach(Dpsoft\Mehr\Models\Category::whereFeatured(true)->take(7)->get() as $r=>$category)
                 <div class="grid-x grid-padding-x dep-section">
                     <div class="department-crt department-crt{{$r}} " id="color{{$r}}">
                         <img src="{{Storage::url($category->image)}}" width="176" alt="{{$category->title}}">
