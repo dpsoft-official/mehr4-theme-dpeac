@@ -792,27 +792,27 @@ $q->whereIn('categories.id',$course->categories->pluck('id')->toArray());
         </section>
 
     <!-- #Department -->
-        <section class="course-card">
+     @if($similarCourses->count()>0)
+           <section class="course-card">
             <div class="head-packege">
                 <h3>سایر دوره های مشابه</h3>
             </div>
             <div class="grid-container">
                 <div class="grid-x grid-padding-x dep-section">
-                    @foreach($similarCourses->take(4) as $course)
+                    @foreach($similarCourses->take(4) as $similarCourse)
                         <div class="post4 ">
-                            <a href="{{$course->url}}" style="height: 300px;">
-                                <img src="{{$course->image? Storage::url($course->image):Storage::url('theme/similar.jpg')}}">
+                            <a href="{{$similarCourse->url}}" style="height: 300px;">
+                                <img src="{{$similarCourse->image? Storage::url($similarCourse->image):Storage::url('theme/similar.jpg')}}">
                                 <h3>{{$course->title}}</h3>
                             </a>
-                            <ins>{{number_format($course->price)}} ریال </ins>
+                            <ins>{{number_format($similarCourse->price)}} ریال </ins>
 {{--                            <span style="text-align: right;">   </span>--}}
                         </div>
-
                     @endforeach
-
                 </div>
             </div>
         </section>
+        @endif
     <br>
     <br>
     <br>

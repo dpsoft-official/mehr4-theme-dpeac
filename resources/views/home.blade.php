@@ -453,13 +453,13 @@
         </div>
 
         <div class="grid-container">
-            @foreach($categories as $r=>$category)
+                @foreach(Dpsoft\Mehr\Models\Category::whereFeatured(true)->take(6)->get() as $r=>$category)
                 <div class="grid-x grid-padding-x dep-section">
                     <div class="department-crt department-crt{{$r}} " id="color{{$r}}">
                         <img src="{{Storage::url($category->image)}}" width="176" alt="{{$category->title}}">
                         <H5>{{$category->title}}</H5>
                         <p>{{$category->description}}</p>
-                        <a href="{{$category->url}}"
+                        <a href="{{$category->courses_url}}"
                            class="dep-crt-btn">مشاهده کل دوره ها</a>
                     </div>
                     @if($category->courses() !=null)
