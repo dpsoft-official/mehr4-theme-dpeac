@@ -92,7 +92,7 @@
                     <div class="medium-4">
                         <a href="{{$featuredCourse->url}}">
                 <span class="dpe-dep-box">
-                    <img src="{{Storage::url($featuredCourse->image)}}" alt="{{$featuredCourse->title}}">
+                    <img src="{{Storage::url($featuredCourse->avatar)}}" alt="{{$featuredCourse->title}}">
                     <p>{{($featuredCourse->title)}}</p>
                 </span>
                         </a>
