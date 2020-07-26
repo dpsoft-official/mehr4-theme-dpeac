@@ -5,7 +5,7 @@
     <section class="contact-us-content" id="custome-page">
         <!-- #contact Us Header -->
         <div class="back-header">
-            <img src="{{Storage::url('theme/robane-package.png')}}" alt="">
+            <img src="{{Storage::url('theme/robane-package.png')}}" alt="{{setting('site.name')}}">
         </div>
         <!-- Gride Start -->
         <div class="contact-us-content-parent">

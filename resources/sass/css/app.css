@@ -8885,7 +8885,7 @@ header.header .reg-log-btn {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 100%
+    width: 49%
 }
 
 ul#panel {
@@ -11967,7 +11967,7 @@ section.post-send h1 {
 
 .offering-box:before {
     content: "";
-    background-image: url(../assets/image/packagehaye-0ta-10.png);
+    background-image: url(/vendor/mehr4-theme-dpeac/images/takhfif.png);
     background-repeat: no-repeat;
     background-position: center right;
     display: inline-block;
@@ -14178,7 +14178,7 @@ a.btn-pro {
 
     .offering-box:before {
         content: "";
-        background-image: url(../assets/image/packagehaye-0ta-10.png);
+        background-image: url(/vendor/mehr4-theme-dpeac/images/takhfif.png);
         background-repeat: no-repeat;
         background-position: center right;
         display: inline-block;

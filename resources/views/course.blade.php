@@ -11,6 +11,7 @@
                 line-height: 35px;
                 width: 100%;
             }
+
             .dropdown.menu>li.is-dropdown-submenu-parent>a:after {
                 display: inline-block !important;
                 width: 0;
@@ -164,17 +165,17 @@
                                 <p>{{$course->title}}</p>
                                 <li>
                                     <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                    <span itemprop="timeRequired"> {{number_format($course->duration/60)}} </span>
+                                    <span itemprop="timeRequired"> {{number_format($course->duration/60)}} ساعت </span>
                                 </li>
                                 <li>
                                     <i class="fa fa-history" aria-hidden="true"></i>
-                                    <span itemprop="timeRequired"> {{number_format($course->duration/60)}}
+                                    <span itemprop="timeRequired"> {{number_format($course->duration/1440)}} روز
                     </span>
                                 </li>
                                 <li>
                                     <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                                     <span dir="ltr">+
-                        100</span>
+                        +{{$course->id*date('m')+(date('d')*2)}}</span>
                                 </li>
                                 <li>
                                     <i class="fa fa-money" aria-hidden="true"></i>
@@ -506,56 +507,18 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
             </section>
             <!-- #Comments Packages -->
 
-            <section class="comments-course">
-                <h3>نظرات</h3>
-                <!-- Gride Start -->
-                <div class="grid-container">
-                    <div class="grid-x grid-padding-x">
-                        <div class="medium-4 small-12">
-                            <div class="comments-course-form">
-                                <h2>ارسال دیدگاه</h2>
-                                @include('mehr4-theme-dpeac::component.comment-creat',['parent'=>'course' ,'parent_id'=>$course->id])
-                            </div>
-                        </div>
-                        @if($course->comments->count()>0)
-                            <div class="medium-8 small-12" itemscope="itemscope" itemprop="http://schema.org/Comment">
-                                @foreach($course->comments as $comment)
-                                    <section class="comments-course-box">
-                                        <article style="overflow: hidden; max-height: none;">
-                                            <b itemprop="author"><a>{{$comment->creator ? $comment->creator->name:"نظر دهنده"}}
-                                                </a></b>
-                                            <p itemprop="description">
-                                                {{$comment->body}}
-                                            </p>
-                                        </article>
-                                    </section>
-                                @endforeach
-                            </div>
-                        @endif
-                        <br>
-                        <br>
-                        <br>
-
-                        {{--                        <div class="medium-4 small-12">--}}
-                        {{--                        <div class="comment">--}}
-                        {{--                            <h5>اولین فرد مشارکت کننده باشید...</h5>--}}
-                        {{--                        </div>--}}
-                        {{--                    </div>--}}
-
-                    </div>
-                </div>
-            </section>
 
         <br>
+        <br>
+        <br>
+        <br>  <br>
         <br>
         <br>
         <br>
 @endsection
     @else
 @section('main')
-
-    <h2>{{$course->title}}</h2>
-    <!-- #Slider -->
+     <!-- #Slider -->
     <section class="slider-course">
         <div class="back-header">
             <img src="{{$course->image? Storage::url($course->image):Storage::url('theme/head.jpg')}}">
@@ -677,7 +640,7 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
                         <p>{{$course->name}}</p>
                         <li>
                             <i class="fa fa-clock-o" aria-hidden="true"></i>
-                            <span itemprop="timeRequired"></span>
+                            <span itemprop="timeRequired"> ساعت</span>
                         </li>
                         <li>
                             <i class="fa fa-history" aria-hidden="true"></i>
@@ -685,7 +648,7 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
                         </li>
                         <li>
                             <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                            <span dir="ltr">  {{$course->id*date('m')+(date('d')*2)}} +</span>
+                            <span dir="ltr"> + {{$course->id*date('m')+(date('d')*2)}} </span>
                         </li>
                         <li>
                             <i class="fa fa-money" aria-hidden="true"></i>
@@ -712,7 +675,7 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
                         <div class="" style="bottom: auto; top: 0px;margin-bottom: 0;">
                             <ul class="des-side-info" style="margin-bottom: 0;">
                                 <img
-                                    src="{{$course->image? Storage::url('$course->image'):Storage::url('theme/head.jpg')}}"
+                                    src="{{$course->image? Storage::url($course->image):Storage::url('theme/head.jpg')}}"
                                     alt="{{$course->title}}"
                                     style="width: 5%;margin-top: 14px;margin-bottom: -10px;float: right;display: block;">
                                 <p style="color:black;display: inline-block;margin-top: 18px;margin-right: 30px;">{{$course->title}}</p>
@@ -729,7 +692,7 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
                                 </li>
                                 <li style="display: inline-flex;padding: 10px 35px !important;border-left: 1px solid #ddd;color: black;">
                                     <i class="fa fa-graduation-cap" aria-hidden="true" style="margin-left: 5px;"> </i>
-                                    <span itemprop="timeRequired" style="color: black;"> {{$course->id*date('m')+(date('d')*2)}}  +</span>
+                                    <span itemprop="timeRequired" style="color: black;"> +{{$course->id*date('m')+(date('d')*2)}}  </span>
                                 </li>
                                 <li style="display: inline-flex;padding: 10px 35px !important;border-left: 1px solid #ddd;color: black;">
                                     <i class="fa fa-money" aria-hidden="true" style="margin-left: 5px;"></i>
