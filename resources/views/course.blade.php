@@ -540,10 +540,7 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
                         @if (isset($course->meta['future']))
                             <h3>آنچه می آموزید</h3>
                             <ul class="learning-course">
-                                <li> {{$course->meta['future']}}
-                                    {{$course->meta['future']}}
-                                </li>
-
+                                <li> {{$course->meta['future']}}</li>                                                          </li>
                             </ul>
                         @endif
                     </div>
