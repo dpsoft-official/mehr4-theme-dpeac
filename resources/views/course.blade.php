@@ -273,7 +273,7 @@
                                 </li>
                                 <li style="display: inline-flex;padding: 10px 35px !important;border-left: 1px solid #ddd;color: black;">
                                     <i class="fa fa-graduation-cap" aria-hidden="true" style="margin-left: 5px;"> </i>
-                                    <span itemprop="timeRequired" style="color: black;"> {{$course->id*date('m')+(date('d')*2)}}  +</span>
+                                    <span itemprop="timeRequired" style="color: black;">+ {{$course->id*date('m')+(date('d')*2)}}  </span>
                                 </li>
                                 <li style="display: inline-flex;padding: 10px 35px !important;border-left: 1px solid #ddd;color: black;">
                                     <i class="fa fa-money" aria-hidden="true" style="margin-left: 5px;"></i>
@@ -527,7 +527,7 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
             <h2 id="course-title"
                 style="color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 4px 3px;">{{$course->title}}</h2>
             <p id="course-description"
-               style="color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 2px 3px;">{{$course->expert}}</p>
+               style="color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 2px 3px;">{{$course->excerpt}}</p>
         </div>
     </section>
     <!-- #Info Course  -->
