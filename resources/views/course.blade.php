@@ -300,7 +300,7 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
                     <div class="grid-container">
                         <div class="grid-x grid-padding-x">
                             <div class="head-packege-light">
-                                <h3>اساتید این پکیج</h3>
+                                <h3>اساتید این دور</h3>
                                 <hr>
                             </div>
                             <ul class="tabs" data-tabs="" id="teacher-tabs" role="tablist" data-e="mvo36u-e">
@@ -715,7 +715,7 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
                 <div class="grid-container">
                     <div class="grid-x grid-padding-x">
                         <div class="head-packege-light">
-                            <h3>اساتید این پکیج</h3>
+                            <h3>اساتید این دوره</h3>
                             <hr>
                         </div>
                         <ul class="tabs" data-tabs="" id="teacher-tabs" role="tablist" data-e="1qq8yw-e">
