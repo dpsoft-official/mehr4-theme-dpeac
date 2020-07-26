@@ -88,8 +88,8 @@
         </div>
         <div class="grid-container">
             <div class="grid-x grid-padding-x">
-                @foreach(Dpsoft\Mehr\Models\Course::where('status','published')->get() as $featuredCourse)
-                    <div class="medium-4">
+                @foreach(Dpsoft\Mehr\Models\Course::where('featured',True)->where('status','published')->get() as $featuredCourse)
+                        <div class="medium-4">
                         <a href="{{$featuredCourse->url}}">
                 <span class="dpe-dep-box">
                     <img src="{{Storage::url($featuredCourse->avatar)}}" alt="{{$featuredCourse->title}}">
