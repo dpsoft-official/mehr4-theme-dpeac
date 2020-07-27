@@ -10683,7 +10683,7 @@ div#eac-container-search_course ul {
     width: 0;
     height: 0;
     border-right: 20px solid transparent;
-    border-top: 20px solid #cc8b00;
+    /*border-top: 20px solid #cc8b00;*/
     border-left: 20px solid transparent;
     position: absolute;
     top: 135px;

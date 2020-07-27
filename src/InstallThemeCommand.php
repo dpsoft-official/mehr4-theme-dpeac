@@ -135,6 +135,7 @@ class InstallThemeCommand extends Command
         \Mehr::updateOrNewSetting('title4cat','پشتیبانی یکساله پرسش و پاسخ از طریق سامانه','شعار 4 صفحه دسته بندی');
         \Mehr::updateOrNewSetting('title5cat','تأییدیه تخصصی اساتید دوره','شعار 5 صفحه دسته بندی');
         \Mehr::updateOrNewSetting('title6cat','LMS','شعار 6 صفحه دسته بندی');
+        \Mehr::updateOrNewSetting('video','<style>.h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/tbxKM/vt/frame" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>','لینک ویدیوی پیش فرض در آپارات');
 
 
 

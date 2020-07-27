@@ -467,11 +467,11 @@
                             @if($i<4)
                                 <div class="post4">
                                     <a href="{{$course->url}}">
-                                        <img id="course-image" src="{{Storage::url($course->image)}}"
+                                        <img id="course-image" src="{{Storage::url($course->avatar)}}"
                                              alt="{{$course->title}}">
                                         <h3 id="course-title">{{$course->title}}</h3>
                                         <span></span>
-                                        <ins></ins>
+                                        <ins>{{number_format($course->price)}} تومان </ins>
                                     </a>
                                 </div>
                             @endif
