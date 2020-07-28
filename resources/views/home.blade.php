@@ -463,7 +463,7 @@
                            class="dep-crt-btn">مشاهده کل دوره ها</a>
                     </div>
                     @if($category->courses() !=null)
-                        @foreach($category->courses as $i=>$course)
+                        @foreach($category->courses->where('status','published') as $i=>$course)
                             @if($i<4)
                                 <div class="post4">
                                     <a href="{{$course->url}}">
