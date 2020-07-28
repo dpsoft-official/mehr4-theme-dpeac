@@ -18470,3 +18470,7 @@ background-color: #0199e7;
     line-height: 30px;
     margin-top: 14px;
 }
+.card {
+    border: 1px solid #e6e6e694!important;
+     padding: 1%!important;
+}

@@ -364,6 +364,12 @@
 
     });
 </script>
+<script>
+    function refreshPage(){
+        location.reload();
+
+    }
+</script>
 @yield('footer')
 @include('sweet::alert')
 </body>

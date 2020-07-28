@@ -16,28 +16,18 @@
                         <input type="hidden" name="source_id" value="{{setting('source_id')}}">
                         <input type="tel"  name="mob" id="inputMobile"  required="required" pattern="[\u06F0-\u06F90-9\u0660-\u0669]{11}"
                                value=""   size="40"    placeholder="091212345678">
-                        <p><button class="button" data-open="exampleModal1" style="background: #2ac489;
+                        <p><button class="button" data-open="exampleModal1"   style="background: #2ac489;
     padding: 10px 18px;
     border-radius: 3px;
     color: white!important;">با من تماس بگیرید</button></p>
                     </form>
                 </div>
-
-
-
-
-
                 <div class="row medium-8 small-12">
                     <div class="column-right">
                         {!! setting('samandehi')!!}
-
                         {!! setting('enemad')!!}
-
-
                         <p>دانش پژوهان را دنبال کنید</p>
                         <ul class="socoial">
-
-
                             @if(setting('social.twitter')!=null)
                             <li>
                                 <a href="{{setting('social.twitter')}}">
@@ -45,7 +35,6 @@
                                 </a>
                             </li>
                             @endif
-
                                 @if(setting('social.instagram')!=null)
                             <li>
                                 <a href="{{setting('social.instagram')}}">

@@ -66,7 +66,7 @@
                                         <img src="{{Storage::url($course->avatar)}}" alt="{{$course->title}}">
                                         <h3>{{$course->title}}</h3>
 {{--                                        <span></span>--}}
-                                        <ins>{{number_format($course->price )}}تومان</ins>
+                                        <ins>{{number_format($course->price)}}تومان</ins>
                                     </a>
                                 </div>
                             @endforeach

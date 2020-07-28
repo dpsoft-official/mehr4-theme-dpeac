@@ -6,7 +6,7 @@
         </h5>
         <p class="lead" style="text-align: center;">شماره تماس شما ثبت شد.</p>
         <p style="text-align: center;">کارشناسان ما با شما تماس خواهند گرفت</p>
-        <button class="close-button" data-close aria-label="Close modal" type="button">
+        <button class="close-button" data-close aria-label="Close modal" type="button" onclick="refreshPage()">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
