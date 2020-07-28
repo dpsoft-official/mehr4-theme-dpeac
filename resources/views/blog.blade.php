@@ -28,7 +28,7 @@
                             <meta itemprop="datePublished" content=" ">
                             <meta itemprop="dateModified" content="">
                             <div itemprop="image" itemscope="" itemtype="">
-                                <img src="" alt="{{setting('site.name')}}">
+                                <img src="{{Storage::url($post->image)}}"  alt="{{setting('site.name')}}">
                                 <meta itemprop="url" content="">
                                 <meta itemprop="width" content="70">
                                 <meta itemprop="height" content="70">
