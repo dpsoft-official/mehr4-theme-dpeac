@@ -179,7 +179,7 @@
                      data-mutate="f8m58d-sticky" data-e="7ob48p-e" data-events="resize"
                      style="max-width: 1527.48px; margin-top: 0px; bottom: auto; top: 0px;">
                     <ul class="des-side-info">
-                        <img src="{{Storage::url($course->image)}}" alt="{{$course->title}}">
+                        <img src="{{Storage::url($course->avatar)}}" alt="{{$course->title}}">
                         <p>{{$course->title}}</p>
                         <li>
                             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -282,7 +282,7 @@
                 <div class="" style="bottom: auto; top: 0px;margin-bottom: 0;">
                     <ul class="des-side-info" style="margin-bottom: 0;">
                         <img
-                            src="{{$course->image? Storage::url('$course->image'):Storage::url('theme/head.jpg')}}"
+                            src="{{$course->image? Storage::url($course->image):Storage::url('theme/head.jpg')}}"
                             alt="{{$course->title}}"
                             style="width: 5%;margin-top: 14px;margin-bottom: -10px;float: right;display: block;">
                         <p style="color:black;display: inline-block;margin-top: 18px;margin-right: 30px;">{{$course->title}}</p>
@@ -641,9 +641,6 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
                         </div>
                     </div>
 
-
-
-
                 </div>
             </div>
         </div>
@@ -667,7 +664,7 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
                          data-top-anchor="example2:top" data-btm-anchor="foo:bottom" data-resize="tlab0p-sticky"
                          data-mutate="tlab0p-sticky" data-e="rj6ejr-e" data-events="resize"
                          style="max-width: 300px; margin-top: 0px; bottom: auto; top: 0px;">
-                        <img src="{{Storage::url($course->image)}}" alt="{{$course->title}}">
+                        <img src="{{Storage::url($course->avatar)}}" alt="{{$course->title}}">
                         <div class="des-side-info">
                             <b>{{$course->name}}</b>
                             <p>
@@ -680,7 +677,7 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
                             </p>
                             <p>
                                 <i class="fa fa-graduation-cap" aria-hidden="true"></i>کاربران:
-                                <span dir="ltr">+ {{$course->id*date('m')+(date('d')*2)}} </span>
+                                <span dir="ltr"> {{$course->id*date('m')+(date('d')*2)}} + </span>
                             </p>
                             <p>
                                 <i class="fa fa-money" aria-hidden="true"></i> قیمت:
@@ -737,7 +734,7 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
                         </li>
                         <li>
                             <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                            <span dir="ltr"> + {{$course->id*date('m')+(date('d')*2)}} </span>
+                            <span dir="ltr">  {{$course->id*date('m')+(date('d')*2)}} +</span>
                         </li>
                         <li>
                             <i class="fa fa-money" aria-hidden="true"></i>
@@ -758,13 +755,12 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
         <section class="teacher-course">
             <div class="header-tabs">
                 <!-- Gride Start -->
-
                 <div class="header hide-for-small-only show-for-medium" id="myHeader">
                     <div class="medium-12 small-12 sticky-container">
                         <div class="" style="bottom: auto; top: 0px;margin-bottom: 0;">
                             <ul class="des-side-info" style="margin-bottom: 0;">
                                 <img
-                                    src="{{$course->image? Storage::url($course->image):Storage::url('theme/head.jpg')}}"
+                                    src="{{$course->avatar? Storage::url($course->avatar):Storage::url('theme/head.jpg')}}"
                                     alt="{{$course->title}}"
                                     style="width: 5%;margin-top: 14px;margin-bottom: -10px;float: right;display: block;">
                                 <p style="color:black;display: inline-block;margin-top: 18px;margin-right: 30px;">{{$course->title}}</p>
