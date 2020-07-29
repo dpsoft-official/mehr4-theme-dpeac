@@ -148,7 +148,7 @@
                                 کاربران:
                             </b>
                             <span property="interactionStatistic">
-                               +   {{$course->maximum_students}} </span>
+                                  {{$course->maximum_students}} +</span>
                         </li>
                         <li>
                             <img src="/vendor/mehr4-theme-dpeac/images/price-course.png" alt="{{$course->title}}">
@@ -193,7 +193,7 @@
                         <li>
                             <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                             <span dir="ltr">
-                        + {{$course->maximum_students}} </span>
+                        {{$course->id*date('m')+(date('d')*2)}} +</span>
                         </li>
                         <li>
                             <i class="fa fa-money" aria-hidden="true"></i>
@@ -292,7 +292,6 @@
                         <li style="display: inline-flex;padding: 10px 35px !important;border-left: 1px solid #ddd;color: black;">
                             <i class="fa fa-clock-o" aria-hidden="true" style="margin-left: 5px;"></i>
                             <span itemprop="timeRequired"> {{number_format($course->id*10/60)}}  ساعت </span>
-                            <span itemprop="timeRequired"> {{number_format($course->id*10/60)}}  ساعت </span>
                         </li>
                         <li style="display: inline-flex;padding: 10px 35px !important;border-left: 1px solid #ddd;color: black;">
                             <i class="fa fa-history" aria-hidden="true" style="margin-left: 5px;"></i>
@@ -301,7 +300,7 @@
                         <li style="display: inline-flex;padding: 10px 35px !important;border-left: 1px solid #ddd;color: black;">
                             <i class="fa fa-graduation-cap" aria-hidden="true" style="margin-left: 5px;"> </i>
                             <span itemprop="timeRequired"
-                                  style="color: black;"> {{$course->id*date('m')+(date('d')*2)}}  +</span>
+                                  style="color: black;"> {{$course->maximum_students}}  +</span>
                         </li>
                         <li style="display: inline-flex;padding: 10px 35px !important;border-left: 1px solid #ddd;color: black;">
                             <i class="fa fa-money" aria-hidden="true" style="margin-left: 5px;"></i>
@@ -882,7 +881,7 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
                                 <li style="display: inline-flex;padding: 10px 35px !important;border-left: 1px solid #ddd;color: black;">
                                     <i class="fa fa-graduation-cap" aria-hidden="true" style="margin-left: 5px;"> </i>
                                     <span itemprop="timeRequired"
-                                          style="color: black;"> {{$course->maximum_students}}  +  </span>
+                                          style="color: black;"> {{$course->id*date('m')+(date('d')*2)}} +  </span>
                                 </li>
                                 <li style="display: inline-flex;padding: 10px 35px !important;border-left: 1px solid #ddd;color: black;">
                                     <i class="fa fa-money" aria-hidden="true" style="margin-left: 5px;"></i>
