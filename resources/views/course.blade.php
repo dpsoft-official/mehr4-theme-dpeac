@@ -779,25 +779,28 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
                                                                         </div>
 
                                                                     </div>
+                                                                </a>
                                                             </li>
-                                                            </a>
+
                                                             <hr style="border-bottom: 1px solid #e6e6e694;margin: 0.7%"  >
                                                         @endforeach
                                                         @foreach($section->quizzes as $quiz)
-                                                            <li>
-                                                                <div class="download-detail">
+                                                            <li style="list-style: none;padding-top:1%;font-size: 0.9rem;color:black;">
+                                                                <div class="download-detail" style="color: #000000d6;">
                                                                     <a class="session"
                                                                        data-toggle="collapse"
                                                                        data-target="#dcollapse1"
                                                                        aria-expanded="true"
-                                                                       aria-controls="collapse 1">{{$quiz->title}}
+                                                                       aria-controls="collapse 1" style="color:#000000d6;">{{$quiz->title}}
                                                                     </a>
-                                                                    <div class="time">
+                                                                    <div class="time" style="float: left">
                                                                         {{$lesson->duration_read}}
                                                                     </div>
                                                                 </div>
                                                             </li>
-                                                        @endforeach
+                                                                <hr style="border-bottom: 1px solid #e6e6e694;margin: 0.7%"  >
+
+                                                            @endforeach
 
                                                     </ul>
                                                 </div>

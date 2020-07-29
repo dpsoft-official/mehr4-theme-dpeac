@@ -93,7 +93,7 @@
                                         </a>
                                     </div>
                                 @endforeach
-                                    {{$course->render('mehr4-theme-dpeac::pagination.custom')}}
+{{--                                    {{$course->render('mehr4-theme-dpeac::pagination.custom')}}--}}
                             @else
                                 <div class="callout warning">
                                     <h2 style="text-align: center;color: black;">
