@@ -40,12 +40,13 @@
 <!-- COMMON SCRIPTS -->
 @yield('footer')
 <script src="{{mix('app.js','vendor/mehr4-theme-dpeac')}}"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/app.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.lazy.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.plugins.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 {{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.tabs.js')}}"></script>--}}
 {{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.core.js')}}"></script>--}}
 {{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.util.keyboard.js')}}"></script>--}}
@@ -367,7 +368,6 @@
 <script>
     function refreshPage(){
         location.reload();
-
     }
 </script>
 @yield('footer')

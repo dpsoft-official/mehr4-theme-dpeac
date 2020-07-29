@@ -208,7 +208,6 @@
                     <div class="clear"></div>
                 </div>
             </div>
-
         </div>
         <div class="tabs-content float-center" data-tabs-content="teacher-tabs">
             <div class="tabs-panel " id="teacher-2">

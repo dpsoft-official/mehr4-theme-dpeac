@@ -244,6 +244,6 @@ jQuery(function ($) {
         $this.countTo(options);
     }
 });
-// $(function() {
-//     $('.lazy').lazy();
-// });
+$(function() {
+    $('.lazy').lazy();
+});
