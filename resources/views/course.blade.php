@@ -97,15 +97,38 @@
                        style="color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 2px 3px;">{{$course->excerpt}}
                 </div>
                 <p style="text-align:  left;float:  left;display:block;margin: 0 auto 0 0;position:  relative;">
-                <p><button data-toggle="animatedModal10">
-         <img class="video-graphic" src="{{Storage::url('theme/axasy.gif')}}" alt="{{$course->title}}">
-                </button></p>
+                <p>
+                    <button data-toggle="animatedModal10">
+                        <img class="video-graphic" src="{{Storage::url('theme/axasy.gif')}}" alt="{{$course->title}}">
+                    </button>
+                </p>
             </div>
-            <div class="large reveal" id="animatedModal10" data-reveal data-close-on-click="true" data-animation-in="spin-in" data-animation-out="spin-out">
-             @if (isset($course->meta['video']))
-               {!!$course->meta['video']!!}
+            <div class="large reveal" id="animatedModal10" data-reveal data-close-on-click="true"
+                 data-animation-in="spin-in" data-animation-out="spin-out">
+                @if (isset($course->meta['video']))
+                    {!!$course->meta['video']!!}
                 @else
-                    <style>.h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/6gPjh/vt/frame" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>
+                    <style>.h_iframe-aparat_embed_frame {
+                            position: relative;
+                        }
+
+                        .h_iframe-aparat_embed_frame .ratio {
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                        }
+
+                        .h_iframe-aparat_embed_frame iframe {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }</style>
+                    <div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span>
+                        <iframe src="https://www.aparat.com/video/video/embed/videohash/6gPjh/vt/frame"
+                                allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+                    </div>
                 @endif
                 {{--                {{\MehrLock::lessonUrl($lesson)}}--}}
                 <button class="close-button" data-close aria-label="Close reveal" type="button">
@@ -603,39 +626,51 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
                         @if (isset($course->meta['future-1']))
                             <h3>آنچه می آموزید</h3>
                             <ul class="learning-course">
-                              <li> {{$course->meta['future-1']}}</li>
-                                @if (isset($course->meta['future-2'])) <li> {{$course->meta['future-2']}}</li>@endif
-                                @if (isset($course->meta['future-3'])) <li> {{$course->meta['future-3']}}</li>@endif
-                                @if (isset($course->meta['future-4'])) <li> {{$course->meta['future-4']}}</li>@endif
-                                @if (isset($course->meta['future-5'])) <li> {{$course->meta['future-5']}}</li>@endif
-                                @if (isset($course->meta['future-6'])) <li> {{$course->meta['future-6']}}</li>@endif
-                                @if (isset($course->meta['future-7'])) <li> {{$course->meta['future-7']}}</li>@endif
-                                @if (isset($course->meta['future-8'])) <li> {{$course->meta['future-8']}}</li>@endif
-                                @if (isset($course->meta['future-9'])) <li> {{$course->meta['future-9']}}</li>@endif
-                                @if (isset($course->meta['future-10'])) <li> {{$course->meta['future-10']}}</li>@endif
-                                @if (isset($course->meta['future-11'])) <li> {{$course->meta['future-11']}}</li>@endif
-                                @if (isset($course->meta['future-12'])) <li> {{$course->meta['future-12']}}</li>@endif
-                             </ul>
+                                <li> {{$course->meta['future-1']}}</li>
+                                @if (isset($course->meta['future-2']))
+                                    <li> {{$course->meta['future-2']}}</li>@endif
+                                @if (isset($course->meta['future-3']))
+                                    <li> {{$course->meta['future-3']}}</li>@endif
+                                @if (isset($course->meta['future-4']))
+                                    <li> {{$course->meta['future-4']}}</li>@endif
+                                @if (isset($course->meta['future-5']))
+                                    <li> {{$course->meta['future-5']}}</li>@endif
+                                @if (isset($course->meta['future-6']))
+                                    <li> {{$course->meta['future-6']}}</li>@endif
+                                @if (isset($course->meta['future-7']))
+                                    <li> {{$course->meta['future-7']}}</li>@endif
+                                @if (isset($course->meta['future-8']))
+                                    <li> {{$course->meta['future-8']}}</li>@endif
+                                @if (isset($course->meta['future-9']))
+                                    <li> {{$course->meta['future-9']}}</li>@endif
+                                @if (isset($course->meta['future-10']))
+                                    <li> {{$course->meta['future-10']}}</li>@endif
+                                @if (isset($course->meta['future-11']))
+                                    <li> {{$course->meta['future-11']}}</li>@endif
+                                @if (isset($course->meta['future-12']))
+                                    <li> {{$course->meta['future-12']}}</li>@endif
+                            </ul>
                         @endif
                     </div>
                 </div>
                 <div class="medium-6 small-12">
                     <div class="info-video">
                         <button data-toggle="animatedModal10">
-                        <a class="video-embed-course" data-open="video-head-course" data-video="video-22049107"
-                           aria-controls="video-head-course" aria-haspopup="true" tabindex="0">
-                            <img src="{{Storage::url('theme/video-poster.jpg')}}" alt="{{$course->name}}">
-                        </a>
+                            <a class="video-embed-course" data-open="video-head-course" data-video="video-22049107"
+                               aria-controls="video-head-course" aria-haspopup="true" tabindex="0">
+                                <img src="{{Storage::url('theme/video-poster.jpg')}}" alt="{{$course->name}}">
+                            </a>
                         </button>
                     </div>
                     <div class="grid-container">
-                       <div class="large reveal" id="animatedModal10" data-reveal data-close-on-click="true" data-animation-in="spin-in" data-animation-out="spin-out">
+                        <div class="large reveal" id="animatedModal10" data-reveal data-close-on-click="true"
+                             data-animation-in="spin-in" data-animation-out="spin-out">
                             @if (isset($course->meta['video']))
                                 {!!$course->meta['video']!!}
                             @else
                                 {!!setting('video')!!}
                             @endif
-                              <button class="close-button" data-close aria-label="Close reveal" type="button">
+                            <button class="close-button" data-close aria-label="Close reveal" type="button">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
@@ -658,39 +693,12 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
         </style>
         <div class="grid-container">
             <div class="grid-x grid-padding-x">
-{{--                <div class="medium-3 small-12 sticky-container" data-sticky-container="" style="height: 481px;">--}}
-{{--                    <div id="example2"></div>--}}
-{{--                    <div class="des-side sticky is-anchored is-at-top" data-stick-to="bottom" data-sticky=""--}}
-{{--                         data-top-anchor="example2:top" data-btm-anchor="foo:bottom" data-resize="tlab0p-sticky"--}}
-{{--                         data-mutate="tlab0p-sticky" data-e="rj6ejr-e" data-events="resize"--}}
-{{--                         style="max-width: 300px; margin-top: 0px; bottom: auto; top: 0px;">--}}
-{{--                        <img src="{{Storage::url($course->avatar)}}" alt="{{$course->title}}">--}}
-{{--                        <div class="des-side-info">--}}
-{{--                            <b>{{$course->name}}</b>--}}
-{{--                            <p>--}}
-{{--                                <i class="fa fa-clock-o" aria-hidden="true"></i> ساعت آموزشی:--}}
-{{--                                <span> {{number_format($course->id*10/60)}} ساعت</span>--}}
-{{--                            </p>--}}
-{{--                            <p>--}}
-{{--                                <i class="fa fa-history" aria-hidden="true"></i> طول دوره:--}}
-{{--                                <span>  {{number_format($course->id*10/1440)}}  روز</span>--}}
-{{--                            </p>--}}
-{{--                            <p>--}}
-{{--                                <i class="fa fa-graduation-cap" aria-hidden="true"></i>کاربران:--}}
-{{--                                <span dir="ltr">  + {{$course->maximum_students}}  </span>--}}
-{{--                            </p>--}}
-{{--                            <p>--}}
-{{--                                <i class="fa fa-money" aria-hidden="true"></i> قیمت:--}}
-{{--                                <span>  {{number_format($course->price)}} تومان</span>--}}
-{{--                            </p>--}}
-{{--                            <a href="{{\Mehr4Payment::courseBuyUrl($course)}}" class="des-side-info-btn">ثبت نام--}}
-{{--                                آنلاین </a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-                <div class="medium-3 small-12 sticky-container" data-sticky-container="" style="height: 504.4px;">
+                             <div class="medium-3 small-12 sticky-container" data-sticky-container="" style="height: 504.4px;">
                     <div id="example2"></div>
-                    <div class="des-side sticky is-anchored is-at-top" data-sticky="" data-top-anchor="example2:top" data-btm-anchor="foo:bottom" data-resize="pialxj-sticky" data-mutate="pialxj-sticky" data-e="u5acoh-e" style="max-width: 300px; margin-top: 0px; bottom: auto; top: 0px;" data-events="mutate">
+                    <div class="des-side sticky is-anchored is-at-top" data-sticky="" data-top-anchor="example2:top"
+                         data-btm-anchor="foo:bottom" data-resize="pialxj-sticky" data-mutate="pialxj-sticky"
+                         data-e="u5acoh-e" style="max-width: 300px; margin-top: 0px; bottom: auto; top: 0px;"
+                         data-events="mutate">
                         <img src="{{Storage::url($course->avatar)}}" alt="{{$course->title}}">
 
                         <div class="des-side-info">
@@ -711,7 +719,8 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
                                 <i class="fa fa-money" aria-hidden="true"></i> قیمت:
                                 <span> {{number_format($course->price)}} تومان </span>
                             </p>
-                            <a href="{{\Mehr4Payment::courseBuyUrl($course)}}" class="des-side-info-btn">ثبت نام آنلاین </a>
+                            <a href="{{\Mehr4Payment::courseBuyUrl($course)}}" class="des-side-info-btn">ثبت نام
+                                آنلاین </a>
                         </div>
                     </div>
                 </div>
@@ -723,97 +732,99 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
                                 {!! $course->description !!}
                             </p>
                         </div>
-                        <div class="des-content-learning">
+
+                        @if($course->sections->count()>0)
+                          <div class="des-content-learning">
                             <h4>سر فصل های دوره</h4>
-{{--                            <div id="course-lessons"><h2 class="section-title">جلسات دوره</h2>--}}
-                                <div id="accordion">
-                                    @foreach($course->sections as $index=> $section)
-                                        <div class="card">
-                                            <div class="card-header"
-                                                 id="heading1">
-                                                <button class="btn btn-link collapsed"
-                                                        data-toggle="collapse"
-                                                        data-target="#collapse{{$index}}"
-                                                        aria-expanded="false"
-                                                        aria-controls="collapse{{$index}}">
-                                                    <i>
-                                                        <img data-lazyloaded="1"
-                                                             src="{{Storage::url('theme/icon-dars-4.png')}}"
-                                                             data-src="{{Storage::url('theme/icon-dars-4.png')}}"
-                                                             alt="">
-                                                        <noscript>
-                                                            <img
-                                                                src="{{Storage::url('theme/icon-dars-4.png')}}"
-                                                                alt="">
-                                                        </noscript>
-                                                    </i>
-                                                    <div class="lesson-inner">
-                                                        <div class="lesson-title"><i class="fa fa-caret-left" aria-hidden="true"></i>  {{$section->title}}</div>
+                            {{--                            <div id="course-lessons"><h2 class="section-title">جلسات دوره</h2>--}}
+                            <div id="accordion">
+                                @foreach($course->sections as $index=> $section)
+                                    <div class="card">
+                                        <div class="card-header"
+                                             id="heading1">
+                                            <button class="btn btn-link collapsed"
+                                                    data-toggle="collapse"
+                                                    data-target="#collapse{{$index}}"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapse{{$index}}">
+                                                <i>
+                                                    <img data-lazyloaded="1"
+                                                         src="{{Storage::url('theme/icon-dars-4.png')}}"
+                                                         data-src="{{Storage::url('theme/icon-dars-4.png')}}"
+                                                         alt="">
+                                                    <noscript>
+                                                        <img
+                                                            src="{{Storage::url('theme/icon-dars-4.png')}}"
+                                                            alt="">
+                                                    </noscript>
+                                                </i>
+                                                <div class="lesson-inner">
+                                                    <div class="lesson-title"><i class="fa fa-caret-left"
+                                                     aria-hidden="true"></i> {{$section->title}}
                                                     </div>
-                                                    <i class="arrow down"></i>
-                                                </button>
-                                            </div>
-                                            <div id="collapse{{$index}}"
-                                                 class="collapse"
-                                                 aria-labelledby="heading0"
-                                                 data-parent="#accordion">
-                                                <div class="card-body">
-                                                    <ul class="lessons-list">
-                                                        @foreach($section->lessons as $lesson)
-                                                            <li style="list-style: none;padding-top:1%;font-size: 0.9rem;color:black;">
-                                                                <a target="_blank"
-                                                                   href="{{\MehrLock::lessonUrl($lesson)}}">
-                                                                    <div class="download-detail" style="color: #000000d6;"
-                                                                         @if($lesson->preview==false ) data-toggle="tooltip"
-                                                                         data-placement="right"
-                                                                         title="برای مشاهده این ویدیو باید دوره را خریداری نمایید!"@endif>
-                                                                        <i class="fa fa-film"></i>
-                                                                        {{$lesson->title}}
-                                                                        <div class="time"
-                                                                             style="float: left">
-                                                                            @if($lesson->preview==true)
-                                                                                {{$lesson->duration_read}}
-                                                                            @else
-                                                                                <i class="fa fa-lock"></i>
-                                                                            @endif
-                                                                        </div>
-
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-
-                                                            <hr style="border-bottom: 1px solid #e6e6e694;margin: 0.7%"  >
-                                                        @endforeach
-                                                        @foreach($section->quizzes as $quiz)
-                                                            <li style="list-style: none;padding-top:1%;font-size: 0.9rem;color:black;">
-                                                                <div class="download-detail" style="color: #000000d6;">
-                                                                    <a class="session"
-                                                                       data-toggle="collapse"
-                                                                       data-target="#dcollapse1"
-                                                                       aria-expanded="true"
-                                                                       aria-controls="collapse 1" style="color:#000000d6;">{{$quiz->title}}
-                                                                    </a>
-                                                                    <div class="time" style="float: left">
-                                                                        {{$lesson->duration_read}}
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                                <hr style="border-bottom: 1px solid #e6e6e694;margin: 0.7%"  >
-
-                                                            @endforeach
-
-                                                    </ul>
                                                 </div>
+                                                <i class="arrow down"></i>
+                                            </button>
+                                        </div>
+                                        <div id="collapse{{$index}}"
+                                             class="collapse"
+                                             aria-labelledby="heading0"
+                                             data-parent="#accordion">
+                                            <div class="card-body">
+                                                <ul class="lessons-list" style="margin:0;">
+                                                    @foreach($section->lessons as $lesson)
+                                                        <li style="list-style: none;padding-top:1%;font-size: 0.9rem;color:black;">
+                                                            <a target="_blank"
+                                                               href="{{\MehrLock::lessonUrl($lesson)}}">
+                                                                <div class="download-detail" style="color: #000000d6;"
+                                                                     @if($lesson->preview==false ) data-toggle="tooltip"
+                                                                     data-placement="right"
+                                                                     title="برای مشاهده این ویدیو باید دوره را خریداری نمایید!"@endif>
+                                                                    <i class="fa fa-angle-left" aria-hidden="true" "></i>                                                                    {{$lesson->title}}
+                                                                    <div class="time"
+                                                                         style="float: left">
+                                                                        @if($lesson->preview==true)
+                                                                            {{$lesson->duration_read}}
+                                                                        @else
+                                                                            <i class="fa fa-lock" style="color:#808080bd;"></i>
+                                                                        @endif
+                                                                    </div>
+
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <hr style="border-bottom: 1px dashed #e6e6e694;;margin: 0.7%">
+                                                    @endforeach
+                                                    @foreach($section->quizzes as $quiz)
+                                                        <li style="list-style: none;padding-top:1%;font-size: 0.9rem;color:black;">
+                                                            <div class="download-detail" style="color: #000000d6;">
+                                                                <a class="session"
+                                                                   data-toggle="collapse"
+                                                                   data-target="#dcollapse1"
+                                                                   aria-expanded="true"
+                                                                   aria-controls="collapse 1"
+                                                                   style="color:#000000d6;">{{$quiz->title}}
+                                                                </a>
+                                                                <div class="time" style="float: left">
+                                                                    {{$lesson->duration_read}}
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                            <hr style="border-bottom: 1px dashed #e6e6e694;;margin: 0.7%">
+                                                    @endforeach
+                                                </ul>
                                             </div>
                                         </div>
-                                    @endforeach
-                                </div>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
+                            @endif
                     </div>
                 </div>
-                <div id="foo"></div>
             </div>
+            <div id="foo"></div>
+        </div>
         </div>
         <div id="start-menu-stiky"></div>
     </section>
@@ -850,7 +861,7 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
                 </div>
             </div>
             <div class="medium-2 small-12 sticky-container" data-sticky-container="" style="height: 0px;">
-                <div  class="stiky-menu-btn sticky is-anchored is-at-top" data-sticky="" data-stick-to="top"
+                <div class="stiky-menu-btn sticky is-anchored is-at-top" data-sticky="" data-stick-to="top"
                      data-top-anchor="start-menu-stiky" data-btm-anchor="end-menu-stiky" data-resize="n0r1af-sticky"
                      data-mutate="n0r1af-sticky" data-e="139100-e" data-events="resize"
                      style="max-width: 224.828px; margin-top: 0px; bottom: auto; top: 0px;width:100%;">

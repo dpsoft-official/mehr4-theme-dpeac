@@ -1,4 +1,7 @@
 @extends('mehr4-theme-dpeac::layout-page')
+
+
+
 @section('title')
     {{$page->title}}
 @endsection

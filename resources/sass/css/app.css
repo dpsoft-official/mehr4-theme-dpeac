@@ -5747,7 +5747,7 @@ select[multiple] {
     flex-direction: column;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    margin-bottom: 1rem;
+    /*margin-bottom: 1rem;*/
     border: 1px solid #e6e6e6;
     border-radius: 0;
     background: #fefefe;
@@ -11207,11 +11207,11 @@ div#comment-send i {
     padding: 50px
 }
 
-.contact-us-content .head-packege {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 20px
-}
+/*.contact-us-content .head-packege {*/
+/*    text-align: center;*/
+/*    margin-top: 50px;*/
+/*    margin-bottom: 20px*/
+/*}*/
 
 .contact-us-content .head-packege > h3 {
     text-align: center;
@@ -18471,6 +18471,43 @@ background-color: #0199e7;
     margin-top: 14px;
 }
 .card {
-    border: 1px solid #e6e6e694!important;
-     padding: 1%!important;
+    border: 1px dotted hsla(0,0%,90.2%,.58) !important;
+    padding-right: 1% !important;
+    padding-left: 1% !important;
+
+}
+.contact-us-content .head-packege {
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 62px;
+}
+
+.contact-us-content .contact-us-content-box img, .contact-us-content .contact-us-content-box-section img {
+    padding: 15px !important;
+}
+@media screen and (max-width: 39.9375em) {
+    .contact-us-content .head-packege > hr {
+        border-bottom-color: #00a6bc;
+        margin: 10px 0 !important;
+    }
+    .contact-us-content .head-packege > h3 {
+        text-align: center;
+        color: #00a6bc;
+        background: #fff;
+        display: inline-block;
+        padding-top:1.6rem !important;
+        font-weight: 700;
+    }
+    .footer .footer-main {
+        /*background-image: url(../img/footer.png);*/
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #f9f9f9;
+        position: relative;
+        width: 100%;
+        z-index: 999;
+        height: 100%;
+        margin-top: 0;
+    }
 }
