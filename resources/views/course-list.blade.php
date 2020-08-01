@@ -27,7 +27,7 @@
         <div class="grid-container">
             <div class="grid-x grid-padding-x">
                 <div class="department-boxes">
-                    @foreach(Dpsoft\Mehr\Models\Category::whereFeatured(true)->take(6)->get() as $featuredCategory)
+                    @foreach(Dpsoft\Mehr\Models\Category::whereFeatured(true)->take(7)->get() as $featuredCategory)
                         <a class="departman-boxa"
                            href="{{$featuredCategory->courses_url}}">
     <span class="departman-box">
