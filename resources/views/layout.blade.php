@@ -21,13 +21,10 @@
     <!-- Favicons-->
     <link rel="shortcut icon" type="image/x-icon"    href="{{Storage::url('theme/favicon.png')}} ">
     <!-- BASE CSS -->
-
+    @yield('head')
     <link rel="stylesheet" href="{{asset('/vendor/mehr4-theme-dpeac/fonts/font.css')}}">
     <link href="{{mix('app.css','vendor/mehr4-theme-dpeac')}}" rel="stylesheet">
-    @yield('head')
-
-</head>
-
+   </head>
 <body>
 @include('mehr4-theme-dpeac::component.header')
 <main class="main">
