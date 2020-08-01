@@ -244,6 +244,3 @@ jQuery(function ($) {
         $this.countTo(options);
     }
 });
-$(function() {
-    $('.lazy').lazy();
-});

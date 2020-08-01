@@ -41,7 +41,7 @@
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/app.js')}}"></script>
-<script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.lazy.min.js')}}"></script>
+{{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.lazy.min.js')}}"></script>--}}
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.plugins.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 {{--<script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.tabs.js')}}"></script>--}}
