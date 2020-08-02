@@ -7540,6 +7540,7 @@ caption, tbody td, tbody th {
         border: 0;
         border-radius: 0
     }
+
 }
 
 .reveal.without-overlay {
@@ -9335,7 +9336,7 @@ section.comments-course {
 
 .department .head-packege {
     text-align: center;
-    margin-top: 60px;
+    margin-top: 61px;
     margin-bottom: 60px
 }
 
@@ -12185,9 +12186,9 @@ a.btn-pro {
 
     .slider-main .department-boxes .departman-box {
         margin: 10px;
-        display: -ms-inline-grid;
-        display: inline-grid;
-        width: 21%;
+        /*display: -ms-inline-grid;*/
+        display: block!important;
+        width: 100%!important;
         text-align: center;
         box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, .2);
         border-radius: 3px !important
@@ -12846,6 +12847,9 @@ a.btn-pro {
         box-shadow: 0 0 12px -4px;
         margin-bottom: 0 !important
     }
+    .department .head-packege {
+              margin-top: 100px!important;
+          }
 
     .menu-mobile-cert p {
         float: right;
@@ -13044,7 +13048,7 @@ a.btn-pro {
 
     .department .head-packege {
         text-align: center;
-        margin-top: 30px;
+        margin-top:90px!important;
         margin-bottom: 40px
     }
 
@@ -13878,7 +13882,7 @@ a.btn-pro {
         box-shadow: 0 0 14px -6px;
         background: #fafbfc !important;
         padding-bottom: 55px;
-        margin-top: -16px
+        margin-top: 155px!important;
     }
 
     .footer .footer-main .column-left {
@@ -18278,7 +18282,25 @@ header.header nav.menu-header ul>li ul {
     display: inline-grid!important;
     width: 40%;
     margin-top: 35px;
-}}
+}
+    .department .department-crt {
+        color: #fff;
+        text-align: center;
+        padding: 30px 10px;
+        width: 100%;
+        position: relative;
+    }
+    .charts-mg .graph-des {
+        text-align: center;
+        padding: 4px!important;
+        color: #fff;
+    }
+
+    .department .department-crt::after {
+        display: none;
+    }
+
+}
 .dep-pages .post4 {
     box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.4);
     padding-bottom: 71px;
@@ -18510,4 +18532,12 @@ background-color: #0199e7;
         height: 100%;
         margin-top: 0;
     }
+}
+.slider-main .department-boxes .departman-box:nth-child(1) {
+    background: #545456;
+}
+.slider-main .department-boxes .departman-box:hover {
+    filter: grayscale(0);
+    transition: all ease-in-out .5s;
+    box-shadow: 2px 2px 25px 0 rgba(46,61,73,.2);
 }
