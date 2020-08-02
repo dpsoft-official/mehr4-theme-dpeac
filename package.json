@@ -24,13 +24,21 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@pluginjs/before-after": "^0.8.11",
+        "before-after": "^2.0.4",
         "bootstrap-v4-rtl": "^4.3.1-6",
+        "evolution": "^0.1.0",
+        "extend": "^3.0.2",
         "font-awesome": "^4.7.0",
         "foundation": "^4.2.1-1",
         "foundation-sites": "^6.6.3",
         "jquery-lazy": "^1.7.11",
+        "jquery-particles": "^1.17.5",
         "owl.carousel": "^2.3.4",
+        "parallax-js": "^3.1.0",
+        "react-rev-slider": "^1.0.1",
         "revslider": "^5.4.201-8.6",
-        "vazir-font": "^21.1.0"
+        "vazir-font": "^21.1.0",
+        "x-particles": "^1.0.9"
     }
 }
