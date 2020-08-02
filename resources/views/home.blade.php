@@ -645,7 +645,7 @@
         } else {
             revapi13 = tpj("#rev_slider_13_1").show().revolution({
                 sliderType: "standard",
-                jsFileLocation: "http://dpe.ac/theme/dpeac/assets/js/",
+                jsFileLocation: "https://dpe.ac/theme/dpeac/assets/js/",
                 sliderLayout: "auto",
                 dottedOverlay: "none",
                 delay: 9000,
