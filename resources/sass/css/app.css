@@ -9384,7 +9384,7 @@ section.comments-course {
 
 .department .department-crt .dep-crt-btn:after {
     content: " ";
-    background: url(../assets/image/webpagenew-interface_03.png) no-repeat;
+    /*background: url(../assets/image/webpagenew-interface_03.png) no-repeat;*/
     display: inline-block;
     position: absolute;
     left: 10px;
