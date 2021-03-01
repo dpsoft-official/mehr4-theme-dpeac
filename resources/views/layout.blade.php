@@ -24,6 +24,7 @@
     @yield('head')
     <link rel="stylesheet" href="{{asset('/vendor/mehr4-theme-dpeac/fonts/font.css')}}">
     <link href="{{mix('app.css','vendor/mehr4-theme-dpeac')}}" rel="stylesheet">
+    {!! setting('raw_header') !!}
    </head>
 <body>
 @include('mehr4-theme-dpeac::component.header')
@@ -67,5 +68,6 @@
 
 @yield('footer')
 @include('sweet::alert')
+{!! setting('raw_footer') !!}
 </body>
 </html>
