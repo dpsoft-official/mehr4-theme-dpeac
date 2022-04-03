@@ -88,13 +88,13 @@
         </div>
         <div class="grid-container">
             <div class="grid-x grid-padding-x">
-                @foreach(Dpsoft\Mehr\Models\Course::where('featured',True)->where('status','published')->get() as $featuredCourse)
-                        <div class="medium-4">
+                @foreach(Dpsoft\Mehr\Models\Course::where('status','published')->withAnyTags(['پکیج'])->get() as $featuredCourse)
+                    <div class="medium-4">
                         <a href="{{$featuredCourse->url}}">
-                <span class="dpe-dep-box">
-                    <img src="{{Storage::url($featuredCourse->avatar)}}" alt="{{$featuredCourse->title}}">
-                    <p>{{($featuredCourse->title)}}</p>
-                </span>
+                            <span class="dpe-dep-box">
+                                <img src="{{Storage::url($featuredCourse->avatar)}}" alt="{{$featuredCourse->title}}">
+                                <p>{{($featuredCourse->title)}}</p>
+                            </span>
                         </a>
                     </div>
                 @endforeach
@@ -114,335 +114,47 @@
                         <hr>
                     </div>
                     <ul class="tabs" data-tabs="" id="teacher-tabs" role="tablist" data-e="ds568c-e">
-                        <li class="tabs-title is-active" role="presentation">
-                            <img src="{{Storage::url('theme/teacher1.png')}}" class="teacher-avatar" width="100px"
-                                 alt="{{setting('teacher1.name')}}">
-                            <a data-tabs-target="teacher-1" href="#teacher-1" role="tab"
-                               aria-controls="teacher-22143" aria-selected="false" id="teacher-22143-label"
-                               tabindex="-1">{{setting('teacher1.name')}}</a>
-                        </li>
-                        <li class="tabs-title" role="presentation">
-                            <img src="{{Storage::url('theme/teacher2.png')}}" class="teacher-avatar" width="100px"
-                                 alt="{{setting('teacher2.name')}}">
-                            <a data-tabs-target="teacher-2" href="#teacher-2" role="tab"
-                               aria-controls="teacher-19776" aria-selected="false" id="teacher-19776-label"
-                               tabindex="-1">{{setting('teacher2.name')}}</a>
-                        </li>
-                        <li class="tabs-title" role="presentation">
-                            <img src="{{Storage::url('theme/teacher3.png')}}" class="teacher-avatar" width="100px"
-                                 alt="{{setting('teacher3.name')}}">
-                            <a data-tabs-target="teacher-3" href="#teacher-3" role="tab"
-                               aria-controls="teacher-19253" aria-selected="false" id="teacher-19253-label"
-                               tabindex="-1">{{setting('teacher3.name')}}</a>
-                        </li>
-                        <li class="tabs-title " role="presentation">
-                            <img src="{{Storage::url('theme/teacher4.png')}}" class="teacher-avatar" width="100px"
-                                 alt="{{setting('teacher4.name')}}">
-                            <a data-tabs-target="teacher-4" href="#teacher-4" role="tab"
-                               aria-controls="teacher-18742" aria-selected="true" id="teacher-18742-label"
-                               tabindex="0">{{setting('teacher4.name')}}</a>
-                        </li>
-                        <li class="tabs-title " role="presentation">
-                            <img src="{{Storage::url('theme/teacher5.png')}}" class="teacher-avatar" width="100px"
-                                 alt="{{setting('teacher5.name')}}">
-                            <a data-tabs-target="teacher-5" href="#teacher-5" role="tab"
-                               aria-controls="teacher-18684" aria-selected="false" id="teacher-18684-label"
-                               tabindex="-1">{{setting('teacher5.name')}}</a>
-                        </li>
-                        <li class="tabs-title " role="presentation">
-                            <img src="{{Storage::url('theme/teacher6.png')}}" class="teacher-avatar" width="100px"
-                                 alt="{{setting('teacher6.name')}}">
-                            <a data-tabs-target="teacher-6" href="#teacher-6" role="tab"
-                               aria-controls="teacher-18683" aria-selected="false" id="teacher-18683-label"
-                               tabindex="-1">{{setting('teacher6.name')}}</a>
-                        </li>
-                        <li class="tabs-title " role="presentation">
-                            <img src="{{Storage::url('theme/teacher7.png')}}" class="teacher-avatar" width="100px"
-                                 alt="{{setting('teacher7.name')}}">
-                            <a data-tabs-target="teacher-7" href="#teacher-7" role="tab"
-                               aria-controls="teacher-18682" aria-selected="false" id="teacher-18682-label"
-                               tabindex="-1">{{setting('teacher7.name')}}</a>
-                        </li>
-                        <li class="tabs-title " role="presentation">
-                            <img src="{{Storage::url('theme/teacher8.png')}}" class="teacher-avatar" width="100px"
-                                 alt="{{setting('teacher8.name')}}">
-                            <a data-tabs-target="teacher-8" href="#teacher-8" role="tab"
-                               aria-controls="teacher-18578" aria-selected="false" id="teacher-18578-label"
-                               tabindex="-1">{{setting('teacher8.name')}}</a>
-                        </li>
-                        <li class="tabs-title " role="presentation">
-                            <img src="{{Storage::url('theme/teacher9.png')}}" class="teacher-avatar" width="100px"
-                                 alt="{{setting('teacher9.name')}}">
-                            <a data-tabs-target="teacher-9" href="#teacher-9" role="tab"
-                               aria-controls="teacher-16093" aria-selected="false" id="teacher-16093-label"
-                               tabindex="-1">{{setting('teacher9.name')}}</a>
-                        </li>
+                        @foreach(\App\User::withAnyTags(['برتر','استاد'])->get() as $teacher)
+                            <li class="tabs-title {{$loop->first?'is-active':''}}" role="presentation">
+                                <img src="{{Storage::url($teacher['meta']['avatar']??null)}}" class="teacher-avatar"
+                                     width="100px"
+                                     alt="{{$teacher->name}}">
+                                <a data-tabs-target="teacher-{{$loop->index}}" href="#teacher-{{$loop->index}}"
+                                   role="tab"
+                                   aria-controls="teacher-{{$loop->index}}" aria-selected="false"
+                                   id="teacher-{{$loop->index}}-label"
+                                   tabindex="-1">{{$teacher->name}}</a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="tabs-content float-center" data-tabs-content="teacher-tabs">
-            <div class="tabs-panel is-active" id="teacher-1">
-                <div class="good-teacher-tab-box">
-                    <div class="grid-container">
-                        <div class="info-teacher">
-                            <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                 data-src="{{Storage::url('theme/teacher1-bg.jpg')}}"
-                                 alt="{{setting('teacher1.name')}}">
-                            <div class="grid-x grid-padding-x top">
-                                <div class="medium-6  ">
-                                </div>
-                                <div class="medium-6  small-12 ">
-                                    <h3>{{setting('teacher1.name')}}</h3>
-                                    <span>{{setting('exp1.teacher1.name')}}</span>
-                                    <span>{{setting('exp2.teacher1.name')}}</span>
-                                    <span>{{setting('exp3.teacher1.name')}}</span>
-                                    <span>{{setting('exp4.teacher1.name')}}</span>
-                                    <span>{{setting('exp5.teacher1.name')}}</span>
-                                    <span>{{setting('exp6.teacher1.name')}}</span>
-                                    <a href="" class="profile-teacher-btn">پروفایل استاد</a>
+        @foreach(\App\User::withAnyTags(['برتر','استاد'])->get() as $teacher)
+            <div class="tabs-content float-center" data-tabs-content="teacher-tabs">
+                <div class="tabs-panel {{$loop->first?'is-active':''}}" id="teacher-{{$loop->index}}">
+                    <div class="good-teacher-tab-box">
+                        <div class="grid-container">
+                            <div class="info-teacher">
+                                <img width="100%" style="height:454px!important;position: relative;" class="lazy"
+                                     data-src="{{Storage::url($teacher['meta']['background']??null)}}"
+                                     alt="{{$teacher->name}}">
+                                <div class="grid-x grid-padding-x top">
+                                    <div class="medium-6  ">
+                                    </div>
+                                    <div class="medium-6  small-12 ">
+                                        <h3>{{$teacher->name}}</h3>
+                                        {!! $teacher['meta']['expertises']??null !!}
+                                        {{--                                    <a href="" class="profile-teacher-btn">پروفایل استاد</a>--}}
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="clear"></div>
                     </div>
-                    <div class="clear"></div>
                 </div>
             </div>
-        </div>
-        <div class="tabs-content float-center" data-tabs-content="teacher-tabs">
-            <div class="tabs-panel " id="teacher-2">
-                <div class="good-teacher-tab-box">
-                    <div class="grid-container">
-                        <div class="info-teacher">
-                            <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                 data-src="{{Storage::url('theme/teacher2-bg.jpg')}}"
-                                 alt="{{setting('teacher2.name')}}">
-                            <div class="grid-x grid-padding-x top">
-                                <div class="medium-6  ">
-                                </div>
-                                <div class="medium-6  small-12 ">
-                                    <h3>{{setting('teacher2.name')}}</h3>
-
-                                    <span>{{setting('exp1.teacher2.name')}}</span>
-                                    <span>{{setting('exp2.teacher2.name')}}</span>
-                                    <span>{{setting('exp3.teacher2.name')}}</span>
-                                    <span>{{setting('exp4.teacher2.name')}}</span>
-                                    <span>{{setting('exp5.teacher2.name')}}</span>
-                                    <span>{{setting('exp6.teacher2.name')}}</span>
-                                    <a href="" class="profile-teacher-btn">پروفایل استاد</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-
-        </div>
-        <div class="tabs-content float-center" data-tabs-content="teacher-tabs">
-            <div class="tabs-panel " id="teacher-3">
-                <div class="good-teacher-tab-box">
-                    <div class="grid-container">
-                        <div class="info-teacher">
-                            <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                 data-src="{{Storage::url('theme/teacher3-bg.jpg')}}"
-                                 alt="{{setting('teacher3.name')}}">
-                            <div class="grid-x grid-padding-x top">
-                                <div class="medium-6  ">
-                                </div>
-                                <div class="medium-6  small-12 ">
-                                    <h3>{{setting('teacher3.name')}}</h3>
-
-                                    <span>{{setting('exp1.teacher3.name')}}</span>
-                                    <span>{{setting('exp2.teacher3.name')}}</span>
-                                    <span>{{setting('exp3.teacher3.name')}}</span>
-                                    <span>{{setting('exp4.teacher3.name')}}</span>
-                                    <span>{{setting('exp5.teacher3.name')}}</span>
-                                    <span>{{setting('exp6.teacher3.name')}}</span>
-                                    <a href="" class="profile-teacher-btn">پروفایل استاد</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-
-        </div>
-        <div class="tabs-content float-center" data-tabs-content="teacher-tabs">
-            <div class="tabs-panel " id="teacher-4">
-                <div class="good-teacher-tab-box">
-                    <div class="grid-container">
-                        <div class="info-teacher">
-                            <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                 data-src="{{Storage::url('theme/teacher4-bg.jpg')}}"
-                                 alt="{{setting('teacher4.name')}}">
-                            <div class="grid-x grid-padding-x top">
-                                <div class="medium-6  ">
-                                </div>
-                                <div class="medium-6  small-12 ">
-                                    <h3>{{setting('teacher4.name')}}</h3>
-                                    <span>{{setting('exp1.teacher4.name')}}</span>
-                                    <span>{{setting('exp2.teacher4.name')}}</span>
-                                    <span>{{setting('exp3.teacher4.name')}}</span>
-                                    <span>{{setting('exp4.teacher4.name')}}</span>
-                                    <span>{{setting('exp5.teacher4.name')}}</span>
-                                    <span>{{setting('exp6.teacher4.name')}}</span>
-                                    <a href="" class="profile-teacher-btn">پروفایل استاد</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-
-        </div>
-        <div class="tabs-content float-center" data-tabs-content="teacher-tabs">
-            <div class="tabs-panel " id="teacher-5">
-                <div class="good-teacher-tab-box">
-                    <div class="grid-container">
-                        <div class="info-teacher">
-                            <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                 data-src="{{Storage::url('theme/teacher5-bg.jpg')}}"
-                                 alt="{{setting('teacher5.name')}}">
-                            <div class="grid-x grid-padding-x top">
-                                <div class="medium-6  ">
-                                </div>
-                                <div class="medium-6  small-12 ">
-                                    <h3>{{setting('teacher5.name')}}</h3>
-                                    <span>{{setting('exp1.teacher5.name')}}</span>
-                                    <span>{{setting('exp2.teacher5.name')}}</span>
-                                    <span>{{setting('exp3.teacher5.name')}}</span>
-                                    <span>{{setting('exp4.teacher5.name')}}</span>
-                                    <span>{{setting('exp5.teacher5.name')}}</span>
-                                    <span>{{setting('exp6.teacher5.name')}}</span>
-                                    <a href="" class="profile-teacher-btn">پروفایل استاد</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-
-        </div>
-        <div class="tabs-content float-center" data-tabs-content="teacher-tabs">
-            <div class="tabs-panel " id="teacher-6">
-                <div class="good-teacher-tab-box">
-                    <div class="grid-container">
-                        <div class="info-teacher">
-                            <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                 data-src="{{Storage::url('theme/teacher6-bg.jpg')}}"
-                                 alt="{{setting('teacher6.name')}}">
-                            <div class="grid-x grid-padding-x top">
-                                <div class="medium-6  ">
-                                </div>
-                                <div class="medium-6  small-12 ">
-                                    <h3>{{setting('teacher6.name')}}</h3>
-                                    <span>{{setting('exp1.teacher6.name')}}</span>
-                                    <span>{{setting('exp2.teacher6.name')}}</span>
-                                    <span>{{setting('exp3.teacher6.name')}}</span>
-                                    <span>{{setting('exp4.teacher6.name')}}</span>
-                                    <span>{{setting('exp5.teacher6.name')}}</span>
-                                    <span>{{setting('exp6.teacher6.name')}}</span>
-                                    <a href="" class="profile-teacher-btn">پروفایل استاد</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-
-        </div>
-        <div class="tabs-content float-center" data-tabs-content="teacher-tabs">
-            <div class="tabs-panel " id="teacher-7">
-                <div class="good-teacher-tab-box">
-                    <div class="grid-container">
-                        <div class="info-teacher">
-                            <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                 data-src="{{Storage::url('theme/teacher7-bg.jpg')}}"
-                                 alt="{{setting('teacher7.name')}}">
-                            <div class="grid-x grid-padding-x top">
-                                <div class="medium-6  ">
-                                </div>
-                                <div class="medium-6  small-12 ">
-                                    <h3>{{setting('teacher7.name')}}</h3>
-
-                                    <span>{{setting('exp1.teacher7.name')}}</span>
-                                    <span>{{setting('exp2.teacher7.name')}}</span>
-                                    <span>{{setting('exp3.teacher7.name')}}</span>
-                                    <span>{{setting('exp4.teacher7.name')}}</span>
-                                    <span>{{setting('exp5.teacher7.name')}}</span>
-                                    <span>{{setting('exp6.teacher7.name')}}</span>
-                                    <a href="" class="profile-teacher-btn">پروفایل استاد</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-
-        </div>
-        <div class="tabs-content float-center" data-tabs-content="teacher-tabs">
-            <div class="tabs-panel " id="teacher-8">
-                <div class="good-teacher-tab-box">
-                    <div class="grid-container">
-                        <div class="info-teacher">
-                            <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                 data-src="{{Storage::url('theme/teacher8-bg.jpg')}}"
-                                 alt="{{setting('teacher8.name')}}">
-                            <div class="grid-x grid-padding-x top">
-                                <div class="medium-6  ">
-                                </div>
-                                <div class="medium-6  small-12 ">
-                                    {{setting('teacher8.name')}}
-                                    <span>{{setting('exp1.teacher8.name')}}</span>
-                                    <span>{{setting('exp2.teacher8.name')}}</span>
-                                    <span>{{setting('exp3.teacher8.name')}}</span>
-                                    <span>{{setting('exp4.teacher8.name')}}</span>
-                                    <span>{{setting('exp5.teacher8.name')}}</span>
-                                    <span>{{setting('exp6.teacher8.name')}}</span>
-                                    <a href="" class="profile-teacher-btn">پروفایل استاد</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-        </div>
-        <div class="tabs-content float-center" data-tabs-content="teacher-tabs">
-            <div class="tabs-panel " id="teacher-9">
-                <div class="good-teacher-tab-box">
-                    <div class="grid-container">
-                        <div class="info-teacher">
-                            <img width="100%" style="height:454px!important;position: relative;" class="lazy"
-                                 data-src="{{Storage::url('theme/teacher9-bg.jpg')}}"
-                                 alt="{{setting('teacher9.name')}}">
-                            <div class="grid-x grid-padding-x top">
-                                <div class="medium-6  ">
-                                </div>
-                                <div class="medium-6  small-12 ">
-                                    <h3>{{setting('teacher9.name')}}</h3>
-
-                                    <span>{{setting('exp1.teacher9.name')}}</span>
-                                    <span>{{setting('exp2.teacher9.name')}}</span>
-                                    <span>{{setting('exp3.teacher9.name')}}</span>
-                                    <span>{{setting('exp4.teacher9.name')}}</span>
-                                    <span>{{setting('exp5.teacher9.name')}}</span>
-                                    <span>{{setting('exp6.teacher9.name')}}</span>
-                                    <a href="" class="profile-teacher-btn">پروفایل استاد</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </section>
     <!-- #Department -->
     <section class="department">
@@ -452,30 +164,26 @@
         </div>
 
         <div class="grid-container">
-                @foreach(Dpsoft\Mehr\Models\Category::whereFeatured(true)->take(7)->get() as $r=>$category)
+            @foreach(Dpsoft\Mehr\Models\Category::whereFeatured(true)->take(7)->get() as $r=>$category)
                 <div class="grid-x grid-padding-x dep-section">
                     <div class="department-crt department-crt{{$r}} " id="color{{$r}}">
-                        <img src="{{Storage::url($category->image)}}" width="176" alt="{{$category->title}}">
+                        <img src="{{Storage::url($category->image)}}" width="150" alt="{{$category->title}}">
                         <H5>{{$category->title}}</H5>
-                        <p>{{$category->description}}</p>
+                        <p>{!! $category->description !!}</p>
                         <a href="{{$category->courses_url}}"
                            class="dep-crt-btn">مشاهده کل دوره ها</a>
                     </div>
-                    @if($category->courses() !=null)
-                        @foreach($category->courses->where('status','published') as $i=>$course)
-                            @if($i<4)
-                                <div class="post4">
-                                    <a href="{{$course->url}}">
-                                        <img id="course-image" src="{{Storage::url($course->avatar)}}"
-                                             alt="{{$course->title}}">
-                                        <h3 id="course-title">{{$course->title}}</h3>
-                                        <span></span>
-                                        <ins>{{number_format($course->price)}} تومان </ins>
-                                    </a>
-                                </div>
-                            @endif
-                        @endforeach
-                    @endif
+                    @foreach($category->courses()->where('status','published')->whereFeatured(TRUE)->take(4)->get() as $course)
+                        <div class="post4">
+                            <a href="{{$course->url}}">
+                                <img id="course-image" src="{{Storage::url($course->avatar)}}"
+                                     alt="{{$course->title}}">
+                                <h3 id="course-title">{{$course->title}}</h3>
+                                <span></span>
+                                <ins>{{number_format($course->price/10)}} تومان</ins>
+                            </a>
+                        </div>
+                    @endforeach
                 </div>
         @endforeach
     </section>
@@ -602,241 +310,239 @@
                 console.log("Failure at Presize of Slider:" + d)
             }
         };
-</script>
-<!-- END REVOLUTION SLIDER -->
-<script type="text/javascript">
-    function setREVStartSize(e) {
-        try {
-            var i = jQuery(window).width(),
-                t = 9999,
-                r = 0,
-                n = 0,
-                l = 0,
-                f = 0,
-                s = 0,
-                h = 0;
-            if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function(e, f) {
-                f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
-            }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
-                var u = (e.c.width(), jQuery(window).height());
-                if (void 0 != e.fullScreenOffsetContainer) {
-                    var c = e.fullScreenOffsetContainer.split(",");
-                    if (c) jQuery.each(c, function(e, i) {
-                        u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
-                    }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
-                }
-                f = u
-            } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
-            e.c.closest(".rev_slider_wrapper").css({
-                height: f
-            })
-        } catch (d) {
-            console.log("Failure at Presize of Slider:" + d)
-        }
-    };
+    </script>
+    <!-- END REVOLUTION SLIDER -->
+    <script type="text/javascript">
+        function setREVStartSize(e) {
+            try {
+                var i = jQuery(window).width(),
+                    t = 9999,
+                    r = 0,
+                    n = 0,
+                    l = 0,
+                    f = 0,
+                    s = 0,
+                    h = 0;
+                if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function (e, f) {
+                    f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
+                }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
+                    var u = (e.c.width(), jQuery(window).height());
+                    if (void 0 != e.fullScreenOffsetContainer) {
+                        var c = e.fullScreenOffsetContainer.split(",");
+                        if (c) jQuery.each(c, function (e, i) {
+                            u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
+                        }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
+                    }
+                    f = u
+                } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
+                e.c.closest(".rev_slider_wrapper").css({
+                    height: f
+                })
+            } catch (d) {
+                console.log("Failure at Presize of Slider:" + d)
+            }
+        };
 
-</script>
-<script type="text/javascript">
-    var revapi13,
-        tpj = jQuery;
-    tpj(document).ready(function() {
-        if (tpj("#rev_slider_13_1").revolution == undefined) {
-            revslider_showDoubleJqueryError("#rev_slider_13_1");
-        } else {
-            revapi13 = tpj("#rev_slider_13_1").show().revolution({
-                sliderType: "standard",
-                jsFileLocation: "https://dpe.ac/theme/dpeac/assets/js/",
-                sliderLayout: "auto",
-                dottedOverlay: "none",
-                delay: 9000,
-                particles: {
-                    startSlide: "first",
-                    endSlide: "last",
-                    zIndex: "1",
+    </script>
+    <script type="text/javascript">
+        var revapi13,
+            tpj = jQuery;
+        tpj(document).ready(function () {
+            if (tpj("#rev_slider_13_1").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_13_1");
+            } else {
+                revapi13 = tpj("#rev_slider_13_1").show().revolution({
+                    sliderType: "standard",
+                    jsFileLocation: "https://dpe.ac/vendor/mehr4-theme-dpeac/js/",
+                    sliderLayout: "auto",
+                    dottedOverlay: "none",
+                    delay: 9000,
                     particles: {
-                        number: {
-                            value: 80
-                        },
-                        color: {
-                            value: "#ffffff"
-                        },
-                        shape: {
-                            type: "circle",
-                            stroke: {
-                                width: 0,
-                                color: "#ffffff",
-                                opacity: 1
+                        startSlide: "first",
+                        endSlide: "last",
+                        zIndex: "1",
+                        particles: {
+                            number: {
+                                value: 80
                             },
-                            image: {
-                                src: ""
-                            }
-                        },
-                        opacity: {
-                            value: 0.5,
-                            random: true,
-                            min: 0.25,
-                            anim: {
-                                enable: false,
-                                speed: 3,
-                                opacity_min: 0,
-                                sync: false
-                            }
-                        },
-                        size: {
-                            value: 2,
-                            random: true,
-                            min: 0.5,
-                            anim: {
-                                enable: false,
-                                speed: 40,
-                                size_min: 1,
-                                sync: false
-                            }
-                        },
-                        line_linked: {
-                            enable: false,
-                            distance: 150,
-                            color: "#ffffff",
-                            opacity: 0.4,
-                            width: 1
-                        },
-                        move: {
-                            enable: true,
-                            speed: 1,
-                            direction: "none",
-                            random: true,
-                            min_speed: 1,
-                            straight: false,
-                            out_mode: "out"
-                        }
-                    },
-                    interactivity: {
-                        events: {
-                            onhover: {
-                                enable: false,
-                                mode: "repulse"
+                            color: {
+                                value: "#ffffff"
                             },
-                            onclick: {
-                                enable: false,
-                                mode: "repulse"
-                            }
-                        },
-                        modes: {
-                            grab: {
-                                distance: 400,
-                                line_linked: {
-                                    opacity: 0.5
+                            shape: {
+                                type: "circle",
+                                stroke: {
+                                    width: 0,
+                                    color: "#ffffff",
+                                    opacity: 1
+                                },
+                                image: {
+                                    src: ""
                                 }
                             },
-                            bubble: {
-                                distance: 400,
-                                size: 40,
-                                opacity: 0.4
+                            opacity: {
+                                value: 0.5,
+                                random: true,
+                                min: 0.25,
+                                anim: {
+                                    enable: false,
+                                    speed: 3,
+                                    opacity_min: 0,
+                                    sync: false
+                                }
                             },
-                            repulse: {
-                                distance: 200
+                            size: {
+                                value: 2,
+                                random: true,
+                                min: 0.5,
+                                anim: {
+                                    enable: false,
+                                    speed: 40,
+                                    size_min: 1,
+                                    sync: false
+                                }
+                            },
+                            line_linked: {
+                                enable: false,
+                                distance: 150,
+                                color: "#ffffff",
+                                opacity: 0.4,
+                                width: 1
+                            },
+                            move: {
+                                enable: true,
+                                speed: 1,
+                                direction: "none",
+                                random: true,
+                                min_speed: 1,
+                                straight: false,
+                                out_mode: "out"
+                            }
+                        },
+                        interactivity: {
+                            events: {
+                                onhover: {
+                                    enable: false,
+                                    mode: "repulse"
+                                },
+                                onclick: {
+                                    enable: false,
+                                    mode: "repulse"
+                                }
+                            },
+                            modes: {
+                                grab: {
+                                    distance: 400,
+                                    line_linked: {
+                                        opacity: 0.5
+                                    }
+                                },
+                                bubble: {
+                                    distance: 400,
+                                    size: 40,
+                                    opacity: 0.4
+                                },
+                                repulse: {
+                                    distance: 200
+                                }
                             }
                         }
-                    }
-                },
-                navigation: {
-                    keyboardNavigation: "off",
-                    keyboard_direction: "horizontal",
-                    mouseScrollNavigation: "off",
-                    mouseScrollReverse: "default",
-                    onHoverStop: "off",
-                    arrows: {
-                        style: "gyges",
-                        enable: true,
-                        hide_onmobile: false,
-                        hide_onleave: false,
-                        tmp: '',
-                        left: {
-                            h_align: "center",
-                            v_align: "bottom",
-                            h_offset: -20,
-                            v_offset: 0
-                        },
-                        right: {
-                            h_align: "center",
-                            v_align: "bottom",
-                            h_offset: 20,
-                            v_offset: 0
+                    },
+                    navigation: {
+                        keyboardNavigation: "off",
+                        keyboard_direction: "horizontal",
+                        mouseScrollNavigation: "off",
+                        mouseScrollReverse: "default",
+                        onHoverStop: "off",
+                        arrows: {
+                            style: "gyges",
+                            enable: true,
+                            hide_onmobile: false,
+                            hide_onleave: false,
+                            tmp: '',
+                            left: {
+                                h_align: "center",
+                                v_align: "bottom",
+                                h_offset: -20,
+                                v_offset: 0
+                            },
+                            right: {
+                                h_align: "center",
+                                v_align: "bottom",
+                                h_offset: 20,
+                                v_offset: 0
+                            }
                         }
+                    },
+                    visibilityLevels: [1240, 1024, 778, 480],
+                    gridwidth: 1200,
+                    gridheight: 500,
+                    lazyType: "none",
+                    minHeight: "500",
+                    parallax: {
+                        type: "mouse+scroll",
+                        origo: "slidercenter",
+                        speed: 400,
+                        speedbg: 0,
+                        speedls: 0,
+                        levels: [1, 2, 3, 4, 5, 6, 7, 8, 12, 16, 47, 48, 49, 50, 51, 55],
+                    },
+                    shadow: 0,
+                    spinner: "off",
+                    stopLoop: "on",
+                    stopAfterLoops: 0,
+                    stopAtSlide: 1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    disableProgressBar: "on",
+                    hideThumbsOnMobile: "off",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "off",
+                        nextSlideOnWindowFocus: "off",
+                        disableFocusListener: false,
                     }
-                },
-                visibilityLevels: [1240, 1024, 778, 480],
-                gridwidth: 1200,
-                gridheight: 500,
-                lazyType: "none",
-                minHeight: "500",
-                parallax: {
-                    type: "mouse+scroll",
-                    origo: "slidercenter",
-                    speed: 400,
-                    speedbg: 0,
-                    speedls: 0,
-                    levels: [1, 2, 3, 4, 5, 6, 7, 8, 12, 16, 47, 48, 49, 50, 51, 55],
-                },
-                shadow: 0,
-                spinner: "off",
-                stopLoop: "on",
-                stopAfterLoops: 0,
-                stopAtSlide: 1,
-                shuffle: "off",
-                autoHeight: "off",
-                disableProgressBar: "on",
-                hideThumbsOnMobile: "off",
-                hideSliderAtLimit: 0,
-                hideCaptionAtLimit: 0,
-                hideAllCaptionAtLilmit: 0,
-                debugMode: false,
-                fallbacks: {
-                    simplifyAll: "off",
-                    nextSlideOnWindowFocus: "off",
-                    disableFocusListener: false,
+                });
+                var ua = window.navigator.userAgent;
+                var msie = ua.indexOf("MSIE ");
+
+                if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv:11./) || ('CSS' in window && 'supports' in window.CSS && !window.CSS.supports('mix-blend-mode', 'screen'))) {
+
+                    var bgColor = 'rgba(245, 245, 245, 0.5)';
+                    //jQuery('.rev_slider .tp-caption[data-blendmode]').removeAttr('data-blendmode').css('background', bgColor);
+                    jQuery('.rev_slider .tp-caption.tp-blendvideo[data-blendmode]').remove();
                 }
-            });
-            var ua = window.navigator.userAgent;
-            var msie = ua.indexOf("MSIE ");
-
-            if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv:11./) || ('CSS' in window && 'supports' in window.CSS && !window.CSS.supports('mix-blend-mode', 'screen'))) {
-
-                var bgColor = 'rgba(245, 245, 245, 0.5)';
-                //jQuery('.rev_slider .tp-caption[data-blendmode]').removeAttr('data-blendmode').css('background', bgColor);
-                jQuery('.rev_slider .tp-caption.tp-blendvideo[data-blendmode]').remove();
             }
-        }
 
 
-
-        RevSliderBeforeAfter(tpj, revapi13, {
-            arrowStyles: {
-                leftIcon: "fa-icon-caret-left",
-                rightIcon: "fa-icon-caret-right",
-                topIcon: "fa-icon-caret-up",
-                bottomIcon: "fa-icon-caret-down",
-                size: "35",
-                color: "#ffffff",
-                bgColor: "transparent",
-                spacing: "10",
-                padding: "0",
-                borderRadius: "0"
-            },
-            dividerStyles: {
-                width: "1",
-                color: "rgba(255, 255, 255, 0.5)"
-            },
-            onClick: {
-                time: "500",
-                easing: "Power2.easeOut",
-            },
-            cursor: "move",
-            carousel: false
+            RevSliderBeforeAfter(tpj, revapi13, {
+                arrowStyles: {
+                    leftIcon: "fa-icon-caret-left",
+                    rightIcon: "fa-icon-caret-right",
+                    topIcon: "fa-icon-caret-up",
+                    bottomIcon: "fa-icon-caret-down",
+                    size: "35",
+                    color: "#ffffff",
+                    bgColor: "transparent",
+                    spacing: "10",
+                    padding: "0",
+                    borderRadius: "0"
+                },
+                dividerStyles: {
+                    width: "1",
+                    color: "rgba(255, 255, 255, 0.5)"
+                },
+                onClick: {
+                    time: "500",
+                    easing: "Power2.easeOut",
+                },
+                cursor: "move",
+                carousel: false
+            });
         });
-    });
-</script>
-</script>
+    </script>
 @endsection
 
 
