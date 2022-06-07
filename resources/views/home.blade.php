@@ -88,7 +88,7 @@
         </div>
         <div class="grid-container">
             <div class="grid-x grid-padding-x">
-                @foreach(Dpsoft\Mehr\Models\Course::where('status','published')->withAnyTags(['پکیج'])->get() as $featuredCourse)
+                @foreach(Dpsoft\Mehr\Models\Course::where('status','published')->withAnyTags(['پکیج'])->orderByRaw("cast(meta->'$.priority' as unsigned) asc")->get() as $featuredCourse)
                     <div class="medium-4">
                         <a href="{{$featuredCourse->url}}">
                             <span class="dpe-dep-box">
