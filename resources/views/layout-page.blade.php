@@ -1,6 +1,10 @@
 @extends('mehr4-theme-dpeac::layout')
 @section('main')
-
+    <style>
+        #login-step{
+            opacity: 1 !important;
+        }
+    </style>
     <section class="contact-us-content" id="custome-page">
         <!-- #contact Us Header -->
         <div class="back-header">
