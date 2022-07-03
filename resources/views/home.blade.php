@@ -198,30 +198,30 @@
                 <div class="grid-x grid-padding-x">
                     <div class="medium-3  small-6">
                         <div class="graph-des">
-                            <h1 class="timer count-title before-numb count-number" data-to="{{setting('num1')}}"
-                                data-speed="1500"></h1>
+                            <div class="timer count-title before-numb count-number" data-to="{{setting('num1')}}"
+                                 data-speed="1500" style="font-size: 3rem;"></div>
                             <b>{{setting('title1')}}</b>
                         </div>
                     </div>
                     <div class="medium-3 small-6">
                         <div class="graph-des">
-                            <h1 class="timer count-title before-numb count-number" data-to="{{setting('num2')}}"
-                                data-speed="1500"></h1>
+                            <div class="timer count-title before-numb count-number" data-to="{{setting('num2')}}"
+                                 data-speed="1500" style="font-size: 3rem;"></div>
                             <b>{{setting('title2')}}</b>
                         </div>
                     </div>
                     <div class="medium-3 small-6">
                         <div class="graph-des">
-                            <h1 class="timer count-title before-numb count-number" data-to="{{setting('num3')}}"
-                                data-speed="1500"></h1>
+                            <div class="timer count-title before-numb count-number" data-to="{{setting('num3')}}"
+                                 data-speed="1500" style="font-size: 3rem;"></div>
                             <b>{{setting('title3')}}</b>
                         </div>
                     </div>
                     <div class="medium-3 small-6">
                         <div class="graph-des">
-                            <h1 class="timer count-title before-numb count-number" data-to="{{setting('num4')}}"
-                                data-speed="1000"></h1>
-                            <b>{{setting('title4')}}</b>
+                            <div class="timer count-title before-numb count-number" data-to="{{setting('num4')}}"
+                                 data-speed="1000"  style="font-size: 3rem;"></div>
+                            <b >{{setting('title4')}} </b>
                         </div>
                     </div>
                 </div>
