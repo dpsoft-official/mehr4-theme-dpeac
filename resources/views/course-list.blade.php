@@ -1,7 +1,78 @@
 @extends("mehr4-theme-dpeac::layout")
 @section('main')
-    <!-- #Slider -->
-    <section class="slider-main">
+    <style>
+        .dep-pages .department-crt {
+            background: #8f0324;
+            color: #fff;
+            text-align: center;
+            padding: 30px 10px;
+            width: 100%;
+            position: relative;
+            height: 340px;
+        }
+
+        .slider-main .title-department h2, .slider-main .title-department p {
+            color: #fff;
+            font-weight: 700;
+            text-shadow: 0px 4px 4px #000;
+        }
+
+        .dep-pages .post4 {
+            box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.4);
+            padding-bottom: 71px;
+            position: relative;
+            border-radius: 5px;
+            background: #fff;
+            height: 280px;
+            margin-right: 48px;
+            display: -ms-inline-grid;
+            display: inline-grid;
+            width: 19%;
+            margin-top: 35px;
+        }
+
+        .department .department-crt .dep-crt-btn {
+            border: 1px solid #fff;
+            color: #e1e1e1;
+            font-size: 13px;
+            font-weight: 100;
+            width: 100%;
+            padding: 8px 25px !important;
+            position: relative;
+            border-radius: 2px;
+        }
+
+        @media screen and (max-width: 39.9375em) {
+            .dep-pages .post4 {
+                box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.4);
+                padding-bottom: 71px;
+                position: relative;
+                border-radius: 5px;
+                background: #fff;
+                height: 195px;
+                margin-right: 10px;
+                display: -ms-inline-grid;
+                display: inline-grid;
+                width: 40%;
+                margin-top: 35px;
+
+            }
+
+            .slider-main .department-boxes .departman-box {
+                margin: 10px;
+                display: -ms-inline-grid;
+                display: inline-grid;
+                width: 94%;
+                text-align: center;
+                box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, .2);
+                border-radius: 3px !important;
+            }
+
+            .slider-main .department-boxes {
+                margin-top: 1rem;
+            }
+        }
+    </style>    <section class="slider-main">
         @if($selectedCategory)
             <img id="course-image"
                  src="{{Storage::url($selectedCategory->image)}}">
@@ -72,6 +143,7 @@
                                     </a>
                                 </div>
                             @endforeach
+                                {{$courses->render('mehr4-theme-dpeac::pagination.custom')}}
                         @endif
                     </div>
                     @endif
@@ -95,7 +167,7 @@
                                         </a>
                                     </div>
                                 @endforeach
-                                {{$course->render('mehr4-theme-dpeac::pagination.custom')}}
+                                {{$courses->render('mehr4-theme-dpeac::pagination.custom')}}
                             @else
                                 <div class="callout warning">
                                     <h2 style="text-align: center;color: black;">
@@ -108,77 +180,5 @@
                     </div>
                 </div>
             </section>
-            <style>
-                .dep-pages .department-crt {
-                    background: #8f0324;
-                    color: #fff;
-                    text-align: center;
-                    padding: 30px 10px;
-                    width: 100%;
-                    position: relative;
-                    height: 340px;
-                }
 
-                .slider-main .title-department h2, .slider-main .title-department p {
-                    color: #fff;
-                    font-weight: 700;
-                    text-shadow: 0px 4px 4px #000;
-                }
-
-                .dep-pages .post4 {
-                    box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.4);
-                    padding-bottom: 71px;
-                    position: relative;
-                    border-radius: 5px;
-                    background: #fff;
-                    height: 280px;
-                    margin-right: 48px;
-                    display: -ms-inline-grid;
-                    display: inline-grid;
-                    width: 19%;
-                    margin-top: 35px;
-                }
-
-                .department .department-crt .dep-crt-btn {
-                    border: 1px solid #fff;
-                    color: #e1e1e1;
-                    font-size: 13px;
-                    font-weight: 100;
-                    width: 100%;
-                    padding: 8px 25px !important;
-                    position: relative;
-                    border-radius: 2px;
-                }
-
-                @media screen and (max-width: 39.9375em) {
-                    .dep-pages .post4 {
-                        box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.4);
-                        padding-bottom: 71px;
-                        position: relative;
-                        border-radius: 5px;
-                        background: #fff;
-                        height: 195px;
-                        margin-right: 10px;
-                        display: -ms-inline-grid;
-                        display: inline-grid;
-                        width: 40%;
-                        margin-top: 35px;
-
-                    }
-
-                    .slider-main .department-boxes .departman-box {
-                        margin: 10px;
-                        display: -ms-inline-grid;
-                        display: inline-grid;
-                        width: 94%;
-                        text-align: center;
-                        box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, .2);
-                        border-radius: 3px !important;
-                    }
-
-                    .slider-main .department-boxes {
-                        margin-top: 1rem;
-                    }
-                }
-            </style>
 @endsection
