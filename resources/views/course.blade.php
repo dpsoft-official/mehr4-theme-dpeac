@@ -490,8 +490,8 @@ border-radius: 3px;" href="{{\Mehr4Payment::courseBuyUrl($course)}}">ثبت نا
             <img src="{{$course->image? Storage::url($course->image):Storage::url('theme/head.jpg')}}">
         </div>
         <div class="title-course">
-            <h2 id="course-title"
-                style="color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 4px 3px;">{{$course->title}}</h2>
+            <h1 id="course-title"
+                style="color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 4px 3px;">{{$course->title}}</h1>
             <p id="course-description"
                style="color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0px 2px 3px;">{{$course->excerpt}}</p>
         </div>
@@ -813,7 +813,7 @@ $q->whereIn('categories.id',$course->categories->pluck('id')->toArray());
                         <div class="post4 ">
                             <a href="{{$similarCourse->url}}" style="height: 300px;">
                                 <img
-                                        src="{{$similarCourse->avatar? Storage::url($similarCourse->avatar):Storage::url('theme/similar.jpg')}}">
+                                        src="{{$similarCourse->avatar? Storage::url($similarCourse->avatar):Storage::url('theme/similar.jpg')}}" alt="{{$similarCourse->title}}">
                                 <h3>{{$similarCourse->title}}</h3>
                             </a>
                             <ins>{{number_format($similarCourse->price/10)}} تومان</ins>
