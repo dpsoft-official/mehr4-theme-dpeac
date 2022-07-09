@@ -1,4 +1,4 @@
-<div class="column one">
+<div class="column one" style="margin-top:30px;text-align:center">
 
     @if ($paginator->onFirstPage())
         <a class="button button_js slider_prev disbutton" style="background-color: gray;cursor: pointer;"><span class="" style="padding: 11px 13px;"><span style="cursor: pointer;" class="back">صفحه  قبلی
