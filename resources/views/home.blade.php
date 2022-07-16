@@ -203,14 +203,21 @@
                             <b>{{setting('title1')}}</b>
                         </div>
                     </div>
-                    <div class="medium-3 small-6">
+                    <div class="medium-2 small-6">
                         <div class="graph-des">
                             <div class="timer count-title before-numb count-number" data-to="{{setting('num2')}}"
                                  data-speed="1500" style="font-size: 3rem;"></div>
                             <b>{{setting('title2')}}</b>
                         </div>
                     </div>
-                    <div class="medium-3 small-6">
+                    <div class="medium-2 small-6">
+                        <div class="graph-des">
+                            <div class="timer count-title before-numb count-number" data-to="{{setting('num5')}}"
+                                 data-speed="1500" style="font-size: 3rem;"></div>
+                            <b>{{setting('title5')}}</b>
+                        </div>
+                    </div>
+                    <div class="medium-2 small-6">
                         <div class="graph-des">
                             <div class="timer count-title before-numb count-number" data-to="{{setting('num3')}}"
                                  data-speed="1500" style="font-size: 3rem;"></div>
