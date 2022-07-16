@@ -210,25 +210,34 @@
                             <b>{{setting('title2')}}</b>
                         </div>
                     </div>
-                    <div class="medium-2 small-6">
-                        <div class="graph-des">
-                            <div class="timer count-title before-numb count-number" data-to="{{setting('num5')}}"
-                                 data-speed="1500" style="font-size: 3rem;"></div>
-                            <b>{{setting('title5')}}</b>
+                    @if(setting('title5')!=null)
+                        <div class="medium-2 small-6">
+                            <div class="graph-des">
+                                @if(setting('num5')!=null)
+                                    <div class="timer count-title before-numb count-number"
+                                         data-to="{{setting('num5')}}"
+                                         data-speed="1500" style="font-size: 3rem;"></div>
+                                @endif
+                                <b>{{setting('title5')}}</b>
+                            </div>
                         </div>
-                    </div>
+                    @endif
                     <div class="medium-2 small-6">
                         <div class="graph-des">
-                            <div class="timer count-title before-numb count-number" data-to="{{setting('num3')}}"
+
+                            <div class="timer count-title before-numb count-number"
+                                 data-to="{{setting('num3')}}"
                                  data-speed="1500" style="font-size: 3rem;"></div>
+
                             <b>{{setting('title3')}}</b>
                         </div>
                     </div>
+
                     <div class="medium-3 small-6">
                         <div class="graph-des">
                             <div class="timer count-title before-numb count-number" data-to="{{setting('num4')}}"
-                                 data-speed="1000"  style="font-size: 3rem;"></div>
-                            <b >{{setting('title4')}} </b>
+                                 data-speed="1000" style="font-size: 3rem;"></div>
+                            <b>{{setting('title4')}} </b>
                         </div>
                     </div>
                 </div>
