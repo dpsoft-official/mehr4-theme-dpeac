@@ -1,0 +1,9 @@
+#seo-text div * {
+    text-align: right;
+    line-height:2.3!important;
+}
+#seo-text p,ul {
+    font-weight:500;
+    font-size: 15px;
+    color:#4b5259;
+}

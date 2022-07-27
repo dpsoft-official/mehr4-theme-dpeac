@@ -188,12 +188,12 @@
         @endforeach
     </section>
     <!-- #DaneshPajohaniShavid -->
-    <section class="dpe" id="dpe">
+    <section class="dpe" id="dpe" style="height: 753px!important;">
         <div class="head-packege-light">
             <h3>دانش پژوهانی شوید</h3>
             <hr>
         </div>
-        <div class="charts-mg">
+        <div class="charts-mg" style="margin-top: 10px!important;margin-bottom: 10px!important">
             <div class="grid-container">
                 <div class="grid-x grid-padding-x">
                     <div class="medium-3  small-6">
@@ -243,7 +243,7 @@
                 </div>
             </div>
         </div>
-        <div class="video-style">
+        <div class="video-style" style="top: 250px!important;">
             <div class="grid-container">
                 <div class="grid-x grid-padding-x">
                     <div class="row medium-12 cell">
@@ -256,8 +256,25 @@
             </div>
         </div>
     </section>
+
+    <!-- #Seo -->
+    @foreach(\Dpsoft\Mehr\Models\Page::withAnyTags(['seo','main'])->get() as $page )
+        <div class="contact-us-content-parent"
+             style="padding-top: 100px!important;padding-bottom:100px;background-color: #f6f6f6">
+            <div class="grid-container">
+                <div class="contact-us-content-box">
+                    <div class="head-packege">
+                        <div class="grid-container" id="seo-text">
+                            {!! $page->content!!}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
+
     <!-- #Blog -->
-    <section class="newsbar" style="margin-top:303px;">
+    <section class="newsbar">
         <div class="grid-container">
             <h2>
                 آخرین مطالب وبلاگ
@@ -560,6 +577,5 @@
         });
     </script>
 @endsection
-
 
 

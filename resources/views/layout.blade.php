@@ -24,6 +24,7 @@
     @yield('head')
     <link rel="stylesheet" href="{{asset('/vendor/mehr4-theme-dpeac/fonts/font.css')}}">
     <link href="{{mix('app.css','vendor/mehr4-theme-dpeac')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('/vendor/mehr4-theme-dpeac/custom.css')}}">
     {!! setting('raw_header') !!}
    </head>
 <body>
