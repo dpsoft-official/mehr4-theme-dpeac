@@ -139,7 +139,7 @@
                                         <img src="{{Storage::url($course->avatar)}}" alt="{{$course->title}}">
                                         <h3>{{$course->title}}</h3>
                                         {{--                                        <span></span>--}}
-                                        <ins>{{number_format($course->price)}}تومان</ins>
+                                        <ins>{{number_format($course->price/10)}}تومان</ins>
                                     </a>
                                 </div>
                             @endforeach
@@ -163,7 +163,7 @@
                                             <img src="{{Storage::url($course->avatar)}}" alt="{{$course->title}}">
                                             <h3>{{$course->title}}</h3>
                                             <span></span>
-                                            <ins>{{number_format($course->price )}}</ins>
+                                            <ins>{{number_format($course->price/10 )}}</ins>
                                         </a>
                                     </div>
                                 @endforeach
