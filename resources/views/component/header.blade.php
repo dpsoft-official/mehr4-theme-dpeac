@@ -8,7 +8,7 @@
             </div>
             <div class="small-6 none-desk">
                 <div class="menu-responsive-mob" data-responsive-toggle="home-animated-menu" data-hide-for="medium"
-                    data-e="b8c3kf-e" style="display: none;">
+                     data-e="b8c3kf-e" style="display: none;">
                     <button class="menu-icon" type="button" data-toggle=""></button>
                     <div class="title-bar-title">فهرست</div>
                 </div>
@@ -26,7 +26,8 @@
                             <a href="/">صفحه اصلی</a>
                         </li>
 
-                        <li @if (Route::currentRouteName() == 'course-list') role="menuitem" class="current-menu-item" @endif>
+                        <li @if (Route::currentRouteName() == 'course-list') role="menuitem"
+                            class="current-menu-item" @endif>
                             <a href="{{ route('course-list') }}"><span>دپارتمان ها</span></a>
                         </li>
                         <li @if (Route::currentRouteName() == 'blog') role="menuitem" class="current-menu-item" @endif>
@@ -132,120 +133,140 @@
                                 <a href="{{ Dpsoft\Mehr\Models\Page::find(18)->url }}"><span>تاییدیه ها</span></a>
                             </li>
                         @endif
+                        @guest
+                            <li class="" role="menuitem">
+                                <a href="{{ route('login') }}"><span>ورود</span></a>
+                            </li>
+                        @else
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                            <li class="is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true"
+                                aria-label="درباره ما">
+                                <a href="{{ auth()->user()->roles()->exists()? '/panel': '/dashboard/courses' }}">   {{ Auth::user()->name }}</a>
+                                <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" role="menu">
 
-                        <li class="is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true"
-                            aria-label="درباره ما">
-                            <a href="">درباره ما</a>
-                            <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" role="menu">
-                                @if (Dpsoft\Mehr\Models\Page::find(28) != null)
-                                    <li>
-                                        <a href="{{ Dpsoft\Mehr\Models\Page::find(28)->url }}"><span>داستان
+                                    <li class="" role="menuitem">
+                                        <a href="/logout" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();"  ><span>خروج</span></a>
+                                    </li>
+                                </ul>
+                    @endguest
+
+                    <li class="is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true"
+                        aria-label="درباره ما">
+                        <a href="">درباره ما</a>
+                        <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" role="menu">
+                            @if (Dpsoft\Mehr\Models\Page::find(28) != null)
+                                <li>
+                                    <a href="{{ Dpsoft\Mehr\Models\Page::find(28)->url }}"><span>داستان
                                                 ما</span></a>
-                                    </li>
-                                @endif
+                                </li>
+                            @endif
 
-                                @if (Dpsoft\Mehr\Models\Page::find(19) != null)
-                                    <li role="menuitem">
-                                        <a href="{{ Dpsoft\Mehr\Models\Page::find(19)->url }}"><span>مجوزات و
+                            @if (Dpsoft\Mehr\Models\Page::find(19) != null)
+                                <li role="menuitem">
+                                    <a href="{{ Dpsoft\Mehr\Models\Page::find(19)->url }}"><span>مجوزات و
                                                 افتخارات</span></a>
-                                    </li>
-                                @endif
-                                @if (Dpsoft\Mehr\Models\Page::find(20) != null)
-                                    <li role="menuitem">
-                                        <a
-                                            href="{{ Dpsoft\Mehr\Models\Page::find(20)->url }}"><span>همکاران</span></a>
-                                    </li>
-                                @endif
-                                @if (Dpsoft\Mehr\Models\Page::find(21) != null)
-                                    <li role="menuitem">
-                                        <a href="{{ Dpsoft\Mehr\Models\Page::find(21)->url }}"><span>سمینار
+                                </li>
+                            @endif
+                            @if (Dpsoft\Mehr\Models\Page::find(20) != null)
+                                <li role="menuitem">
+                                    <a
+                                        href="{{ Dpsoft\Mehr\Models\Page::find(20)->url }}"><span>همکاران</span></a>
+                                </li>
+                            @endif
+                            @if (Dpsoft\Mehr\Models\Page::find(21) != null)
+                                <li role="menuitem">
+                                    <a href="{{ Dpsoft\Mehr\Models\Page::find(21)->url }}"><span>سمینار
                                                 ها</span></a>
-                                    </li>
-                                @endif
-                                <li role="menuitem"
-                                    class="is-dropdown-submenu-parent is-submenu-item is-dropdown-submenu-item opens-left"
-                                    aria-haspopup="true" aria-label="محصولات ما"><a>محصولات ما</a>
-                                    <ul class="submenu is-dropdown-submenu vertical" data-submenu="" role="menu">
-                                        @if (Dpsoft\Mehr\Models\Page::find(22) != null)
-                                            <li role="menuitem">
-                                                <a href="{{ Dpsoft\Mehr\Models\Page::find(22)->url }}"><span> مدیریت
+                                </li>
+                            @endif
+                            <li role="menuitem"
+                                class="is-dropdown-submenu-parent is-submenu-item is-dropdown-submenu-item opens-left"
+                                aria-haspopup="true" aria-label="محصولات ما"><a>محصولات ما</a>
+                                <ul class="submenu is-dropdown-submenu vertical" data-submenu="" role="menu">
+                                    @if (Dpsoft\Mehr\Models\Page::find(22) != null)
+                                        <li role="menuitem">
+                                            <a href="{{ Dpsoft\Mehr\Models\Page::find(22)->url }}"><span> مدیریت
                                                         محتوای نویسه</span></a>
-                                            </li>
-                                        @endif
-                                        @if (Dpsoft\Mehr\Models\Page::find(23) != null)
-                                            <li role="menuitem">
-                                                <a href="{{ Dpsoft\Mehr\Models\Page::find(23)->url }}"><span>سامانه
+                                        </li>
+                                    @endif
+                                    @if (Dpsoft\Mehr\Models\Page::find(23) != null)
+                                        <li role="menuitem">
+                                            <a href="{{ Dpsoft\Mehr\Models\Page::find(23)->url }}"><span>سامانه
                                                         آموزش مجازی مهر</span></a>
-                                            </li>
-                                        @endif
-                                        @if (Dpsoft\Mehr\Models\Page::find(24) != null)
-                                            <li role="menuitem">
-                                                <a href="{{ Dpsoft\Mehr\Models\Page::find(24)->url }}"><span>سامانه
+                                        </li>
+                                    @endif
+                                    @if (Dpsoft\Mehr\Models\Page::find(24) != null)
+                                        <li role="menuitem">
+                                            <a href="{{ Dpsoft\Mehr\Models\Page::find(24)->url }}"><span>سامانه
                                                         بازاریابی و فروش تلفنی آوا</span></a>
-                                            </li>
-                                        @endif
-                                        @if (Dpsoft\Mehr\Models\Page::find(25) != null)
-                                            <li role="menuitem">
-                                                <a href="{{ Dpsoft\Mehr\Models\Page::find(25)->url }}"><span>دارکوب
+                                        </li>
+                                    @endif
+                                    @if (Dpsoft\Mehr\Models\Page::find(25) != null)
+                                        <li role="menuitem">
+                                            <a href="{{ Dpsoft\Mehr\Models\Page::find(25)->url }}"><span>دارکوب
                                                         جاب</span></a>
-                                            </li>
-                                        @endif
-                                    </ul>
-                                </li>
-                            </ul>
+                                        </li>
+                                    @endif
+                                </ul>
+                            </li>
+                        </ul>
 
-                        </li>
+                    </li>
 
-                        <li class="is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true"
-                            aria-label="ارتباط باما">
-                            <a href="">ارتباط باما</a>
-                            <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" role="menu">
-                                <li
-                                    @if (Route::currentRouteName() == 'contact') role="menuitem" class="is-submenu-item is-dropdown-submenu-item current-menu-item" @endif>
-                                    <a href="{{ route('contact') }}"><span>تماس با ما</span></a>
-                                </li>
-                                @if (Dpsoft\Mehr\Models\Page::find(26) != null)
-                                    <li role="menuitem">
-                                        <a href="{{ Dpsoft\Mehr\Models\Page::find(26)->url }}"><span>درخواست همکاری
+                    <li class="is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true"
+                        aria-label="ارتباط باما">
+                        <a href="">ارتباط باما</a>
+                        <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" role="menu">
+                            <li
+                                @if (Route::currentRouteName() == 'contact') role="menuitem"
+                                class="is-submenu-item is-dropdown-submenu-item current-menu-item" @endif>
+                                <a href="{{ route('contact') }}"><span>تماس با ما</span></a>
+                            </li>
+                            @if (Dpsoft\Mehr\Models\Page::find(26) != null)
+                                <li role="menuitem">
+                                    <a href="{{ Dpsoft\Mehr\Models\Page::find(26)->url }}"><span>درخواست همکاری
                                                 با
                                                 دانش پژوهان</span></a>
-                                    </li>
-                                @endif
-                                @if (Dpsoft\Mehr\Models\Page::find(27) != null)
-                                    <li role="menuitem">
-                                        <a href="{{ Dpsoft\Mehr\Models\Page::find(27)->url }}"><span>دانش پژوهان در
+                                </li>
+                            @endif
+                            @if (Dpsoft\Mehr\Models\Page::find(27) != null)
+                                <li role="menuitem">
+                                    <a href="{{ Dpsoft\Mehr\Models\Page::find(27)->url }}"><span>دانش پژوهان در
                                                 رسانه های اجتماعی</span></a>
-                                    </li>
-                                @endif
+                                </li>
+                            @endif
 
-                            </ul>
-                        </li>
+                        </ul>
+                    </li>
                     </ul>
                 </nav>
             </div>
 
-            <div class="medium-2 small-12 cell mobile-support-none ">
-                @guest
-                    <ul class="btn_1">
-                        <li><a class="button hollow button reg-log-btn" href="{{ route('login') }}">ورود</a></li>
-                    </ul>
-                @else
-                    <ul class="btn_1">
+{{--            <div class="medium-2 small-12 cell mobile-support-none ">--}}
+{{--                @guest--}}
+{{--                    <ul class="btn_1">--}}
+{{--                        <li><a class="button hollow button reg-log-btn" href="{{ route('login') }}">ورود</a></li>--}}
+{{--                    </ul>--}}
+{{--                @else--}}
+{{--                    <ul class="btn_1">--}}
 
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                        <li><a href="{{ auth()->user()->roles()->exists()? '/panel': '/dashboard/courses' }}"
-                                class="button hollow button reg-log-btn"><span class="icon-user"></span>
-                                {{ Auth::user()->name }}</a></li>
-                        <li>
-                            <a href="/logout" onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();" class="button hollow button reg-log-btn" style="background-color: #14679e;
-                    color: #fefefe;">خروج </a>
-                        </li>
-                    </ul>
-                @endguest
-            </div>
+{{--                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
+{{--                            @csrf--}}
+{{--                        </form>--}}
+{{--                        <li><a href="{{ auth()->user()->roles()->exists()? '/panel': '/dashboard/courses' }}"--}}
+{{--                               class="button hollow button reg-log-btn"><span class="icon-user"></span>--}}
+{{--                                {{ Auth::user()->name }}</a></li>--}}
+{{--                        <li>--}}
+{{--                            <a href="/logout" onclick="event.preventDefault();--}}
+{{--                    document.getElementById('logout-form').submit();" class="button hollow button reg-log-btn" style="background-color: #14679e;--}}
+{{--                    color: #fefefe;">خروج </a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                @endguest--}}
+{{--            </div>--}}
 
         </div>
     </div>
