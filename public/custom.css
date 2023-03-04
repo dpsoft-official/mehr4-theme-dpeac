@@ -1,3 +1,4 @@
+/*HOME PAGE*/
 #seo-text div * {
     text-align: right;
     line-height:2.3!important;
@@ -6,4 +7,37 @@
     font-weight:500;
     font-size: 15px;
     color:#4b5259;
+}
+/*PAYMENT PAGE BUG FIX*/
+@media screen and (max-width: 39.9375em) {
+    .contact-us-content .back-header {
+        height: auto !important;
+    }
+    div.news-latter p{
+        margin-top: 0;
+    }
+    div.news-latter form{
+        padding-top: 20px;
+    }
+}
+/*BUG FIX*/
+body{
+    text-align: right;
+}
+
+.footer .footer-main .column-left {
+    width: 40%;
+    padding: 0;
+}
+.footer .footer-main .column-right {
+    border-left: none;
+    padding-left: 30px;
+    padding-right: 100px;
+}
+/*COURSE PAGE*/
+#course-title{
+    font-weight: 900;
+}
+.title-caption{
+    font-weight: 900;
 }
