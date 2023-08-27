@@ -133,6 +133,25 @@
                                 <a href="{{ Dpsoft\Mehr\Models\Page::find(18)->url }}"><span>تاییدیه ها</span></a>
                             </li>
                         @endif
+                        @guest
+                            <li class="" role="menuitem">
+                                <a href="{{ route('login') }}"><span>ورود</span></a>
+                            </li>
+                        @else
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                            <li class="is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true"
+                                aria-label="درباره ما">
+                                <a href="{{ auth()->user()->roles()->exists()? '/panel': '/dashboard/courses' }}">   {{ Auth::user()->name }}</a>
+                                <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" role="menu">
+
+                                    <li class="" role="menuitem">
+                                        <a href="/logout" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();"  ><span>خروج</span></a>
+                                    </li>
+                                </ul>
+                        @endguest
 
                         <li class="is-dropdown-submenu-parent opens-left" role="menuitem" aria-haspopup="true"
                             aria-label="درباره ما">
@@ -258,19 +277,18 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
-                        <div style="display: initial"><a
+                        <div style="display: initial"><a style="background-color: #00a6bc;
+                    color: #fefefe!important;"
                                 href="{{ auth()->user()->roles()->exists()? '/panel': '/dashboard/courses' }}"
                                 class="button hollow button reg-log-btn"><span class="icon-user"></span>
-                                {{ Auth::user()->name }}</a></div>
+                                پروفایل ({{ Auth::user()->name }})</a></div>
                             <div style="display: initial">
                                 <a href="/logout" onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();" class="button hollow button reg-log-btn" style="background-color: #14679e;
-                    color: #fefefe;">خروج </a>
+                    document.getElementById('logout-form').submit();" class="button hollow button reg-log-btn">خروج </a>
                             </div>
                     </ul>
                 @endguest
             </div>
-
         </div>
     </div>
 </header>
