@@ -269,7 +269,8 @@
             <div class="medium-2 small-12 cell mobile-support-none " style="margin-top: 10px">
                 @guest
                     <ul class="btn_1">
-                        <div><a class="button hollow button reg-log-btn" href="{{ route('login') }}">ورود</a></div>
+                        <div><a class="button hollow button reg-log-btn" href="{{ route('login') }}" style="background-color: #00a6bc;
+                    color: #fefefe!important;">ورود</a></div>
                     </ul>
                 @else
                     <ul class="btn_1">
