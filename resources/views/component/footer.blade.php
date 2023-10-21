@@ -6,21 +6,7 @@
                 <div class="news-latter">
                     <p style="margin-top: 42px;">برای دریافت مشاوره رایگان شماره تماس خود را وارد کنید</p>
                     <img src="{{Storage::url('theme/footer-mosh.png')}}" alt="فوتر">
-                    <form
-                        role="form"
-                        name="ava-crm-form"
-                        class="wpcf7-form"
-                        data-token="{{setting('institute.token')}}"
-                        novalidate="novalidate">
-                        <input type="hidden" name="product_id" value="{{setting('product_id')}}">
-                        <input type="hidden" name="source_id" value="{{setting('source_id')}}">
-                        <input type="tel"  name="mob" id="inputMobile"  required="required" pattern="[\u06F0-\u06F90-9\u0660-\u0669]{11}"
-                               value=""   size="40"    placeholder="091212345678">
-                        <p><button class="button" data-open="exampleModal1"   style="background: #2ac489;
-    padding: 10px 18px;
-    border-radius: 3px;
-    color: white!important;">با من تماس بگیرید</button></p>
-                    </form>
+                    <livewire:crm-form></livewire:crm-form>
                 </div>
                 <div class="row medium-8 small-12">
                     <div class="column-right">
