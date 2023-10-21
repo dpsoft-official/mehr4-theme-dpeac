@@ -26,6 +26,7 @@
     <link href="{{mix('app.css','vendor/mehr4-theme-dpeac')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('/vendor/mehr4-theme-dpeac/custom.css')}}">
     {!! setting('raw_header') !!}
+    @livewireStyles
    </head>
 <body>
 @include('mehr4-theme-dpeac::component.header')
@@ -70,5 +71,6 @@
 @yield('footer')
 @include('sweet::alert')
 {!! setting('raw_footer') !!}
+@livewireScripts
 </body>
 </html>
