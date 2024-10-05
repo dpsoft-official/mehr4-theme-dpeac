@@ -29,6 +29,7 @@
     @livewireStyles
    </head>
 <body>
+@include("mehr::component.banner")
 @include('mehr4-theme-dpeac::component.header')
 <main class="main">
     @yield('main')
