@@ -247,10 +247,9 @@
             <div class="grid-container">
                 <div class="grid-x grid-padding-x">
                     <div class="row medium-12 cell">
-                        <video width="100%" height="auto" id="video" preload="none" controls=""
-                               poster="{{Storage::url('theme/video-poster.jpg')}}">
-                            <source src="{{Storage::url('theme/video.mp4')}}">
-                        </video>
+                        <a href="https://dpe.ac/tour" style="text-align: center">
+                            <img src="https://dpe.ac/storage-dpe-ac_mehrlms_ir/page/daneshpajouhan-tour.jpg" width="80%" height="auto">
+                        </a>
                     </div>
                 </div>
             </div>

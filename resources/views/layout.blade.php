@@ -38,18 +38,20 @@
 <!--/footer-->
 <!-- COMMON SCRIPTS -->
 @yield('footer')
-<script src="{{mix('app.js','vendor/mehr4-theme-dpeac')}}"></script>
+@if(request()->routeIs('home'))
+    <script src="{{mix('app.js','vendor/mehr4-theme-dpeac')}}"></script>
+@endif
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/foundation.min.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/app.js')}}"></script>
 <script src="{{asset('/vendor/mehr4-theme-dpeac/js/jquery.plugins.js')}}"></script>
-<script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.addon.beforeafter.min.js')}}"></script>
-<script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/jquery.themepunch.revolution.min.js')}}"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="{{asset('/vendor/mehr4-theme-dpeac/js/sweetalert.min.js')}}"></script>
-<script>
+@if(request()->routeIs('home'))
+    <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/revolution.addon.beforeafter.min.js')}}"></script>
+    <script src="{{asset('/vendor/mehr4-theme-dpeac/js/extensions/jquery.themepunch.revolution.min.js')}}"></script>
+@endif
+<script src="{{asset('js/axios.min.js')}}"></script>
 
-    </script>
+<script src="{{asset('/vendor/mehr4-theme-dpeac/js/sweetalert.min.js')}}"></script>
 
 
 <script>
